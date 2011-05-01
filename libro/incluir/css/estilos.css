@@ -1,0 +1,67 @@
+
+body {
+  font-family: Georgia, serif;
+}
+
+#libro {
+  width: 60%;
+  margin: 0 auto;
+}
+
+#libro h2{
+	margin: 60px 0 30px 0;
+}
+
+#libro h3{
+	margin: 40px 0 15px 0;
+}
+
+#libro h4{
+	margin: 10px 0 10px 0;
+}
+
+#libro h2 a, #libro h3 a, #libro h4 a{
+  color: #000;
+  text-decoration: none;
+}
+
+#libro a code{
+  font-family: Georgia, serif;
+  font-size: 16px;
+}
+
+#libro blockquote {
+  background: #FEEDC4;
+  padding: 5px;
+}
+
+#libro img {
+  max-width: 100%;
+  display: block;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+}
+
+#libro pre.sourceCode, #libro pre.numberLines {
+  background: none repeat scroll 0 0 #F1F1F1;
+  border: 1px solid #DDDDDD;
+  color: #000000;
+  font-size: 12px;
+  overflow: auto;
+  width: 745px;
+  margin: 0;
+}
+
+#libro .nums pre {
+  margin: 0;
+  padding: 0 10px 0 0;
+}
+
+#libro pre code, #libro .nums pre {
+  font: 13px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+}
+
+
+#TOC li {
+  margin: 10px 0;
+}

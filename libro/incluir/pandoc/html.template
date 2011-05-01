@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>Guía definitiva para crear plantillas para Joomla! 1.6</title>
+		<meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+		<link href='../incluir/css/estilos.css' media='screen' rel='stylesheet' type='text/css'/>
+		<link href='../incluir/css/estilos-imprimir.css' media='print' rel='stylesheet' type='text/css'/>
+	</head>
+	<body>
+		<div id='libro'>
+			<h1>Guía definitiva para crear plantillas para Joomla! 1.6</h1>
+			
+			$if(toc)$
+				$toc$
+			$endif$
+			
+			$body$
+			
+		</div>
+		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js' type='text/javascript'></script>
+	</body>
+</html>
