@@ -18,13 +18,13 @@ Al finalizar el documento, el lector deberá ser capaz de:
 
 * Conocer cómo modificar correctamente plantillas ya creadas;
 
-* Saber crearlas plantillas desde cero.
+* Saber crear plantillas desde cero.
 
 
 
 ### Requisitos
 
-Para emprender el trabajo, es necesario contar con los siguientes conocimientos mínimos:
+Para emprender el trabajo, es necesario contar mínimamente con los siguientes conocimientos:
 
 
 * HTML/XHTML:
@@ -39,7 +39,7 @@ Para emprender el trabajo, es necesario contar con los siguientes conocimientos 
 	
 	* Saber crear estilos básicos en archivos `.css`;
 	
-	* Entender como funcionan las maquetaciones simples con elementos flotantes.
+	* Entender cómo funcionan las maquetaciones simples con elementos flotantes.
 	
 	
 * JavaScript:
@@ -60,14 +60,11 @@ Para emprender el trabajo, es necesario contar con los siguientes conocimientos 
 
 ### Software
 
-Para trabajar con los contenidos de la guia, es necesario contar con las siguientes herramientas:
+Para trabajar con los contenidos de la guía, es necesario contar con las siguientes herramientas:
 
+* El navegador web Firefox y la extensión Firebug.
 
-* El navegador web Firefox;
-
-* La extensión Firebug para Firefox;
-
-* Un editor de textos planos:
+* Un editor de textos planos ó un IDE (Entorno de Desarrollo Integrado):
 
 	* Notepad++ - Windows;
 	
@@ -75,9 +72,8 @@ Para trabajar con los contenidos de la guia, es necesario contar con las siguien
 	
 	* TextMate - Mac OS X;
 	
-	* Aptana - todas las plataformas.
+	* Aptana 3 / Netbeans PHP - todas las plataformas.
 	
-* Un servidor local (como WAMP o MAMP) ó un cliente FTP/SSH para acceder a un servidor remoto (como Filezilla);
+* Un servidor local (como WAMP o MAMP) ó un cliente FTP/SSH/SFTP para acceder a un servidor remoto (Filezilla, WinSCP, Putty, etc.);
 
 * Joomla! 1.6 instalado en el servidor local ó remoto.	
-
