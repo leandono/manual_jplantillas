@@ -1,69 +1,81 @@
 ﻿
 
-Breve introducción a las plantillas en Joomla! 1.6
---------------------------------------------------
-
-Joomla 1.6 es la última versión del premiado CMS Joomla!. Dicha versión incorpora muchas nuevas características que permiten que la aplicación sea más flexible, extendible y personalizable.
+Breve introducción a las plantillas en Joomla!
+----------------------------------------------
 
 
->Si desea conocer en mayor detalle las características, es muy recomendable visitar el sitio oficial dedicado a Joomla 1.6: <http://www.joomla.org/16/>
+Antes de comenzar, puede que se pregunte ¿qué es una plantilla y para qué sirve?. Las plantillas son archivos que permiten controlar el diseño y la disposición de los elementos a lo largo de un sitio. Las mismas incluyen:
 
 
-En el aspecto relacionado al desarrollo y diseño de plantillas, Joomla 1.6 ha incorporado como nuevas características:
+* El marcado HTML y la maquetación base del sitio;
+
+* Los espacios en donde se mostraran los contenidos (artículos, módulos, componentes);
+
+* El diseño (a través de estilos en cascada e imágenes);
+
+* Y funcionalidades especificadas que dependerán de cada plantilla.
 
 
-* De forma predeterminada, el CMS cuenta con tres nuevas plantillas listas para utilizar y adaptar a las necesidades del sitio;
+En particular, Joomla posee un excelente sistema de plantillas que permite adaptar cualquier sitio a los requerimientos deseados. Además, a medida que el CMS evoluciona en versiones, el mismo va incorporando nuevas características que permiten mejorar la experiencia al momento de crear una plantilla:
 
-* El código generado por Joomla es 100% XHTML estricto;
 
-* Incorporación de estilos en plantillas, una funcionalidad que permite dar más flexibilidad y personalización al sitio, permitiendo mostrar, por ejemplo, un estilo único a secciones determinadas;
+* **Joomla! 1.6**:
 
-* Detección integrada de navegadores, para poder cargar un estilo diferente para cada tipo de navegador.
+	* En la versión 1.6, de forma predeterminada, el CMS cuenta con tres nuevas plantillas listas para utilizar y adaptar a las necesidades del sitio;
+
+	* El código generado por Joomla es 100% XHTML estricto;
+
+	* Incorporación de estilos en plantillas, una funcionalidad que permite dar más flexibilidad y personalización al sitio, permitiendo mostrar, por ejemplo, un estilo único en secciones determinadas;
+
+	* Detección integrada de navegadores, para poder cargar un estilo diferente para cada tipo de navegador.
+
+	>Si desea conocer en mayor detalle las características, puede visitar el sitio oficial dedicado a la versión 1.6: <http://www.joomla.org/16/>
 
 
 
 ### Tipos de plantillas
 
-Antes de comenzar, es necesario saber que Joomla cuenta con dos tipos de plantillas:
+Joomla cuenta con dos tipos de plantillas:
 
 
-* **Plantillas para utilizar en la administración *(backend)***: Son plantillas creadas especialmente para la parte de administración, las cuales pueden incorporar funcionalidades que faciliten el manejo de los contenidos en el sitio.
+* **Plantillas para utilizar en la administración *(backend)***: Son creadas especialmente para la parte de administración, las cuales pueden incorporar funcionalidades que faciliten el manejo de los contenidos en el sitio.
 
-* **Plantillas para utilizar en el sitio público *(frontend)***: Son plantillas creadas para ser visualizadas por los visitantes. Pueden ser simples o complejas, todo dependerá del tipo de sitio y hacia quienes esta orientado.
+* **Plantillas para utilizar en el sitio público *(frontend)***: Son creadas para ser visualizadas por los visitantes. Pueden ser simples o complejas, todo dependerá del tipo de sitio y hacia quienes esta orientado.
+
 
 
 
 ### Encontrar las plantillas disponibles en la administración del CMS
 
-Las plantillas disponibles para utilizar se encuentran, dentro de la administración, llendo a: **Extensiones → Gestor de plantillas → Plantillas**:
+Las plantillas disponibles para utilizar se encuentran, dentro de la administración, yendo a: **Extensiones → Gestor de plantillas → Plantillas**:
 
 ![](../incluir/figuras/image07.png)
 
-A través del filtro por locación es posible seleccionar las plantillas pertenecientes al sitio ó a la administración. Al hacer click sobre la imagen correspondiente, se puede ver una vista alargada del diseño de la plantilla. Además, si hace click en el enlace de detalle, podrá acceder a los archivos principales la componen así como editarlos desde la misma interfaz:
+A través del filtro por locación es posible mostrar las plantillas pertenecientes al sitio ó a la administración. Al hacer click sobre la imagen correspondiente, se mostrará una vista alargada del diseño de la plantilla. Además, al clickear en el enlace de detalle, podrá acceder a los archivos principales componen a la plantilla así como editarlos desde la misma interfaz:
 
 ![](../incluir/figuras/image09.png)
 
-Por otro lado, si accede al apartado estilos, como se mencionó antes, podrá navegar por una de las nuevas características introducidas en Joomla 1.6: Los estilos en plantillas. 
+Por otro lado, al acceder al apartado estilos, como se mencionó antes, podrá navegar por una de las nuevas características introducidas en Joomla 1.6: Los estilos en plantillas. 
 
 ![](../incluir/figuras/image30.png)
 
-Esta funcionalidad lo que permite es, utilizando un mismo template otorgar un diseño diferente a determinada secciones. Por ejemplo: En gran parte de nuestro sitio deseamos utilizar la plantilla con el diseño predeterminado, pero en la sección contacto queremos que el color de fondo sea de otro color y que la estructura sea más angosta.
+Esta funcionalidad lo que permite es, utilizando un mismo *template* otorgar un diseño diferente a determinadas secciones. Por ejemplo: En gran parte del sitio se desea utilizar la plantilla con un diseño predeterminado, pero en la sección *contacto* se requiere que el color de fondo sea de otro color y que la estructura sea más angosta.
 
 
->Las características de personalización dependeran de cada plantilla. Existirán plantillas que otorgaran muchas opciones y flexibilidad mientras que otras pocas o ninguna.
+>Las características de personalización dependerán de cada plantilla. Existirán plantillas que otorgaran muchas opciones y flexibilidad mientras que otras pocas o ninguna.
 
 
-Al acceder a uno de los items enlistados, podremos acceder a las opciones de personalización y a que secciones deseamos asignar el estilo:
+Al acceder a uno de los ítems enlistados, es posible acceder a las opciones de personalización y especificar a que secciones se desea asignar el estilo:
 
 ![](../incluir/figuras/image25.png)
 
-Como podemos ver, el nivel de personalización puede ser variados: Tamaño de estructuras, cambios de imágenes y textos, posición de elementos y diseño.
+El nivel de personalización puede ser variados: Tamaño de estructuras, cambios de imágenes y textos, posición de elementos y diseño.
 
 
 
 ### Estructura básica de una plantilla
 
-Las plantillas en Joomla! van alojadas dentro de la carpeta templates, en el directorio raiz del CMS. Allí dentro, cada plantilla esta separada por carpetas.
+Las plantillas en Joomla! van alojadas dentro de la carpeta `templates`, en el directorio raíz del CMS. Allí dentro, cada plantilla esta separada por carpetas.
 
 Todas las plantillas poseen la siguiente estructura básica de archivos y carpetas:
 
@@ -75,10 +87,10 @@ Los archivos y carpetas dentro de la estructura pueden dividirse en obligatorios
 
 #### Carpetas y archivos obligatorios
 
-Son obligatorios, ya que si no estan presentes, la plantilla no funcionará:
+Son obligatorios, ya que si no están presentes, la plantilla no funcionará:
 
 
-* **Carpeta raiz**: Es la carpeta que contiene todos los archivos de la plantilla. Su nombre no debe posse espacios intermedios. Su ubicación es dentro de la carpeta templates, ubicada en el directorio raiz de Joomla;
+* **Carpeta raiz**: Es la carpeta que contiene todos los archivos de la plantilla. Su nombre no debe poseer espacios intermedios. Su ubicación es dentro de la carpeta `templates`, ubicada en el directorio raíz;
 
 * **index.php**: Archivo principal de la plantilla. Contiene la estructura básica, así como también los llamados a archivos CSS y JavaScript. Su contenido está formado por etiquetas HTML y PHP;
 
@@ -107,17 +119,17 @@ Son obligatorios, ya que si no estan presentes, la plantilla no funcionará:
 Son archivos que agregan funcionalidades o características a la plantilla, pero que no son obligatorios de tener. Crearlos o no, dependerá de las necesidades al momento de crear la plantilla:
 
 
-* **component.php**: Archivo PHP que permite crear una versión reducida de la plantilla. Por lo general, es utilizado como vista previa al querer imprimir un artículo ó enviarlo por email. En caso de no existir, se utiliza el archivo `component.php` ubicado en la carpeta `/templates/system/`;
+* **component.php**: Archivo PHP que permite crear una versión reducida de la plantilla. Por lo general, es utilizado como vista previa al querer imprimir un artículo ó enviarlo por e-mail. En caso de no existir, se utiliza el archivo `component.php` ubicado en la carpeta `/templates/system/`;
 
 * **error.php**: Archivo PHP utilizado para mostrar cuando existe ocurre algún error en el CMS ó cuando una página no es encontrada;
 
-* **favicon.ico**: Imagen que se utilizará como icono de la página. Joomla comprueba que el archivo exista, en caso positivo, se insertan automaticamente las etiquetas apropiadas para mostrar el icono;
+* **favicon.ico**: Imagen que se utilizará como icono de la página. Joomla comprueba que el archivo exista, en caso positivo, se incorporan automáticamente las etiquetas apropiadas para mostrarlo;
 
-* **images**: Carpeta con imagenes a utilizar en el diseño de la plantilla;
+* **images**: Carpeta con imágenes a utilizar en el diseño de la plantilla;
 
 * **js**: Carpeta con archivos JavaScript para utilizar en la plantilla;
 
-* **html**: Los archivos alojados en esta carpeta permiten *sobrescribir* la salida HTML que imprime el CMS de forma predeterminada en componentes y módulos. Es decir, si deseamos personalizar el contenido HTML de una extensión, los archivos que lo harán serán ubicados en esta carpeta;
+* **html**: Los archivos alojados en esta carpeta permiten *sobrescribir* la salida HTML que imprime el CMS de forma predeterminada en componentes y módulos. Es decir, si desea personalizar el contenido HTML de una extensión, los archivos que lo harán serán ubicados en esta carpeta;
 
-* **language**: Contendrá archivos de lenguajes `.ini`, los cuales serviran para mostrar textos diferentes dependiendo del idioma configurado para el sitio y la administración. Cada idioma está separado por carpeta.
+* **language**: Contendrá archivos de lenguajes `.ini`, los cuales servirán para mostrar textos diferentes dependiendo del idioma configurado para el sitio y la administración. Cada idioma está separado por carpeta.
 
