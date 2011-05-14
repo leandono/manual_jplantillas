@@ -3,9 +3,9 @@
 templateDetails.xml
 -------------------
 
-Como se dijo anteriormente, templateDetails es un archivo XML que posee toda la información relacionada a la plantilla. Su importancia radica en que es el archivo que lee Joomla al momento de instalar la plantilla y mostrar su información asociada en el panel de administración.
+Como se comentó anteriormente, `templateDetails` es un archivo XML que posee toda la información relacionada al `template`. Su importancia radica en que es el archivo que lee Joomla al momento de instalar la plantilla y mostrar su información asociada en el panel de administración.
 
-Muchas de las definiciones que se realizaron en el análisis previo van a ir expuestas en este archivo. Veamos como esta conformado:
+Muchas de las definiciones que se realizaron en el análisis previo van a ir expuestas en este archivo. El archivo esta conformado de la siguiente forma:
 
 
 ~~~~~~~~~{.xml .numberLines}
@@ -57,7 +57,7 @@ Muchas de las definiciones que se realizaron en el análisis previo van a ir exp
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Con la información recopilada, nuestro archivo XML quedará:
+Con la información recopilada, el mismo quedará:
 
 
 ~~~~~~~~~{.xml .numberLines}
@@ -111,7 +111,7 @@ Con la información recopilada, nuestro archivo XML quedará:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Veamos por partes lo que hemos modificado:
+Para entender lo modificado, a continuación se muestra un detalle de cada sección correspondiente al archivo:
 
 
 **Sección 1**
@@ -136,7 +136,7 @@ Veamos por partes lo que hemos modificado:
 
 Las primeras etiquetas corresponden a la información asociada a la plantilla: Nombre, fecha de creación, autor, contacto, licencia, versión y descripción. 
 
-Notar  que en la descripción se ha puesto `TPL_INTERPOINT_XML_DESCRIPTION`, el cual es una referencia que se incorporará en el archivo de lenguaje `es-ES.tpl_interpoint.ini`. La idea es que todos los textos explicativos esten situados en el archivo de lenguaje, por si en un futuro nuestra plantilla es utilizada en más idiomas.
+>Notar  que en la descripción se ha puesto `TPL_INTERPOINT_XML_DESCRIPTION`, el cual es una referencia que se incorporará en el archivo de lenguaje `es-ES.tpl_interpoint.ini`. La idea es que todos los textos localizados estén situados en el archivo de lenguaje, por si en un futuro la plantilla es utilizada en más idiomas.
 
 
 **Sección 2**
@@ -161,7 +161,7 @@ Notar  que en la descripción se ha puesto `TPL_INTERPOINT_XML_DESCRIPTION`, el 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Luego se especifican los archivos y carpetas que compondrán a la plantilla. Es muy importante, a medida que vamos avanzando con el desarrollo de la plantilla, ir especificando los archivos nuevos creados en esta sección. Ya que en caso contrario, si no existe referencia a un archivo, cuando queramos instalar la plantilla obtendremos un error.
+Luego se especifican los archivos y carpetas que compondrán a la plantilla. Es muy importante, a medida que se avanza con el desarrollo de la plantilla, ir especificando en esta sección los archivos nuevos creados. En caso contrario, si no existe referencia a un archivo, cuando se quiera instalar la plantilla el CMS mostrará un error.
 
 
 **Sección 3**
@@ -181,7 +181,7 @@ Luego se especifican los archivos y carpetas que compondrán a la plantilla. Es 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-A continuación se especifican las posiciones admitidas por los módulos en la plantilla. El nombre de cada posición suele ser un breve resumen de la posición o funcionalidad especifica de dicha zona. Luego, en el archivo de lenguaje `es-ES.tpl_interpoint.sys.ini` podremos especificar una descripción más explicativa de cada posición.
+A continuación se especifican las posiciones admitidas por los módulos en la plantilla. El nombre de cada una suele ser un breve resumen de la posición o funcionalidad especifica de dicha zona. Luego, en el archivo de lenguaje `es-ES.tpl_interpoint.sys.ini` es posible especificar una descripción más explicativa de cada posición.
 
 
 **Sección 4**
@@ -195,24 +195,24 @@ A continuación se especifican las posiciones admitidas por los módulos en la p
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Por último se añaden los archivos de lenguajes, los cuales tendrán la descripción y textos explicativos de las posiciones de módulos y parámetros de la plantilla. El archivo `es-ES.tpl_interpoint.ini` contendrá todas los textos y definiciones que se utilizarán en la pantalla de edición de estilos de plantillas. Mientras que `es-ES.tpl_interpoint.sys.ini` contendrá las explicaciones correspondientes a cada posición de módulos (estos textos aparecen de ayuda, en el momento de asignar un módulo a una posición). Para poder utilizar estos archivos de lenguajes, lo que haremos es:
+Por último se añaden los archivos de lenguajes, los cuales tendrán la descripción y textos explicativos de las posiciones de módulos y parámetros de la plantilla. El archivo `es-ES.tpl_interpoint.ini` contendrá todas las definiciones que se utilizarán en la pantalla de edición de estilos de plantillas. Mientras que `es-ES.tpl_interpoint.sys.ini` contendrá las explicaciones correspondientes a cada posición de módulos (estos textos aparecen de ayuda, en el momento de asignar un módulo a una posición). Para poder utilizar estos archivos de lenguajes, lo que se hará es:
 
 
-* En nuestra carpeta de la plantilla, ir al directorio `language`;
+* En la carpeta de la plantilla, ir al directorio `language`;
 
-* Allí encontraremos otra carpeta llamada `en-GB`. La renombramos a `es-ES`;
+* Allí dentro existe otra carpeta llamada `en-GB`. Cambiarle el nombre por `es-ES`;
 
-* Dentro de esta carpeta encontraremos dos archivos `.ini`: `en-GB.tpl_atomic.ini` y `en-GB.tpl_atomic.sys.ini`. Vamos a renombrarlos a `es-ES.tpl_interpoint.ini` y `es-ES.tpl_interpoint.sys.ini` respectivamente;
+* Dentro de esta carpeta existen dos archivos `.ini`: `en-GB.tpl_atomic.ini` y `en-GB.tpl_atomic.sys.ini`. Respectivamente, se los renombra a `es-ES.tpl_interpoint.ini` y `es-ES.tpl_interpoint.sys.ini`;
 
-* Abrimos `es-ES.tpl_interpoint.ini` y borramos el contenido y escribimos:
+* Abrir `es-ES.tpl_interpoint.ini`, borrar el contenido y luego escribir:
 
 		TPL_INTERPOINT_XML_DESCRIPTION="Template de ejemplo para Joomla! 1.6"
 	
->Notar que `TPL_INTERPOINT_XML_DESCRIPTION` hace referencia a lo que pusimos en la etiqueta `<description />` en el `templateDetails.xml`. El texto de descripción puede ir a gusto de cada uno.
+>Notar que `TPL_INTERPOINT_XML_DESCRIPTION` hace referencia al término incorporado en la etiqueta `<description />` en el archivo `templateDetails.xml`. El texto de descripción se puede cambair a gusto.
 
-* Guardamos `es-ES.tpl_interpoint.ini`;
+* Guardar `es-ES.tpl_interpoint.ini`;
 
-* Abrimos `es-ES.tpl_interpoint.sys.ini`, también borramos el contenido y escribimos:
+* Abrir `es-ES.tpl_interpoint.sys.ini`, borrar el contenido y escribir:
 
 
 ~~~~~~~~~{.xml .numberLines}
@@ -228,39 +228,36 @@ TPL_INTERPOINT_POSITION_INTERPOINT-MENU_INFERIOR="Menú inferior"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	
 	
-* Guardamos `es-ES.tpl_interpoint.sys.ini`.
+* Guardar `es-ES.tpl_interpoint.sys.ini`.
 
 
->Notar que cada referencia de descripción de módulos esta compuesta por `TPL_(nombre de la plantilla)_POSITION_(nombre de la posición del módulo)`. También hemos agregado nuevamente la descripción de la plantilla con la misma referencia que usamos anteriormente. Los textos de descripción de cada posición se puede cambiar a gusto.
+>Notar que cada referencia de descripción de módulos esta compuesta por `TPL_(nombre de la plantilla)_POSITION_(nombre de la posición del módulo)`. También se ha agregado nuevamente la descripción de la plantilla con la misma referencia que se usó anteriormente. Los textos de descripción de cada posición se pueden cambiar a gusto.
 
 
->En el momento de instalar la plantilla, los archivos `es-ES.tpl_interpoint.ini` y `es-ES.tpl_interpoint.sys.ini` serán copiados dentro de la carpeta `language`, en el directorio raiz del CMS.
-
-
-Con esto listo, ya podemos continuar con la visualización del template en la administración de Joomla.
+>En el momento de instalar la plantilla, los archivos `es-ES.tpl_interpoint.ini` y `es-ES.tpl_interpoint.sys.ini` serán copiados dentro de la carpeta `language/es-ES`, en el directorio raiz del CMS.
 
 
 >En el archivo `templateDetails.xml` también se especifican las opciones de personalización de la plantilla. Más adelante se explicará como añadir esta característica y de que forma.
 
 
+Con esto listo, es posible continuar con la visualización del template en la administración de Joomla.
+
 
 ### Descubrir la plantilla en la administración de CMS
 
-Antes de continuar, es importante que Joomla reconozca la copia que hemos realizado de la plantilla, ya que vamos a necesitar previsualizar nuestro trabajo a medida que avanzamos. 
+Antes de continuar, es importante que Joomla reconozca la copia realizada de la plantilla, ya que será necesario poder previsualizar el trabajo a medida que se va avanzando. 
 
-Para esto, lo que debemos hacer es, en la administración ir a **Extensiones ? Gestor de extensiones ? Descubrir ? Presionar el botón Descubrir**. Si todo sale bien, debería aparecer nuestra plantilla enlistada:
+Para esto, en la administración, ir a **Extensiones → Gestor de extensiones → Descubrir → Presionar el botón Descubrir**. Si todo sale bien, debería aparecer la plantilla enlistada:
 
 ![](../incluir/figuras/image42.png)
 
-Lo siguiente será seleccionar el item de la plantilla y presionar el botón Instalar. Si todo salió bien debe aparecer el texto **“La instalación de la extensión descubierta se ha realizado correctamente”** y más abajo la descripción de la plantilla:
+Lo siguiente será seleccionar el item de la plantilla y presionar el botón **Instalar**. Si todo salió bien debe aparecer el texto **“La instalación de la extensión descubierta se ha realizado correctamente”** y más abajo la descripción de la plantilla:
 
 ![](../incluir/figuras/image48.png)
 
-Finalmente, para poder visualizar la plantilla a medida qe trabajamos, vamos a **Extensiones ? Gestor de plantillas**:
+Finalmente, para poder visualizar la plantilla en el sitio, ir a **Extensiones → Gestor de plantillas**:
 
 ![](../incluir/figuras/image28.png)
 
-Seleccionamos el item de nuestra plantilla y presionamos el botón **Predeterminada**. De esta forma logramos que al ingresar al sitio se cargue la plantilla y podamos continuar con nuestro trabajo mientras visualizamos como queda.
-
-Ahora continuamos con la creación de la plantilla.
+Seleccionar el item de la plantilla nueva y presionar el botón **Predeterminada**. De esta forma se logrará que al ingresar al sitio se cargue la plantilla.
 
