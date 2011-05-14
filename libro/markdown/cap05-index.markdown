@@ -3,7 +3,7 @@
 index.php
 ---------
 
-Al ser uno de los archivos más importantes, es fundamental entender las etiquetas que conforman a `index.php`. Veamos el archivo completo para luego ir por secciones.
+Al ser uno de los archivos más importantes, es fundamental entender las etiquetas que conforman a `index.php`. A continuación se mostrará el archivo completo para luego ir en detalle por cada sección que lo conforma.
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -110,10 +110,10 @@ defined('_JEXEC') or die;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-La línea indicada podrá encontrarla en muchos archivos fuentes de Joomla. Se incorpora por motivos de seguridad, su objetivo es asegurar que el archivo PHP está siendo ejecutado dentro de la sesión y contexto del CMS (de forma que si un usuario que quiere vulnerar el sitio ejecutando un archivo en particular, le sea difícil hacerlo).
+La línea indicada podrá encontrarla en muchos archivos fuentes de Joomla. Se incorpora por motivos de seguridad, su objetivo es asegurar que el archivo PHP está siendo ejecutado dentro de la sesión y contexto del CMS (de forma tal que si un usuario quiere vulnerar el sitio ejecutando un archivo en particular, le sea difícil realizarlo).
 
 
->Más información sobre `JEXEC` en: <http://docs.joomla.org/JEXEC>
+>Más información sobre `JEXEC`: <http://docs.joomla.org/JEXEC>
 
 
 **Sección 2**
@@ -124,12 +124,14 @@ JHTML::_('behavior.framework', true);
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	
 	
-Para crear varias funcionalidades JavaScript, Joomla utiliza el framework JavaScript *Mootools*. Dicho framework está compuesto por varios archivos `.js` que son cargados de forma predeterminada en la cabecera de la plantilla.
+Para crear varias funcionalidades JavaScript, Joomla utiliza el *framework* *[Mootools](http://mootools.net/)*. Dicho framework está compuesto por varios archivos `.js` que son cargados de forma predeterminada en la cabecera de la plantilla (`<head />`).
 Al incorporar la linea mostrada con el argumento `true`, se especifica que también se cargue en la plantilla el archivo `mootools-more.js`, el cual posee diversas funciones que potencian aún más al framework JavaScript.
-Notemos que si quitamos la línea de código, Mootools seguirá cargandose en la plantilla.
 
 
->Más información sobre Mootools y Mootools More en <http://mootools.net/> y <http://mootools.net/more/>
+>Notar que si quita la línea de código en `index.php`, Mootools seguirá cargandose en la plantilla.
+
+
+>Más información sobre Mootools y Mootools More: <http://mootools.net/> y <http://mootools.net/more/>
 
 
 **Sección 3**
@@ -140,10 +142,10 @@ $app = JFactory::getApplication();
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	
-Esta línea guarda en la variable `$app` una referencia al objeto PHP de Joomla `JApplication`. Sin entrar en detalles técnicos, utilizando esta línea podemos obtener luego información del sitio para mostrar dentro de la plantilla (por ejemplo: el nombre del sitio, el título de la página, el nombre del template, etc).
+Esta línea guarda en la variable `$app` una referencia al objeto PHP de Joomla `JApplication`. Sin entrar en detalles técnicos, utilizando esta línea es posible obtener información del sitio para mostrar dentro de la plantilla (por ejemplo: nombre del sitio, título de la página, nombre del *template*, etc).
 
 
->Puede consultar la información relacionada a JApplication en http://api.joomla.org/Joomla-Framework/Application/JApplication.html
+>Puede consultar la información relacionada a JApplication en <http://api.joomla.org/Joomla-Framework/Application/JApplication.html>
 
 
 **Sección 4**
@@ -156,7 +158,7 @@ Esta línea guarda en la variable `$app` una referencia al objeto PHP de Joomla 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-El siguiente bloque de código declara el [tipo de documento](http://es.wikipedia.org/wiki/Declaraci%C3%B3n_de_tipo_de_documento) (`Doctype`) de la plantilla, así como también la codificación, idioma y [dirección de escritura](http://www.w3.org/International/tutorials/bidi-xhtml/Overview.es.php) (de izquierda a derecha o de viceversa). `$this` es una referencia al objeto PHP de Joomla `JDocumentHTML`, el cual posee información necesaria para crear el documento HTML (archivos cargados, información de metatags, idioma, etc).
+El siguiente bloque de código declara el [tipo de documento](http://es.wikipedia.org/wiki/Declaraci%C3%B3n_de_tipo_de_documento) (`Doctype`) de la plantilla, así como también la codificación, idioma y [dirección de escritura](http://www.w3.org/International/tutorials/bidi-xhtml/Overview.es.php) (de izquierda a derecha o de viceversa). `$this` es una referencia al objeto PHP de Joomla `JDocumentHTML`, el cual posee información necesaria para crear el documento HTML (archivos cargados, información de etiquetas meta, idioma, etc).
 
 
 >Puede consultar la información relacionada a `JDocumentHTML` en <http://docs.joomla.org/JDocumentHTML>
@@ -211,10 +213,10 @@ A algunas etiquetas meta, Joomla permite desactivarlas o editarlas, mientras que
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-A continuación se incorporan los archivos pertenecientes al framework CSS *Blueprint*:
+A continuación se incorporan los archivos pertenecientes al framework CSS *[Blueprint](http://www.blueprintcss.org/)*:
 
 
-* **screen.css**: Posee estilos de reseteo, estilos tipográficos, estilos para formularios y para crear maquetaciones a través de grillas. Más adelante se explicará el funcionamiento de las grillas en *Blueprint*;
+* **screen.css**: Posee estilos de reseteo, tipográficos, para formularios y para crear maquetaciones a través de grillas. Más adelante se explicará el funcionamiento de las grillas utilizando *Blueprint*;
 
 * **print.css**: Estilos que mejoran el formateo del sitio al momento de imprimir;
 
@@ -228,7 +230,7 @@ A continuación se incorporan los archivos pertenecientes al framework CSS *Blue
 >Más adelante se explicará la utilización de *BluePrint*
 
 
-En esta parte del código, `$this` se utiliza para completar el valor del atributo href hacia los archivos CSS, primero obteniendo la URL del sitio (`$this->baseurl`) y luego el nombre de la plantilla configurada para utilizar (`$this->template`).
+En esta parte del código, `$this` se utiliza para completar el valor del atributo `href` hacia los archivos CSS: primero obteniendo la URL del sitio (`$this->baseurl`) y luego el nombre de la plantilla configurada para utilizar (`$this->template`).
 
 
 **Sección 7**
@@ -245,7 +247,7 @@ En esta parte del código, `$this` se utiliza para completar el valor del atribu
 El siguiente trozo de código tiene un solo objetivo: Leer la configuración del CMS y determinar la dirección de lectura. En caso que el valor sea `rtl` (de derecha a izquierda  ó *right to left* en inglés) se cargan los estilos apropiados.
 Si el sitio tendrá un sentido de lectura de izquierda a derecha, este trozo de código se puede eliminar.
 
->Podemos observar que el bloque condicional if no tiene la sintaxis clásica que solemos encontrar:
+>Notar que el bloque condicional `if` no tiene la sintaxis clásica que se suele utilizar:
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -257,8 +259,7 @@ if () {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Esto es porque se utiliza una sintaxis alternativa que permite mejorar la lectura del código. 
-El funcionamiento es exactamente el mismo que la forma clásica. 
+Esto es porque se utiliza una sintaxis alternativa que permite mejorar la lectura del código y su funcionamiento es exactamente el mismo que la manera clásica. 
 Más información: <http://www.php.net/manual/es/control-structures.alternative-syntax.php>
 
 
@@ -270,9 +271,9 @@ Más información: <http://www.php.net/manual/es/control-structures.alternative-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-La última línea de código incorporada dentro de la cabecera del sitio es la llamada hacia el archivo `template.js`. Si se lo revisa podremos notar que el mismo está vacio, ya que la idea es que todas las funciones JavaScript que se quieran incorporar dentro de la plantilla sean incorporas en dicho archivo.
+La última línea de código incorporada dentro de la cabecera del sitio es la llamada hacia el archivo `template.js`. Si se revisa al archivo es posible notar que el mismo está vacio. La idea es que todas las funciones JavaScript que se quieran incorporar dentro de la plantilla sean incorporas allí dentro.
 
-Al igual que con las llamadas a los archivos CSS, se utiliza `$this` para completar el atributo `src`, primer obteniendo la URL del sitio y luego el nombre de la plantilla utilizada.
+Al igual que con las llamadas a los archivos CSS, se utiliza `$this` para completar el atributo `src`, primero obteniendo la URL del sitio y luego el nombre de la plantilla utilizada.
 
 
 **Sección 9**
@@ -285,7 +286,7 @@ Al igual que con las llamadas a los archivos CSS, se utiliza `$this` para comple
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Ya dentro del cuerpo del documento, entre etiquetas H1 se utiliza $app para mostrar el nombre del sitio. Dicho nombre es sacado de la configuración del CMS.
+Ya dentro del cuerpo del documento, entre etiquetas H1 se utiliza `$app` para mostrar el nombre del sitio. Dicho nombre es obtenido de la configuración del CMS.
 
 
 **Sección 10**
@@ -303,22 +304,22 @@ Ya dentro del cuerpo del documento, entre etiquetas H1 se utiliza $app para most
 El siguiente trozo de código se repite varias veces en el cuerpo del documento, por lo tanto es importante entender su funcionamiento:
 
 
-* `$this->countModules()`: Esta función lo que hace es contar la cantidad de módulos publicados en una determinada posición de la plantilla. En el ejemplo mostrado, se pregunta cuantos módulos estan publicados en la posición `atomic-search`, en caso de ser igual o mayor a 1, se ejecuta el código siguiente. Esto se suele hacer para que no se muestre código HTML vacio en caso que un módulo no esté publicado (como es el caso de las etiquetas `<div />` en el código mostrado.
+* `$this->countModules()`: Esta función lo que hace es contar la cantidad de módulos publicados en una determinada posición de la plantilla. En el ejemplo mostrado, se pregunta cuantos módulos estan publicados en la posición `atomic-search`, en caso de ser igual o mayor a 1, se ejecuta el código siguiente. Esto se suele hacer para que no se muestre código HTML vacio en caso que un módulo no esté publicado (como es el caso de las etiquetas `<div />` en el código que se muestra.
 
 
 >Más información sobre `countModules()`: <http://docs.joomla.org/JDocumentHTML/countModules>
 
 
-* `<jdoc:include type="modules" name="" style="" />`: Representa una de las partes más importantes de la plantilla. Con esta directiva se indica la carga de un mo´dulo en particular y de una manera especifica. Esto se establecera´ a partir de dos atributos:
+* `<jdoc:include type="modules" name="" style="" />`: Representa una de las partes más importantes de la plantilla. Con esta directiva se indica la carga de un módulo en particular y de una manera especifica. Esto se establecerá a partir de dos atributos:
 
-	* *name*: En este atributo se debe especificar el nombre de una posición determinada de la plantilla. Estas posiciones son especificadas en el archivo `templateDetails.xml` y su nombre debe ser único, sin espacios y lo suficiente descriptivo para entender que tipo de módulo debería ir en esa zona. Por ejemplo, el `atomic-search` indica que esa zona de la plantilla es adecuada para mostrar el buscador del sitio (sin embargo, esto no es obligatorio, nosotros si queremos podemos poner el módulo que queramos en dicha posición).
+	* *name*: En este atributo se debe especificar el nombre de una posición determinada de la plantilla. Estas posiciones son especificadas en el archivo `templateDetails.xml` y su nombre debe ser único, sin espacios y lo suficiente descriptivo para entender que tipo de módulo debería ir en esa zona. Por ejemplo, el `atomic-search` indica que esa zona de la plantilla es adecuada para mostrar el buscador del sitio (sin embargo, esto no es obligatorio, es posible poner el módulo que se desee en dicha posición).
 	
 	* *style*:  En este atributo de especifica el estilo con que se quiere mostrar un módulo determinado. Dicho estilo no se refiere a CSS, sino a que tipos de etiquetas HTML encerrarán al módulo y de que manera. De forma predeterminada, Joomla! cuenta con seis estilos para mostrar un módulo:
 	
-		* xhtml: El módulo estará encerrado por una solo etiqueta `<div />` la cual tendrá como atributo la clase `moduletable+sufijo_del_modulo`.  El sufijo es un parametro que se puede especificar en cada módulo dentro del panel de administración y sirve basicamente para diferenciar en estilos CSS a los diferentes módulos.
+		* xhtml: El módulo estará encerrado por solo una etiqueta `<div />` la cual tendrá como atributo la clase `moduletable+sufijo_del_modulo`.  El sufijo es un parametro que se puede especificar en cada módulo dentro del panel de administración y sirve basicamente para diferenciar en estilos CSS a los diferentes módulos.
 		* rounded: El módulo estará encerrado dentro de 4 etiquetas `<div />`, las cuales permiten (añadiendo luego estilos CSS) un diseño con bordes redondeados al módulo; El primer `<div />` padre tendrá como atributo la clase `module+sufijo_del_modulo`.
 		* table y horz: Utilizando cualquiera de estas dos formas, el módulo estará encerrado dentro de una tabla HTML.
-		* none: El módulo aparecerá "en crudo", es decir, sin ningún tipo de etiquetas encerrandolo, solo el HTML del mismo módulo;
+		* none: El módulo aparecerá "en crudo", es decir, sin ningún tipo de etiquetas encerrandolo, solo el HTML que compone al mismo;
 		* outline: Este estilo se suele utilizar para funciones de depuración. El mismo permite mostrar una linea punteada delimitando el tamaño del módulo para notar su tamaño y espacio ocupado en la plantilla.
 		
 
@@ -333,7 +334,7 @@ A su vez, Joomla! permite incorporar estilos personalizados para mostrar módulo
 
 Los módulos no suelen ocupar posiciones principales de la plantilla, sino más bien son elementos funcionales al sitio: Menús de navegación, cajas de encuestas, formularios de ingreso, etc. La posición principal de la plantilla, por lo general, es ocupada por el contenido de los distintos componentes del CMS (artículos de noticias, seccciones y categorías, etc).
 
-Otros trozos de códigos que incorporan posiciones de módulos en index.php:
+Otros trozos de códigos que incorporan posiciones de módulos en `index.php`:
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -361,7 +362,7 @@ Otros trozos de códigos que incorporan posiciones de módulos en index.php:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
->Notar que varios utilizan estilos personalizados para mostrar los módulos: container, bottommodule y sidebar.
+>Notar que varios trozos de código utilizan estilos personalizados: container, bottommodule y sidebar. Más adelante se explicará la creación de estilos personalizados de módulos.
 
 
 **Sección 11**
@@ -372,7 +373,7 @@ Otros trozos de códigos que incorporan posiciones de módulos en index.php:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Esta directiva debe aparecer sólo una vez en la plantilla. Se utiliza para mostrar diferentes mensajes del CMS. Por ejemplo, cuando un usuario se registra en el sitio, el CMS le informa que el registro fué satisfactorio o erroneo. Dichos mensajes aparecen en la zona en donde especifiquemos la directiva.
+Esta directiva debe aparecer sólo una vez en la plantilla. Se utiliza para mostrar diferentes mensajes del CMS (por ejemplo: cuando un usuario se registra en el sitio, el CMS le informa que el registro fué satisfactorio ó erroneo). Dichos mensajes aparecen en la zona en donde se incorpore la directiva.
 
 
 **Sección 12**
@@ -383,7 +384,7 @@ Esta directiva debe aparecer sólo una vez en la plantilla. Se utiliza para most
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Como se comentó anteriormente, el contenido de los componentes del CMS suelen ocupar la zona principal de la plantilla. Esta línea justamente hace eso, permite mostrar el contenido del componente en que estemos situados. En otras palabras, en esta zona de la plantilla se visualizaran los artículos que componen nuestro sitio, así como también en listado de los mismos dentro de categorías.
+Como se comentó anteriormente, el contenido de los componentes del CMS suelen ocupar la zona principal de la plantilla. Esta línea justamente tiene esa finalidad: permite mostrar el contenido del componente en que se este situado (artículos, categorías, formulario de registro, etc).
 
 **Sección 13**
 
@@ -396,7 +397,7 @@ Como se comentó anteriormente, el contenido de los componentes del CMS suelen o
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Finalmente, casi llegando al final del archivo se incorporan una serie de etiquetas para mostrar el año presente y el nombre del sitio, formando un texto así: **® 2011 Mi Sitio Web**.
+Finalmente, llegando al final del archivo, se incorporan una serie de etiquetas para mostrar el año presente y el nombre del sitio, formando un texto similar a: **® 2011 Mi Sitio Web**.
 
-Ahora vamos a comenzar a modificar a index.php a nuestras necesidades. Como vamos a utilizar `BluePrint` vamos a explicar su funcionamiento mientras creamos la maquetación del diseño.
+Lo siguiente a realizar es la modificación de `index.php` para crear una maquetación en base a las necesidades requeridas. Como se utilizará a `BluePrint` como herramienta, es necesario primero entender su funcionamiento.
 

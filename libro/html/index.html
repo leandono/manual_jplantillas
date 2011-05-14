@@ -1217,7 +1217,7 @@
      ><p
      >Al ser uno de los archivos más importantes, es fundamental entender las etiquetas que conforman a <code
        >index.php</code
-       >. Veamos el archivo completo para luego ir por secciones.</p
+       >. A continuación se mostrará el archivo completo para luego ir en detalle por cada sección que lo conforma.</p
      ><pre class="php numberLines"
      ><code
        >&lt;?php
@@ -1324,12 +1324,12 @@
    </code
        ></pre
      ><p
-     >La línea indicada podrá encontrarla en muchos archivos fuentes de Joomla. Se incorpora por motivos de seguridad, su objetivo es asegurar que el archivo PHP está siendo ejecutado dentro de la sesión y contexto del CMS (de forma que si un usuario que quiere vulnerar el sitio ejecutando un archivo en particular, le sea difícil hacerlo).</p
+     >La línea indicada podrá encontrarla en muchos archivos fuentes de Joomla. Se incorpora por motivos de seguridad, su objetivo es asegurar que el archivo PHP está siendo ejecutado dentro de la sesión y contexto del CMS (de forma tal que si un usuario quiere vulnerar el sitio ejecutando un archivo en particular, le sea difícil realizarlo).</p
      ><blockquote
      ><p
        >Más información sobre <code
          >JEXEC</code
-         > en: <a href="http://docs.joomla.org/JEXEC"
+         >: <a href="http://docs.joomla.org/JEXEC"
          ><code class="url"
    	>http://docs.joomla.org/JEXEC</code
    	></a
@@ -1345,18 +1345,30 @@
    </code
        ></pre
      ><p
-     >Para crear varias funcionalidades JavaScript, Joomla utiliza el framework JavaScript <em
-       >Mootools</em
+     >Para crear varias funcionalidades JavaScript, Joomla utiliza el <em
+       >framework</em
+       > <em
+       ><a href="http://mootools.net/"
+         >Mootools</a
+         ></em
        >. Dicho framework está compuesto por varios archivos <code
        >.js</code
-       > que son cargados de forma predeterminada en la cabecera de la plantilla. Al incorporar la linea mostrada con el argumento <code
+       > que son cargados de forma predeterminada en la cabecera de la plantilla (<code
+       >&lt;head /&gt;</code
+       >). Al incorporar la linea mostrada con el argumento <code
        >true</code
        >, se especifica que también se cargue en la plantilla el archivo <code
        >mootools-more.js</code
-       >, el cual posee diversas funciones que potencian aún más al framework JavaScript. Notemos que si quitamos la línea de código, Mootools seguirá cargandose en la plantilla.</p
+       >, el cual posee diversas funciones que potencian aún más al framework JavaScript.</p
      ><blockquote
      ><p
-       >Más información sobre Mootools y Mootools More en <a href="http://mootools.net/"
+       >Notar que si quita la línea de código en <code
+         >index.php</code
+         >, Mootools seguirá cargandose en la plantilla.</p
+       ></blockquote
+     ><blockquote
+     ><p
+       >Más información sobre Mootools y Mootools More: <a href="http://mootools.net/"
          ><code class="url"
    	>http://mootools.net/</code
    	></a
@@ -1380,10 +1392,16 @@
        >$app</code
        > una referencia al objeto PHP de Joomla <code
        >JApplication</code
-       >. Sin entrar en detalles técnicos, utilizando esta línea podemos obtener luego información del sitio para mostrar dentro de la plantilla (por ejemplo: el nombre del sitio, el título de la página, el nombre del template, etc).</p
+       >. Sin entrar en detalles técnicos, utilizando esta línea es posible obtener información del sitio para mostrar dentro de la plantilla (por ejemplo: nombre del sitio, título de la página, nombre del <em
+       >template</em
+       >, etc).</p
      ><blockquote
      ><p
-       >Puede consultar la información relacionada a JApplication en http://api.joomla.org/Joomla-Framework/Application/JApplication.html</p
+       >Puede consultar la información relacionada a JApplication en <a href="http://api.joomla.org/Joomla-Framework/Application/JApplication.html"
+         ><code class="url"
+   	>http://api.joomla.org/Joomla-Framework/Application/JApplication.html</code
+   	></a
+         ></p
        ></blockquote
      ><p
      ><strong
@@ -1407,7 +1425,7 @@
        >$this</code
        > es una referencia al objeto PHP de Joomla <code
        >JDocumentHTML</code
-       >, el cual posee información necesaria para crear el documento HTML (archivos cargados, información de metatags, idioma, etc).</p
+       >, el cual posee información necesaria para crear el documento HTML (archivos cargados, información de etiquetas meta, idioma, etc).</p
      ><blockquote
      ><p
        >Puede consultar la información relacionada a <code
@@ -1520,14 +1538,16 @@
        ></pre
      ><p
      >A continuación se incorporan los archivos pertenecientes al framework CSS <em
-       >Blueprint</em
+       ><a href="http://www.blueprintcss.org/"
+         >Blueprint</a
+         ></em
        >:</p
      ><ul
      ><li
        ><p
          ><strong
    	>screen.css</strong
-   	>: Posee estilos de reseteo, estilos tipográficos, estilos para formularios y para crear maquetaciones a través de grillas. Más adelante se explicará el funcionamiento de las grillas en <em
+   	>: Posee estilos de reseteo, tipográficos, para formularios y para crear maquetaciones a través de grillas. Más adelante se explicará el funcionamiento de las grillas utilizando <em
    	>Blueprint</em
    	>;</p
          ></li
@@ -1571,7 +1591,9 @@
      ><p
      >En esta parte del código, <code
        >$this</code
-       > se utiliza para completar el valor del atributo href hacia los archivos CSS, primero obteniendo la URL del sitio (<code
+       > se utiliza para completar el valor del atributo <code
+       >href</code
+       > hacia los archivos CSS: primero obteniendo la URL del sitio (<code
        >$this-&gt;baseurl</code
        >) y luego el nombre de la plantilla configurada para utilizar (<code
        >$this-&gt;template</code
@@ -1596,7 +1618,9 @@
        > en inglés) se cargan los estilos apropiados. Si el sitio tendrá un sentido de lectura de izquierda a derecha, este trozo de código se puede eliminar.</p
      ><blockquote
      ><p
-       >Podemos observar que el bloque condicional if no tiene la sintaxis clásica que solemos encontrar:</p
+       >Notar que el bloque condicional <code
+         >if</code
+         > no tiene la sintaxis clásica que se suele utilizar:</p
        ></blockquote
      ><pre class="php numberLines"
      ><code
@@ -1608,7 +1632,7 @@
    </code
        ></pre
      ><p
-     >Esto es porque se utiliza una sintaxis alternativa que permite mejorar la lectura del código. El funcionamiento es exactamente el mismo que la forma clásica. Más información: <a href="http://www.php.net/manual/es/control-structures.alternative-syntax.php"
+     >Esto es porque se utiliza una sintaxis alternativa que permite mejorar la lectura del código y su funcionamiento es exactamente el mismo que la manera clásica. Más información: <a href="http://www.php.net/manual/es/control-structures.alternative-syntax.php"
        ><code class="url"
          >http://www.php.net/manual/es/control-structures.alternative-syntax.php</code
          ></a
@@ -1625,13 +1649,13 @@
      ><p
      >La última línea de código incorporada dentro de la cabecera del sitio es la llamada hacia el archivo <code
        >template.js</code
-       >. Si se lo revisa podremos notar que el mismo está vacio, ya que la idea es que todas las funciones JavaScript que se quieran incorporar dentro de la plantilla sean incorporas en dicho archivo.</p
+       >. Si se revisa al archivo es posible notar que el mismo está vacio. La idea es que todas las funciones JavaScript que se quieran incorporar dentro de la plantilla sean incorporas allí dentro.</p
      ><p
      >Al igual que con las llamadas a los archivos CSS, se utiliza <code
        >$this</code
        > para completar el atributo <code
        >src</code
-       >, primer obteniendo la URL del sitio y luego el nombre de la plantilla utilizada.</p
+       >, primero obteniendo la URL del sitio y luego el nombre de la plantilla utilizada.</p
      ><p
      ><strong
        >Sección 9</strong
@@ -1644,7 +1668,9 @@
    </code
        ></pre
      ><p
-     >Ya dentro del cuerpo del documento, entre etiquetas H1 se utiliza $app para mostrar el nombre del sitio. Dicho nombre es sacado de la configuración del CMS.</p
+     >Ya dentro del cuerpo del documento, entre etiquetas H1 se utiliza <code
+       >$app</code
+       > para mostrar el nombre del sitio. Dicho nombre es obtenido de la configuración del CMS.</p
      ><p
      ><strong
        >Sección 10</strong
@@ -1668,7 +1694,7 @@
          >atomic-search</code
          >, en caso de ser igual o mayor a 1, se ejecuta el código siguiente. Esto se suele hacer para que no se muestre código HTML vacio en caso que un módulo no esté publicado (como es el caso de las etiquetas <code
          >&lt;div /&gt;</code
-         > en el código mostrado.</li
+         > en el código que se muestra.</li
        ></ul
      ><blockquote
      ><p
@@ -1685,7 +1711,7 @@
        ><p
          ><code
    	>&lt;jdoc:include type=&quot;modules&quot; name=&quot;&quot; style=&quot;&quot; /&gt;</code
-   	>: Representa una de las partes más importantes de la plantilla. Con esta directiva se indica la carga de un mo´dulo en particular y de una manera especifica. Esto se establecera´ a partir de dos atributos:</p
+   	>: Representa una de las partes más importantes de la plantilla. Con esta directiva se indica la carga de un módulo en particular y de una manera especifica. Esto se establecerá a partir de dos atributos:</p
          ><ul
          ><li
    	><p
@@ -1695,7 +1721,7 @@
    	    >templateDetails.xml</code
    	    > y su nombre debe ser único, sin espacios y lo suficiente descriptivo para entender que tipo de módulo debería ir en esa zona. Por ejemplo, el <code
    	    >atomic-search</code
-   	    > indica que esa zona de la plantilla es adecuada para mostrar el buscador del sitio (sin embargo, esto no es obligatorio, nosotros si queremos podemos poner el módulo que queramos en dicha posición).</p
+   	    > indica que esa zona de la plantilla es adecuada para mostrar el buscador del sitio (sin embargo, esto no es obligatorio, es posible poner el módulo que se desee en dicha posición).</p
    	  ></li
    	><li
    	><p
@@ -1704,7 +1730,7 @@
    	    >: En este atributo de especifica el estilo con que se quiere mostrar un módulo determinado. Dicho estilo no se refiere a CSS, sino a que tipos de etiquetas HTML encerrarán al módulo y de que manera. De forma predeterminada, Joomla! cuenta con seis estilos para mostrar un módulo:</p
    	  ><ul
    	  ><li
-   	    >xhtml: El módulo estará encerrado por una solo etiqueta <code
+   	    >xhtml: El módulo estará encerrado por solo una etiqueta <code
    	      >&lt;div /&gt;</code
    	      > la cual tendrá como atributo la clase <code
    	      >moduletable+sufijo_del_modulo</code
@@ -1720,7 +1746,7 @@
    	    ><li
    	    >table y horz: Utilizando cualquiera de estas dos formas, el módulo estará encerrado dentro de una tabla HTML.</li
    	    ><li
-   	    >none: El módulo aparecerá “en crudo”, es decir, sin ningún tipo de etiquetas encerrandolo, solo el HTML del mismo módulo;</li
+   	    >none: El módulo aparecerá “en crudo”, es decir, sin ningún tipo de etiquetas encerrandolo, solo el HTML que compone al mismo;</li
    	    ><li
    	    >outline: Este estilo se suele utilizar para funciones de depuración. El mismo permite mostrar una linea punteada delimitando el tamaño del módulo para notar su tamaño y espacio ocupado en la plantilla.</li
    	    ></ul
@@ -1749,7 +1775,9 @@
      ><p
      >Los módulos no suelen ocupar posiciones principales de la plantilla, sino más bien son elementos funcionales al sitio: Menús de navegación, cajas de encuestas, formularios de ingreso, etc. La posición principal de la plantilla, por lo general, es ocupada por el contenido de los distintos componentes del CMS (artículos de noticias, seccciones y categorías, etc).</p
      ><p
-     >Otros trozos de códigos que incorporan posiciones de módulos en index.php:</p
+     >Otros trozos de códigos que incorporan posiciones de módulos en <code
+       >index.php</code
+       >:</p
      ><pre class="php numberLines"
      ><code
        >&lt;?php if($this-&gt;countModules('atomic-topmenu')) : ?&gt;
@@ -1777,7 +1805,7 @@
        ></pre
      ><blockquote
      ><p
-       >Notar que varios utilizan estilos personalizados para mostrar los módulos: container, bottommodule y sidebar.</p
+       >Notar que varios trozos de código utilizan estilos personalizados: container, bottommodule y sidebar. Más adelante se explicará la creación de estilos personalizados de módulos.</p
        ></blockquote
      ><p
      ><strong
@@ -1789,7 +1817,7 @@
    </code
        ></pre
      ><p
-     >Esta directiva debe aparecer sólo una vez en la plantilla. Se utiliza para mostrar diferentes mensajes del CMS. Por ejemplo, cuando un usuario se registra en el sitio, el CMS le informa que el registro fué satisfactorio o erroneo. Dichos mensajes aparecen en la zona en donde especifiquemos la directiva.</p
+     >Esta directiva debe aparecer sólo una vez en la plantilla. Se utiliza para mostrar diferentes mensajes del CMS (por ejemplo: cuando un usuario se registra en el sitio, el CMS le informa que el registro fué satisfactorio ó erroneo). Dichos mensajes aparecen en la zona en donde se incorpore la directiva.</p
      ><p
      ><strong
        >Sección 12</strong
@@ -1800,7 +1828,7 @@
    </code
        ></pre
      ><p
-     >Como se comentó anteriormente, el contenido de los componentes del CMS suelen ocupar la zona principal de la plantilla. Esta línea justamente hace eso, permite mostrar el contenido del componente en que estemos situados. En otras palabras, en esta zona de la plantilla se visualizaran los artículos que componen nuestro sitio, así como también en listado de los mismos dentro de categorías.</p
+     >Como se comentó anteriormente, el contenido de los componentes del CMS suelen ocupar la zona principal de la plantilla. Esta línea justamente tiene esa finalidad: permite mostrar el contenido del componente en que se este situado (artículos, categorías, formulario de registro, etc).</p
      ><p
      ><strong
        >Sección 13</strong
@@ -1814,13 +1842,15 @@
    </code
        ></pre
      ><p
-     >Finalmente, casi llegando al final del archivo se incorporan una serie de etiquetas para mostrar el año presente y el nombre del sitio, formando un texto así: <strong
+     >Finalmente, llegando al final del archivo, se incorporan una serie de etiquetas para mostrar el año presente y el nombre del sitio, formando un texto similar a: <strong
        >® 2011 Mi Sitio Web</strong
        >.</p
      ><p
-     >Ahora vamos a comenzar a modificar a index.php a nuestras necesidades. Como vamos a utilizar <code
+     >Lo siguiente a realizar es la modificación de <code
+       >index.php</code
+       > para crear una maquetación en base a las necesidades requeridas. Como se utilizará a <code
        >BluePrint</code
-       > vamos a explicar su funcionamiento mientras creamos la maquetación del diseño.</p
+       > como herramienta, es necesario primero entender su funcionamiento.</p
      ></div
    ><div id="el-sistema-de-grillas-de-blueprint"
    ><h2
@@ -1828,9 +1858,13 @@
        >El sistema de grillas de BluePrint</a
        ></h2
      ><p
-     ><code
-       >BluePrint</code
-       > es una colección de archivos .css, los cuales poseen variados estilos predefinidos para ahorrar tiempo en diferentes tareas del diseño web: Maquetaciones, reseteo de estilos, diseño de formularios, tipografias, etc. En nuestro caso, utilizaremos su sistema de grillas para realizar la maquetación de la plantilla.</p
+     ><strong
+       ><a href="http://www.blueprintcss.org/"
+         >BluePrint</a
+         ></strong
+       > es una colección de archivos <code
+       >.css</code
+       >, los cuales poseen variados estilos predefinidos para ahorrar tiempo en diferentes tareas del diseño web: Maquetaciones, reseteo de estilos, diseño de formularios, tipografías, etc. Para la creación de la maquetación de la plantilla se utilizará su sistema de grillas.</p
      ><blockquote
      ><p
        >Puede obtener más información sobre BluePrint en su sitio web: <a href="http://www.blueprintcss.org/"
@@ -1842,16 +1876,16 @@
      ><p
      >El sistema de grillas de <code
        >BluePrint</code
-       > es muy fácil de utilizar, permitiendo agilizar de forma severa el proceso de maquetación. Su mecanismo permite crear un máximo de 24 columnas (o grillas) las cuales se pueden combinar a nuestras necesidades:</p
+       > es muy fácil de utilizar, permitiendo agilizar de forma severa el proceso de maquetación. Su mecanismo permite crear un máximo de 24 columnas (o grillas) las cuales se pueden combinar dependiendo de las necesidades:</p
      ><div class="figure"
      ><img src="../incluir/figuras/image02.png"
         /><p class="caption"
        ></p
        ></div
      ><p
-     >La clave de su utilización es añadir una serie de clases predefinidas en los elementos del documento para poder crear las columnas y el ancho que deseamos.</p
+     >La clave de su utilización es añadir una serie de clases predefinidas en los elementos del documento para poder crear las columnas y el ancho necesitado.</p
      ><p
-     >Por ejemplo, si deseamos crear dos columnas y que cada una utilice el espacio de ocho grillas, debemos incorporar en el cuerpo del documento:</p
+     >Por ejemplo, si se desea crear dos columnas y que cada una utilice el espacio de ocho grillas, se deberá incorporar en el cuerpo del documento:</p
      ><pre class="html numberLines"
      ><code
        >&lt;body&gt;
@@ -1872,21 +1906,27 @@
      ><p
      >El <code
        >&lt;div /&gt;</code
-       > con la clase container será el elemento que contendrá todas las columnas de la maquetación. Al agregar dicha clase, hacemos que el documento tenga un ancho de <code
+       > con la clase <code
+       >container</code
+       > será el elemento que contendrá todas las columnas de la maquetación. Al agregar dicha clase, se hará que el documento tenga un ancho de <code
        >950px</code
        > y aparezca centrada horizontalmente. Luego, cada <code
        >&lt;div /&gt;</code
        > con la clase <code
        >span-12</code
-       > especifica que ocupen el espacio de 12 grillas, o sea, la mitad del espacio disponible (recordemos que como máximo disponemos de 24 grillas). De la misma forma, si deseamos que cada columna ocupe un tercio del espacio deberiamos cambiar la clase por <code
+       > especifica que ocupen el espacio de 12 grillas, o sea, la mitad del espacio disponible (recordar que como máximo se dispone de 24 grillas). De la misma forma, si se desea que cada columna ocupe un tercio del espacio, lo único que hay que hacer es cambiar la clase por <code
        >span-8</code
-       >. Finalmente notar que el último elemento (es decir, la última columna) debe tener la clase last, caso contrario la maquetación se visualizará mal.</p
+       >. Finalmente notar que el último elemento (es decir, la última columna) debe tener la clase <code
+       >last</code
+       >, caso contrario la maquetación se visualizará de forma incorrecta.</p
      ><p
      >También existen otras clases que permiten modificar la disposición de las columnas: <code
        >prepend-x</code
        > y <code
        >append-x</code
-       >. La primera permite mover una columna más hacia la derecha, mientras que la otra más hacia la izquierda, todo dependerá del valor que se le asigne a x (por ejemplo: <code
+       >. La primera permite mover una columna más hacia la derecha, mientras que la otra más hacia la izquierda, todo dependerá del valor que se le asigne a <code
+       >x</code
+       > (por ejemplo: <code
        >prepend-4</code
        > / <code
        >append-4</code
