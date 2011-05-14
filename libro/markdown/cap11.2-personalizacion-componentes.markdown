@@ -151,6 +151,7 @@ $doc->addScriptDeclaration ($js);
 >Notar que, para insertar el estilo CSS y la función JavaScript, se utilizó `JFactory::getDocument()`, `addStyleDeclaration()` y `addScriptDeclaration()`. El beneficio de utilizar estas funciones es que Joomla se encarga de insertar todo el código dentro de las etiquetas `<head />` de la plantilla. 
 >
 >Más información sobre:
+>
 >* `JDocument`: <http://docs.joomla.org/JDocument>
 >* `getDocument`: <http://docs.joomla.org/JFactory::getDocument/>
 >* `addScriptDeclaration`: <http://docs.joomla.org/JDocument/addScriptDeclaration>
