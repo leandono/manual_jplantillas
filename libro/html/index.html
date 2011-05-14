@@ -4975,11 +4975,11 @@
        >Incorporación de jQuery</a
        ></h2
      ><p
-     >Anteriormente vimos como podemos aprovechar a <strong
+     >Anteriormente se mostró el aprovechamiento de <strong
        >Mootools</strong
-       > para facilitar el armado de funciones JavaScript. Sin embargo, puede suceder que necesitemos utilizar a <strong
+       > para facilitar el armado de funciones JavaScript. Sin embargo, puede suceder que se necesite utilizar a <strong
        >jQuery</strong
-       >, otra popular biblioteca JavaScript para dotar de funcionalidades a nuestra plantilla.</p
+       >, otra popular biblioteca JavaScript para dotar de funcionalidades a la plantilla.</p
      ><blockquote
      ><p
        >Más información sobre jQuery: <a href="http://jquery.com/"
@@ -4993,7 +4993,7 @@
          ></p
        ></blockquote
      ><p
-     >Los pasos para incorporar jQuery en nuestra plantilla son los siguientes:</p
+     >Los pasos para incorporar jQuery en la plantilla son los siguientes:</p
      ><ul
      ><li
        ><p
@@ -5005,21 +5005,21 @@
          ></li
        ><li
        ><p
-         >Guardamos el archivo <code
+         >Guardar el archivo <code
    	>jquery.min.js</code
-   	> dentro de la capeta <code
+   	> dentro de la carpeta <code
    	>js</code
-   	> de nuestra plantilla;</p
+   	> de la plantilla;</p
          ></li
        ><li
        ><p
-         >Abrimos el archivo <code
+         >Abrir <code
    	>index.php</code
-   	> de la plantilla e insertamos la biblioteca dentro de <code
+   	> de la plantilla e insertar a la biblioteca dentro de <code
    	>&lt;head /&gt;</code
    	>, después de la directiva <code
    	>&lt;jdoc:include type=&quot;head&quot; /&gt;</code
-   	> pero ántes del llamado al archivo <code
+   	> pero antes del llamado al archivo <code
    	>template.js</code
    	>:</p
          ></li
@@ -5039,9 +5039,9 @@
        ></pre
      ><ul
      ><li
-       >Luego, abrimos <code
+       >Abrir <code
          >template.js</code
-         > y escribimos en la primera línea:</li
+         > y escribir en la primera línea:</li
        ></ul
      ><pre class="javascript numberLines"
      ><code
@@ -5050,9 +5050,11 @@
        ></pre
      ><blockquote
      ><p
-       >La línea anterior permite que jQuery funcione sin problemas con otras bibliotecas JavaScript (como es el caso de Mootools). Hay que tener en cuenta que, cuando escribamos funciones jQuery, en lugar de utilizar el símbolo <code
+       >La línea anterior permite que jQuery funcione sin problemas con otras bibliotecas JavaScript (como es el caso de Mootools). Hay que tener en cuenta que, cuando se escriban funciones jQuery, en lugar de utilizar el símbolo <code
          >$</code
-         >, utilizaremos la palabra jQuery. Por ejemplo, la siguiente función:</p
+         >, se deberá utilizar la palabra <code
+         >jQuery</code
+         >. Por ejemplo, la siguiente función:</p
        ><pre
        ><code
          >  $(“#footer”).hide();
@@ -5075,21 +5077,21 @@
          ></p
        ></blockquote
      ><p
-     >Y listo. De esta forma podemos utilizar jQuery sin problemas en nuestra plantilla.</p
+     >Y listo. De esta forma es posible utilizar jQuery sin problemas en la plantilla.</p
      ><div id="creaci&#243;n-de-un-slideshow-con-jquery"
      ><h3
        ><a href="#TOC"
          >Creación de un slideshow con jQuery</a
          ></h3
        ><p
-       >Aprovechando que tenemos a la biblioteca incorporada en nuestra plantilla, vamos a ver como crear un slideshow de imágenes para completar la funcionalidad planeada en la página de inicio de nuestro ejemplo:</p
+       >Aprovechando que se incorporó a jQuery en la plantilla, se mostrará la manera de crear un slideshow de imágenes para completar la funcionalidad planeada en la página de inicio:</p
        ><div class="figure"
        ><img src="../incluir/figuras/image26.png"
           /><p class="caption"
          ></p
          ></div
        ><p
-       >Para esto, utilizaremos la extensión de la biblioteca <strong
+       >Para esto, se utilizará la extensión de la biblioteca <strong
          >jQuery Cycle Plugin</strong
          >: <a href="http://jquery.malsup.com/cycle/"
          ><code class="url"
@@ -5097,7 +5099,7 @@
    	></a
          ></p
        ><p
-       >Recordemos que, la zona que conforma al slideshow en nuestra plantilla esta compuesta por:</p
+       >Recordar que la zona que conforma al slideshow en la plantilla esta compuesta de la siguiente forma:</p
        ><pre class="php numberLines"
        ><code
          >&lt;div id=&quot;slideshow_inferior&quot; class=&quot;span-8 last&quot;&gt;
@@ -5114,7 +5116,7 @@
        ><p
        >La posición <code
          >interpoint-slideshow_inferior</code
-         > mostrará a un módulo del tipo HTML personalizado, en donde incorporaremos varias imágenes para hacer funcionar al slideshow. Al insertar las imagenes, el HTML final quedará así:</p
+         > mostrará a un módulo del tipo HTML personalizado, en donde se incorporaran varias imágenes para hacer funcionar al slideshow. Al insertar las imágenes, el HTML final queda de la siguiente manera:</p
        ><pre class="php numberLines"
        ><code
          >&lt;div id=&quot;slideshow_inferior&quot; class=&quot;span-8 last&quot;&gt;
@@ -5132,21 +5134,21 @@
    </code
          ></pre
        ><p
-       >Es probable que al hacerlo, todo el slideshow se vea mal. Esto por ahora no nos importa, ya que luego, al establecer las funciones relativas al slideshow el problema se habra solucionado.</p
+       >Es probable que al hacerlo, todo el slideshow se vea mal. Esto por ahora no importa, ya que luego, al establecer las funciones relativas al slideshow el problema se habrá solucionado.</p
        ><p
-       >Lo siguiente que haremos será bajar <strong
+       >Lo siguiente a realizar será descargar <strong
          >jQuery Cycle Plugin</strong
          >: <a href="http://jquery.malsup.com/cycle/download.html"
          ><code class="url"
    	>http://jquery.malsup.com/cycle/download.html</code
    	></a
-         >. Descomprimimos el <code
+         >. Descomprimir el archivo <code
          >.zip</code
-         > descargado y copiamos el archivo <code
+         > descargado y copiar el archivo <code
          >jquery.cycle.all.min.js</code
          > en la carpeta <code
          >js</code
-         > de nuestra plantilla, de forma que quede en conjunto con <code
+         > de la plantilla, de forma que quede en conjunto con <code
          >jquery.min.js</code
          > y <code
          >template.js</code
@@ -5157,9 +5159,9 @@
          ></p
          ></div
        ><p
-       >Luego, insertamos a <code
+       >Luego, insertar a <code
          >jquery.cycle.all.min.js</code
-         > en nuestra plantilla. El llamado al archivo debe quedar por debajo de <code
+         > en la plantilla. El llamado al archivo debe quedar por debajo de <code
          >jquery.min.js</code
          > pero antes de <code
          >template.js</code
@@ -5174,7 +5176,7 @@
        ><p
        >Por último, en <code
          >template.js</code
-         > establecemos las funciones para hacer funcionar el slideshow. El archivo quedará de esta forma:</p
+         > se establecen las funciones para hacer funcionar el slideshow. El archivo quedará de la siguiente forma:</p
        ><pre class="javascript numberLines"
        ><code
          >jQuery.noConflict();
@@ -5191,7 +5193,7 @@
    </code
          ></pre
        ><p
-       >Como vemos, es muy fácil la creación del slideshow, tan solo debemos especificar:</p
+       >La creación del slideshow es muy fácil, tan solo se debe especificar:</p
        ><ul
        ><li
          >El ID del <code
@@ -5206,7 +5208,7 @@
          ><li
          >El tiempo de transición entre imagenes: 3000 milisegundos;</li
          ><li
-         >Los IDs de los elementos para pasar al siguiente o anterior slide: <code
+         >Los IDs de los elementos para pasar a la siguiente o anterior imagen: <code
    	>#slideshow_izq</code
    	> y <code
    	>#slideshow_der</code
@@ -5233,9 +5235,9 @@
        >Personalización de las páginas de errores</a
        ></h2
      ><p
-     >Una de los aspectos que menos solemos prestar atención al momento de crear un sitio son las páginas de errores. Estas son muy importantes, ya que, en caso de presentarse un error ante el usuario, debemos incentivarlo a que no abandone nuestra página y continue en ella.</p
+     >Una de los aspectos que menos se suele prestar atención al momento de crear un sitio son las páginas de errores. Éstas son muy importantes, ya que, en caso de presentarse un error ante el usuario, se lo debe incentivar a que no abandone la página y continúe en ella.</p
      ><p
-     >Cada error va acompañado por un código de estado HTTP. Los tipos de errores más comunes son:</p
+     >Cada error siempre va acompañado por un código de estado HTTP. Los tipos de errores más comunes son:</p
      ><ul
      ><li
        ><strong
@@ -5262,11 +5264,11 @@
        ></p
        ></div
      ><p
-     >Como vemos, no posee un aspecto “muy amigable”.</p
+     >Como se puede observar, no posee un aspecto “muy amigable”.</p
      ><p
-     >Lo que haremos es modificarlo para que herede el diseño del sitio. Para esto, debemos modificar el archivo <code
+     >Lo que se hará es modificar la página de errores para que herede el diseño del sitio. Para esto, hacerlo es necesario modificar el archivo <code
        >error.php</code
-       > que se encuentra en la carpeta raiz de nuestra plantilla. Al abrirlo veremos lo siguiente:</p
+       > que se encuentra en la carpeta raíz de la plantilla. Al abrir al archivo se encontrará lo siguiente:</p
      ><pre class="php numberLines"
      ><code
        >&lt;?php
@@ -5325,7 +5327,7 @@
    </code
        ></pre
      ><p
-     >Vamos a borrar el contenido y cambiarlo por una estructura similar a la que tenemos en <code
+     >Lo primero a hacer es borrar el contenido e incorporar por una estructura similar a la creada en <code
        >index.php</code
        >.</p
      ><blockquote
@@ -5334,107 +5336,123 @@
          >error.php</code
          > no funciona de forma exactamente igual a <code
          >index.php</code
-         >. Por ejemplo, los parámetros de la plantilla se acceden de diferente forma, y no es posible insertar módulos y contenidos de la forma anteriormente vista (a través de la directiva <code
+         >. Por ejemplo, los parámetros de la plantilla se acceden de diferente forma y no es posible insertar módulos y contenidos de la manera anteriormente vista (a través de la directiva <code
          >&lt;jdoc:include /&gt;</code
          >).</p
        ></blockquote
      ><pre class="php numberLines"
      ><code
        >&lt;?php
+   
    defined('_JEXEC') or die;
+   
    $app = JFactory::getApplication();
    $params = JFactory::getApplication()-&gt;getTemplate(true)-&gt;params;
+   
    //Parametros de la plantilla
    $imagenLogo = $params-&gt;get('logo');
    $eslogan = $params-&gt;get('eslogan');
+   
    ?&gt;
+   
    &lt;?php echo '&lt;?'; ?&gt;xml version=&quot;1.0&quot; encoding=&quot;&lt;?php echo $this-&gt;_charset ?&gt;&quot;?&gt;
    &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
    &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;&lt;?php echo $this-&gt;language; ?&gt;&quot; lang=&quot;&lt;?php echo $this-&gt;language; ?&gt;&quot; dir=&quot;&lt;?php echo $this-&gt;direction; ?&gt;&quot; &gt;
+   
    &lt;head&gt;
-            &lt;title&gt;&lt;?php echo $this-&gt;error-&gt;getCode(); ?&gt; - &lt;?php echo $this-&gt;title; ?&gt;&lt;/title&gt;
+        &lt;title&gt;&lt;?php echo $this-&gt;error-&gt;getCode(); ?&gt; - &lt;?php echo $this-&gt;title; ?&gt;&lt;/title&gt;
    
-       &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot; /&gt;
-       &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
-       &lt;!--[if lt IE 8]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot; /&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+        &lt;!--[if lt IE 8]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
    
-       &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/template.css&quot; type=&quot;text/css&quot; /&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/template.css&quot; type=&quot;text/css&quot; /&gt;
    
-       &lt;?php if($imagenLogo) : ?&gt;
+        &lt;?php if($imagenLogo) : ?&gt;
    
-                &lt;style type=&quot;text/css&quot;&gt;
+            &lt;style type=&quot;text/css&quot;&gt;
    
-                        #logo h1{
-                                background: transparent url(&lt;?php echo $this-&gt;baseurl.&quot;/&quot;.$imagenLogo; ?&gt;) no-repeat left top;
-                        }
+               #logo h1{
+                   background: transparent url(&lt;?php echo $this-&gt;baseurl.&quot;/&quot;.$imagenLogo; ?&gt;) no-repeat left top;
+               }
    
-                &lt;/style&gt;
+            &lt;/style&gt;
    
-            &lt;?php endif; ?&gt;
+        &lt;?php endif; ?&gt;
    
    &lt;/head&gt;
+   
    &lt;body&gt;
-    &lt;div class=&quot;container&quot;&gt;
+     &lt;div class=&quot;container&quot;&gt;
    
-           &lt;div id=&quot;header&quot; class=&quot;span-24&quot;&gt;
+       &lt;!-- Comienzo Header --&gt;
+       &lt;div id=&quot;header&quot; class=&quot;span-24&quot;&gt;
    
-                   &lt;div id=&quot;logo&quot; class=&quot;span-9 prepend-8&quot;&gt;
-                           &lt;a href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;&quot; title=&quot;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&quot;&gt;
-                                   &lt;h1&gt;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&lt;/h1&gt;
-                           &lt;/a&gt;
-                           &lt;h2 id=&quot;eslogan&quot;&gt;
-                                   &lt;?php if($eslogan) : ?&gt;
-                                           &lt;?php echo $eslogan; ?&gt;
-                                   &lt;?php else : ?&gt;
-                                           Lorem ipsum dolor sit amet
-                                   &lt;?php endif; ?&gt;
-                           &lt;/h2&gt;
-                   &lt;/div&gt;
-   
-           &lt;/div&gt;
-   
-           &lt;div id=&quot;error&quot; class=&quot;span-18 push-3&quot;&gt;
-   
-                   &lt;?php if ($this-&gt;error-&gt;getCode() ==404) :         ?&gt;
-   
-                           &lt;p&gt;La página que esta buscando ya no se encuentra disponible.&lt;/p&gt;
-                           &lt;p&gt;Lo invitamos a realizar un busqueda...&lt;/p&gt;
-   
-                                   &lt;?php 
-                                           $buscador = JModuleHelper::getModule( 'search' );
-                                           echo JModuleHelper::renderModule( $buscador);        
-                                   ?&gt;
-   
-                           &lt;p&gt;ó ir a la &lt;a href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;&quot; title=&quot;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&quot;&gt;página principal del sitio&lt;/a&gt;.&lt;/p&gt;
-   
-                   &lt;?php elseif ($this-&gt;error-&gt;getCode() ==500) :         ?&gt;
-   
-                           &lt;p&gt;Un error desconocido ha ocurrido.&lt;/p&gt;
-                           &lt;p&gt;Mientras solucionamos el asunto, lo invitamos a continuar por la &lt;a href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;&quot; title=&quot;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&quot;&gt;página principal del sitio&lt;/a&gt;.&lt;/p&gt;
-   
-                           &lt;div id=&quot;error_descripcion&quot;&gt;
-                                   &lt;p&gt;Descripción del error:&lt;/p&gt;
-                                   &lt;p&gt;&lt;?php echo $this-&gt;error-&gt;getMessage(); ?&gt;&lt;/p&gt;
-                           &lt;/div&gt;
-   
+           &lt;!-- Comienzo Logo --&gt;
+           &lt;div id=&quot;logo&quot; class=&quot;span-9 prepend-8&quot;&gt;
+               &lt;a href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;&quot; title=&quot;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&quot;&gt;
+                   &lt;h1&gt;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&lt;/h1&gt;
+               &lt;/a&gt;
+               &lt;h2 id=&quot;eslogan&quot;&gt;
+                   &lt;?php if($eslogan) : ?&gt;
+                       &lt;?php echo $eslogan; ?&gt;
+                   &lt;?php else : ?&gt;
+                       Lorem ipsum dolor sit amet
                    &lt;?php endif; ?&gt;
-   
-   
+               &lt;/h2&gt;
            &lt;/div&gt;
    
-            &lt;div id=&quot;footer&quot; class=&quot;span-24&quot;&gt;
-                    &lt;div id=&quot;legal&quot; class=&quot;prepend-3 span-9&quot;&gt;
-                            &amp;copy;&lt;?php echo date('Y'); ?&gt; &lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;
-                    &lt;/div&gt;
-            &lt;/div&gt;
+       &lt;/div&gt;
+       &lt;!-- Fin Header --&gt;
    
-    &lt;/div&gt;
+       &lt;!-- Comienzo Error --&gt;
+       &lt;div id=&quot;error&quot; class=&quot;span-18 push-3&quot;&gt;
+   
+           &lt;!-- Error 404 --&gt;
+           &lt;?php if ($this-&gt;error-&gt;getCode() == 404) :     ?&gt;
+   
+               &lt;p&gt;La página que esta buscando ya no se encuentra disponible.&lt;/p&gt;
+               &lt;p&gt;Lo invitamos a realizar un busqueda...&lt;/p&gt;
+   
+                   &lt;?php 
+                       $module = JModuleHelper::getModule( 'search' );
+                       echo JModuleHelper::renderModule( $module); 
+                   ?&gt;
+   
+               &lt;p&gt;ó ir a la &lt;a href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;&quot; title=&quot;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&quot;&gt;página principal del sitio&lt;/a&gt;.&lt;/p&gt;
+   
+           &lt;!-- Error 500 --&gt;
+           &lt;?php elseif ($this-&gt;error-&gt;getCode() == 500) :     ?&gt;
+   
+               &lt;p&gt;Un error desconocido ha ocurrido.&lt;/p&gt;
+               &lt;p&gt;Mientras solucionamos el asunto, lo invitamos a continuar por la &lt;a href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;&quot; title=&quot;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&quot;&gt;página principal del sitio&lt;/a&gt;.&lt;/p&gt;
+   
+               &lt;div id=&quot;error_descripcion&quot;&gt;
+                   &lt;p&gt;Descripción del error:&lt;/p&gt;
+                   &lt;p&gt;&lt;?php echo $this-&gt;error-&gt;getMessage(); ?&gt;&lt;/p&gt;
+               &lt;/div&gt;
+   
+           &lt;?php endif; ?&gt;
+   
+       &lt;/div&gt;
+       &lt;!-- Fin Error --&gt;
+   
+       &lt;!-- Comienzo Footer --&gt;
+       &lt;div id=&quot;footer&quot; class=&quot;span-24&quot;&gt;
+           &lt;div id=&quot;legal&quot; class=&quot;prepend-3 span-9&quot;&gt;
+               &amp;copy;&lt;?php echo date('Y'); ?&gt; &lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;
+           &lt;/div&gt;
+       &lt;/div&gt;
+       &lt;!-- Fin Footer --&gt;
+   
+     &lt;/div&gt;
    &lt;/body&gt;
+   
    &lt;/html&gt;
    </code
        ></pre
      ><p
-     >Vamos a describir cada sección para entender lo que insertamos.</p
+     >Para entender de mejor manera lo incorporado se detallará cada sección:</p
      ><p
      ><strong
        >Sección 1</strong
@@ -5442,19 +5460,23 @@
      ><pre class="php numberLines"
      ><code
        >&lt;?php
+   
    defined('_JEXEC') or die;
+   
    $app = JFactory::getApplication();
    $params = JFactory::getApplication()-&gt;getTemplate(true)-&gt;params;
+   
    //Parametros de la plantilla
    $imagenLogo = $params-&gt;get('logo');
    $eslogan = $params-&gt;get('eslogan');
+   
    ?&gt;
    </code
        ></pre
      ><p
      >A igual que en <code
        >index.php</code
-       >, vamos a necesitar acceder a las valores de los parámetros de la plantilla. Sin embargo, aquí lo hacemos de forma diferente, utilizando <code
+       >, se necesita acceder a las valores de los parámetros de la plantilla. Sin embargo, aquí se realiza diferente forma, utilizando <code
        >getApplication()</code
        >, el cual posee el objeto PHP global de la aplicación.</p
      ><blockquote
@@ -5476,37 +5498,38 @@
        >&lt;?php echo '&lt;?'; ?&gt;xml version=&quot;1.0&quot; encoding=&quot;&lt;?php echo $this-&gt;_charset ?&gt;&quot;?&gt;
    &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
    &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;&lt;?php echo $this-&gt;language; ?&gt;&quot; lang=&quot;&lt;?php echo $this-&gt;language; ?&gt;&quot; dir=&quot;&lt;?php echo $this-&gt;direction; ?&gt;&quot; &gt;
+   
    &lt;head&gt;
-            &lt;title&gt;&lt;?php echo $this-&gt;error-&gt;getCode(); ?&gt; - &lt;?php echo $this-&gt;title; ?&gt;&lt;/title&gt;
+        &lt;title&gt;&lt;?php echo $this-&gt;error-&gt;getCode(); ?&gt; - &lt;?php echo $this-&gt;title; ?&gt;&lt;/title&gt;
    
-       &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot; /&gt;
-       &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
-       &lt;!--[if lt IE 8]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot; /&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+        &lt;!--[if lt IE 8]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
    
-       &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/template.css&quot; type=&quot;text/css&quot; /&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/template.css&quot; type=&quot;text/css&quot; /&gt;
    
-       &lt;?php if($imagenLogo) : ?&gt;
+        &lt;?php if($imagenLogo) : ?&gt;
    
-                &lt;style type=&quot;text/css&quot;&gt;
+            &lt;style type=&quot;text/css&quot;&gt;
    
-                        #logo h1{
-                                background: transparent url(&lt;?php echo $this-&gt;baseurl.&quot;/&quot;.$imagenLogo; ?&gt;) no-repeat left top;
-                        }
+               #logo h1{
+                   background: transparent url(&lt;?php echo $this-&gt;baseurl.&quot;/&quot;.$imagenLogo; ?&gt;) no-repeat left top;
+               }
    
-                &lt;/style&gt;
+            &lt;/style&gt;
    
-            &lt;?php endif; ?&gt;
+        &lt;?php endif; ?&gt;
    
    &lt;/head&gt;
    </code
        ></pre
      ><p
-     >Luego, creamos el <code
+     >Luego, se crea el <code
        >Doctype</code
-       > del documento, insertamos el título y los archivos CSS de nuestra plantilla. Los archivos JavaScript no son necesarios, por lo tanto no los incorporamos.</p
+       > del documento, se inserta el título y los archivos CSS de la plantilla. Los archivos JavaScript no son necesarios, por lo tanto no se incorporan.</p
      ><blockquote
      ><p
-       >Notemos que utilizamos <code
+       >Notar que se utiliza <code
          >$this-&gt;error-&gt;getCode()</code
          > para obtener el código del error actual de la página y así mostrarlo en el título de la página.</p
        ></blockquote
@@ -5517,69 +5540,77 @@
      ><pre class="php numberLines"
      ><code
        >&lt;body&gt;
-   &lt;div class=&quot;container&quot;&gt;
+     &lt;div class=&quot;container&quot;&gt;
    
-           &lt;div id=&quot;header&quot; class=&quot;span-24&quot;&gt;
+       &lt;!-- Comienzo Header --&gt;
+       &lt;div id=&quot;header&quot; class=&quot;span-24&quot;&gt;
    
-                   &lt;div id=&quot;logo&quot; class=&quot;span-9 prepend-8&quot;&gt;
-                           &lt;a href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;&quot; title=&quot;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&quot;&gt;
-                                   &lt;h1&gt;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&lt;/h1&gt;
-                           &lt;/a&gt;
-                           &lt;h2 id=&quot;eslogan&quot;&gt;
-                                   &lt;?php if($eslogan) : ?&gt;
-                                           &lt;?php echo $eslogan; ?&gt;
-                                   &lt;?php else : ?&gt;
-                                           Lorem ipsum dolor sit amet
-                                   &lt;?php endif; ?&gt;
-                           &lt;/h2&gt;
-                   &lt;/div&gt;
-   
+           &lt;!-- Comienzo Logo --&gt;
+           &lt;div id=&quot;logo&quot; class=&quot;span-9 prepend-8&quot;&gt;
+               &lt;a href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;&quot; title=&quot;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&quot;&gt;
+                   &lt;h1&gt;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&lt;/h1&gt;
+               &lt;/a&gt;
+               &lt;h2 id=&quot;eslogan&quot;&gt;
+                   &lt;?php if($eslogan) : ?&gt;
+                       &lt;?php echo $eslogan; ?&gt;
+                   &lt;?php else : ?&gt;
+                       Lorem ipsum dolor sit amet
+                   &lt;?php endif; ?&gt;
+               &lt;/h2&gt;
            &lt;/div&gt;
+   
+       &lt;/div&gt;
+       &lt;!-- Fin Header --&gt;
    </code
        ></pre
      ><p
-     >Para la cabecera, solo mostraremos el logo de nuestro sitio y lo alinearemos en el centro.</p
+     >Para la cabecera, se mostrará el logotipo del sitio y se lo alineará en el centro.</p
      ><p
      ><strong
        >Sección 4</strong
        ></p
      ><pre class="php numberLines"
      ><code
-       >&lt;div id=&quot;error&quot; class=&quot;span-18 push-3&quot;&gt;
+       >&lt;!-- Comienzo Error --&gt;
+   &lt;div id=&quot;error&quot; class=&quot;span-18 push-3&quot;&gt;
    
-           &lt;?php if ($this-&gt;error-&gt;getCode() == 404) :         ?&gt;
+       &lt;!-- Error 404 --&gt;
+       &lt;?php if ($this-&gt;error-&gt;getCode() == 404) :     ?&gt;
    
-                   &lt;p&gt;La página que esta buscando ya no se encuentra disponible.&lt;/p&gt;
-                   &lt;p&gt;Lo invitamos a realizar una búsqueda...&lt;/p&gt;
+           &lt;p&gt;La página que esta buscando ya no se encuentra disponible.&lt;/p&gt;
+           &lt;p&gt;Lo invitamos a realizar un busqueda...&lt;/p&gt;
    
-                           &lt;?php 
-                                   $module = JModuleHelper::getModule( 'search' );
-                                   echo JModuleHelper::renderModule( $module);        
-                           ?&gt;
+               &lt;?php 
+                   $module = JModuleHelper::getModule( 'search' );
+                   echo JModuleHelper::renderModule( $module); 
+               ?&gt;
    
-                   &lt;p&gt;ó ir a la &lt;a href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;&quot; title=&quot;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&quot;&gt;página principal del sitio&lt;/a&gt;.&lt;/p&gt;
+           &lt;p&gt;ó ir a la &lt;a href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;&quot; title=&quot;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&quot;&gt;página principal del sitio&lt;/a&gt;.&lt;/p&gt;
    
-           &lt;?php elseif ($this-&gt;error-&gt;getCode() == 500) :         ?&gt;
+       &lt;!-- Error 500 --&gt;
+       &lt;?php elseif ($this-&gt;error-&gt;getCode() == 500) :     ?&gt;
    
-                   &lt;p&gt;Un error desconocido ha ocurrido.&lt;/p&gt;
-                   &lt;p&gt;Mientras solucionamos el asunto, lo invitamos a continuar por la &lt;a href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;&quot; title=&quot;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&quot;&gt;página principal del sitio&lt;/a&gt;.&lt;/p&gt;
+           &lt;p&gt;Un error desconocido ha ocurrido.&lt;/p&gt;
+           &lt;p&gt;Mientras solucionamos el asunto, lo invitamos a continuar por la &lt;a href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;&quot; title=&quot;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&quot;&gt;página principal del sitio&lt;/a&gt;.&lt;/p&gt;
    
-                   &lt;div id=&quot;error_descripcion&quot;&gt;
-                           &lt;p&gt;Descripción del error:&lt;/p&gt;
-                           &lt;p&gt;&lt;?php echo $this-&gt;error-&gt;getMessage(); ?&gt;&lt;/p&gt;
-                   &lt;/div&gt;
+           &lt;div id=&quot;error_descripcion&quot;&gt;
+               &lt;p&gt;Descripción del error:&lt;/p&gt;
+               &lt;p&gt;&lt;?php echo $this-&gt;error-&gt;getMessage(); ?&gt;&lt;/p&gt;
+           &lt;/div&gt;
    
-           &lt;?php endif; ?&gt;
+       &lt;?php endif; ?&gt;
+   
    &lt;/div&gt;
+   &lt;!-- Fin Error --&gt;
    </code
        ></pre
      ><p
-     >Esta es la parte más importante. Tenemos dos bloques condicionales:</p
+     >Esta sección es la más importante. En ella existen dos bloques condicionales:</p
      ><ul
      ><li
-       >En caso que la página sea no encontrada (404), mostramos un mensaje conveniente e invitamos al usuario a realizar una búsqueda o continuar por la página principal del sitio. Algo importante es que la caja de búsqueda la insertamos a través de la directiva <code
+       >En caso que la página sea no encontrada (404), se mostrará un mensaje conveniente e se invitará al usuario a realizar una búsqueda o continuar por la página principal del sitio. Algo importante es que la caja de búsqueda se incorpora a través de la directiva <code
          >JModuleHelper::getModule()</code
-         > la cual entre parentesis se le indica el tipo de módulo a mostrar (en este caso <code
+         > en la cual entre parentesis se le indica el tipo de módulo a mostrar (en este caso <code
          >search</code
          >).</li
        ></ul
@@ -5593,35 +5624,40 @@
        ></blockquote
      ><ul
      ><li
-       >En caso que la página posea un error interno (500), también mostramos un mensaje conveniente invitando al usuario a continuar por la página principal. Por otro lado, para tener de referencia, mostramos el tipo de error que se produjo a través de la directiva <code
+       >En caso que la página posea un error interno (500), también se mostrará un mensaje conveniente invitando al usuario a continuar por la página principal. Por otro lado, para tener de referencia, se mostrará el tipo de error que se produjo a través de la directiva <code
          >$this-&gt;error-&gt;getMessage()</code
          >.</li
        ></ul
+     ><blockquote
+     ><p
+       >Una buena práctica es no incorporar los textos en nuestro idioma dentro del archivo, sino utilizar los archivos de lenguajes de la plantilla. Esto se puede realizar una vez comprobado que los textos a mostrar son los correctos.</p
+       ></blockquote
      ><p
      ><strong
        >Sección 5</strong
        ></p
      ><pre class="php numberLines"
      ><code
-       >    &lt;div id=&quot;footer&quot; class=&quot;span-24&quot;&gt;
-            &lt;div id=&quot;legal&quot; class=&quot;prepend-3 span-9&quot;&gt;
-                    &amp;copy;&lt;?php echo date('Y'); ?&gt; &lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;
-            &lt;/div&gt;
+       >    &lt;!-- Comienzo Footer --&gt;
+       &lt;div id=&quot;footer&quot; class=&quot;span-24&quot;&gt;
+           &lt;div id=&quot;legal&quot; class=&quot;prepend-3 span-9&quot;&gt;
+               &amp;copy;&lt;?php echo date('Y'); ?&gt; &lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;
+           &lt;/div&gt;
        &lt;/div&gt;
+       &lt;!-- Fin Footer --&gt;
    
-   &lt;/div&gt;
+     &lt;/div&gt;
    &lt;/body&gt;
-   &lt;/html&gt; 
+   
+   &lt;/html&gt;
    </code
        ></pre
-     ><blockquote
      ><p
-       >Una buena práctica sería no incorporar los textos en nuestro idioma dentro del archivo, sino utilizar los archivos de lenguajes de la plantilla. Esto lo podemos realizar una vez que hemos comprobado que los textos son los correctos.</p
-       ></blockquote
+     >El documento se termina mostrando, en el pie, el nombre del sitio y el año corriente.</p
      ><p
-     >El documento lo terminamos mostrando, en el pie, el nombre del sitio y el año corriente.</p
-     ><p
-     >Por otro lado, debemos escribir algunos estilos CSS para los elementos de la página de error. En template.css incorporamos:</p
+     >Por otro lado, es necesario escribir algunos estilos CSS para los elementos de la página de error. En <code
+       >template.css</code
+       > se incorpora:</p
      ><pre class="css numberLines"
      ><code
        >/* Páginas de error
@@ -5652,21 +5688,21 @@
    </code
        ></pre
      ><p
-     >Nuestra página de error 404 personalizada quedará con el siguiente diseño:</p
+     >La página de error 404 personalizada quedará con el siguiente diseño:</p
      ><div class="figure"
      ><img src="../incluir/figuras/image47.png"
         /><p class="caption"
        ></p
        ></div
      ><p
-     >Mientras que la página de error 500 quedará así:</p
+     >Mientras que la página de error 500 quedará de la siguiente manera:</p
      ><div class="figure"
      ><img src="../incluir/figuras/image31.png"
         /><p class="caption"
        ></p
        ></div
      ><p
-     >Como podemos ver, dentro de un recuadro queda el error de la página para tener luego de referencia.</p
+     >Como se puede ver, dentro de un recuadro queda el error de la página para tener luego de referencia.</p
      ></div
    ><div id="ap&#233;ndice"
    ><h2

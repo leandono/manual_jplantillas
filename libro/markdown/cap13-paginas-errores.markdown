@@ -3,9 +3,9 @@
 Personalización de las páginas de errores
 -----------------------------------------
 
-Una de los aspectos que menos solemos prestar atención al momento de crear un sitio son las páginas de errores. Estas son muy importantes, ya que, en caso de presentarse un error ante el usuario, debemos incentivarlo a que no abandone nuestra página y continue en ella.
+Una de los aspectos que menos se suele prestar atención al momento de crear un sitio son las páginas de errores. Éstas son muy importantes, ya que, en caso de presentarse un error ante el usuario, se lo debe incentivar a que no abandone la página y continúe en ella.
 
-Cada error va acompañado por un código de estado HTTP. Los tipos de errores más comunes son:
+Cada error siempre va acompañado por un código de estado HTTP. Los tipos de errores más comunes son:
 
 
 * **404 - Página no encontrada**: Sucede cuando el usuario quiere acceder a una página que no existe más;
@@ -19,9 +19,9 @@ De forma predeterminada, la página de error 404 en Joomla posee el siguiente di
 
 ![](../incluir/figuras/image36.png)
 
-Como vemos, no posee un aspecto "muy amigable".
+Como se puede observar, no posee un aspecto "muy amigable".
 
-Lo que haremos es modificarlo para que herede el diseño del sitio. Para esto, debemos modificar el archivo `error.php` que se encuentra en la carpeta raiz de nuestra plantilla. Al abrirlo veremos lo siguiente:
+Lo que se hará es modificar la página de errores para que herede el diseño del sitio. Para esto, hacerlo es necesario modificar el archivo `error.php` que se encuentra en la carpeta raíz de la plantilla. Al abrir al archivo se encontrará lo siguiente:
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -80,126 +80,145 @@ if (!isset($this->error)) {
 </html>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Lo primero a hacer es borrar el contenido e incorporar por una estructura similar a la creada en `index.php`.
 
-Vamos a borrar el contenido y cambiarlo por una estructura similar a la que tenemos en `index.php`.
 
-
->Es importante entender que `error.php` no funciona de forma exactamente igual a `index.php`. Por ejemplo, los parámetros de la plantilla se acceden de diferente forma, y no es posible insertar módulos y contenidos de la forma anteriormente vista (a través de la directiva `<jdoc:include />`).
+>Es importante entender que `error.php` no funciona de forma exactamente igual a `index.php`. Por ejemplo, los parámetros de la plantilla se acceden de diferente forma y no es posible insertar módulos y contenidos de la manera anteriormente vista (a través de la directiva `<jdoc:include />`).
 
 
 ~~~~~~~~~{.php .numberLines}
 <?php
+
 defined('_JEXEC') or die;
+
 $app = JFactory::getApplication();
 $params = JFactory::getApplication()->getTemplate(true)->params;
+
 //Parametros de la plantilla
 $imagenLogo = $params->get('logo');
 $eslogan = $params->get('eslogan');
+
 ?>
+
 <?php echo '<?'; ?>xml version="1.0" encoding="<?php echo $this->_charset ?>"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" >
+
 <head>
-         <title><?php echo $this->error->getCode(); ?> - <?php echo $this->title; ?></title>
-         
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/blueprint/screen.css" type="text/css" media="screen, projection" />
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/blueprint/print.css" type="text/css" media="print" />
-    <!--[if lt IE 8]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-  
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/template.css" type="text/css" />
-    
-    <?php if($imagenLogo) : ?>
-    
-             <style type="text/css">
-             
-                     #logo h1{
-                             background: transparent url(<?php echo $this->baseurl."/".$imagenLogo; ?>) no-repeat left top;
-                     }
-             
-             </style>
-             
-         <?php endif; ?>
-    
+	 <title><?php echo $this->error->getCode(); ?> - <?php echo $this->title; ?></title>
+	 
+     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/blueprint/screen.css" type="text/css" media="screen, projection" />
+     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/blueprint/print.css" type="text/css" media="print" />
+     <!--[if lt IE 8]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+   
+     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/template.css" type="text/css" />
+     
+     <?php if($imagenLogo) : ?>
+     
+	     <style type="text/css">
+	     
+	     	#logo h1{
+	     		background: transparent url(<?php echo $this->baseurl."/".$imagenLogo; ?>) no-repeat left top;
+	     	}
+	     
+	     </style>
+	     
+	 <?php endif; ?>
+     
 </head>
+
 <body>
- <div class="container">
- 
-        <div id="header" class="span-24">
-        
-                <div id="logo" class="span-9 prepend-8">
-                        <a href="<?php echo $this->baseurl ?>" title="<?php echo $app->getCfg('sitename'); ?>">
-                                <h1><?php echo $app->getCfg('sitename'); ?></h1>
-                        </a>
-                        <h2 id="eslogan">
-                                <?php if($eslogan) : ?>
-                                        <?php echo $eslogan; ?>
-                                <?php else : ?>
-                                        Lorem ipsum dolor sit amet
-                                <?php endif; ?>
-                        </h2>
-                </div>
-                
-        </div>
-        
-        <div id="error" class="span-18 push-3">
-        
-                <?php if ($this->error->getCode() ==404) :         ?>
-                
-                        <p>La página que esta buscando ya no se encuentra disponible.</p>
-                        <p>Lo invitamos a realizar un busqueda...</p>
-                        
-                                <?php 
-                                        $buscador = JModuleHelper::getModule( 'search' );
-                                        echo JModuleHelper::renderModule( $buscador);        
-                                ?>
-                        
-                        <p>ó ir a la <a href="<?php echo $this->baseurl ?>" title="<?php echo $app->getCfg('sitename'); ?>">página principal del sitio</a>.</p>
-                
-                <?php elseif ($this->error->getCode() ==500) :         ?>
-                
-                        <p>Un error desconocido ha ocurrido.</p>
-                        <p>Mientras solucionamos el asunto, lo invitamos a continuar por la <a href="<?php echo $this->baseurl ?>" title="<?php echo $app->getCfg('sitename'); ?>">página principal del sitio</a>.</p>
-                        
-                        <div id="error_descripcion">
-                                <p>Descripción del error:</p>
-                                <p><?php echo $this->error->getMessage(); ?></p>
-                        </div>
-                
-                <?php endif; ?>
-                
-        
-        </div>
-         
-         <div id="footer" class="span-24">
-                 <div id="legal" class="prepend-3 span-9">
-                         &copy;<?php echo date('Y'); ?> <?php echo $app->getCfg('sitename'); ?>
-                 </div>
-         </div>
- 
- </div>
+  <div class="container">
+  
+  	<!-- Comienzo Header -->
+	<div id="header" class="span-24">
+	
+		<!-- Comienzo Logo -->
+		<div id="logo" class="span-9 prepend-8">
+			<a href="<?php echo $this->baseurl ?>" title="<?php echo $app->getCfg('sitename'); ?>">
+				<h1><?php echo $app->getCfg('sitename'); ?></h1>
+			</a>
+			<h2 id="eslogan">
+				<?php if($eslogan) : ?>
+					<?php echo $eslogan; ?>
+				<?php else : ?>
+					Lorem ipsum dolor sit amet
+				<?php endif; ?>
+			</h2>
+		</div>
+		
+	</div>
+	<!-- Fin Header -->
+	
+	<!-- Comienzo Error -->
+	<div id="error" class="span-18 push-3">
+	
+		<!-- Error 404 -->
+		<?php if ($this->error->getCode() == 404) : 	?>
+		
+			<p>La página que esta buscando ya no se encuentra disponible.</p>
+			<p>Lo invitamos a realizar un busqueda...</p>
+			
+				<?php 
+					$module = JModuleHelper::getModule( 'search' );
+					echo JModuleHelper::renderModule( $module);	
+				?>
+			
+			<p>ó ir a la <a href="<?php echo $this->baseurl ?>" title="<?php echo $app->getCfg('sitename'); ?>">página principal del sitio</a>.</p>
+		
+		<!-- Error 500 -->
+		<?php elseif ($this->error->getCode() == 500) : 	?>
+		
+			<p>Un error desconocido ha ocurrido.</p>
+			<p>Mientras solucionamos el asunto, lo invitamos a continuar por la <a href="<?php echo $this->baseurl ?>" title="<?php echo $app->getCfg('sitename'); ?>">página principal del sitio</a>.</p>
+			
+			<div id="error_descripcion">
+				<p>Descripción del error:</p>
+				<p><?php echo $this->error->getMessage(); ?></p>
+			</div>
+		
+		<?php endif; ?>
+		
+	</div>
+  	<!-- Fin Error -->
+  	
+  	<!-- Comienzo Footer -->
+  	<div id="footer" class="span-24">
+  		<div id="legal" class="prepend-3 span-9">
+  			&copy;<?php echo date('Y'); ?> <?php echo $app->getCfg('sitename'); ?>
+  		</div>
+  	</div>
+  	<!-- Fin Footer -->
+  	
+  </div>
 </body>
+
 </html>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Vamos a describir cada sección para entender lo que insertamos.
+Para entender de mejor manera lo incorporado se detallará cada sección:
 
 **Sección 1**
 
 
 ~~~~~~~~~{.php .numberLines}
 <?php
+
 defined('_JEXEC') or die;
+
 $app = JFactory::getApplication();
 $params = JFactory::getApplication()->getTemplate(true)->params;
+
 //Parametros de la plantilla
 $imagenLogo = $params->get('logo');
 $eslogan = $params->get('eslogan');
+
 ?>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	
 
-A igual que en `index.php`, vamos a necesitar acceder a las valores de los parámetros de la plantilla. Sin embargo, aquí lo hacemos de forma diferente, utilizando `getApplication()`, el cual posee el objeto PHP global de la aplicación.
+A igual que en `index.php`, se necesita acceder a las valores de los parámetros de la plantilla. Sin embargo, aquí se realiza diferente forma, utilizando `getApplication()`, el cual posee el objeto PHP global de la aplicación.
 
 
 >Más información sobre `getApplication`: <http://docs.joomla.org/JFactory::getApplication>
@@ -212,35 +231,36 @@ A igual que en `index.php`, vamos a necesitar acceder a las valores de los pará
 <?php echo '<?'; ?>xml version="1.0" encoding="<?php echo $this->_charset ?>"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" >
+
 <head>
-         <title><?php echo $this->error->getCode(); ?> - <?php echo $this->title; ?></title>
-         
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/blueprint/screen.css" type="text/css" media="screen, projection" />
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/blueprint/print.css" type="text/css" media="print" />
-    <!--[if lt IE 8]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-  
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/template.css" type="text/css" />
-    
-    <?php if($imagenLogo) : ?>
-    
-             <style type="text/css">
-             
-                     #logo h1{
-                             background: transparent url(<?php echo $this->baseurl."/".$imagenLogo; ?>) no-repeat left top;
-                     }
-             
-             </style>
-             
-         <?php endif; ?>
-    
+	 <title><?php echo $this->error->getCode(); ?> - <?php echo $this->title; ?></title>
+	 
+     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/blueprint/screen.css" type="text/css" media="screen, projection" />
+     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/blueprint/print.css" type="text/css" media="print" />
+     <!--[if lt IE 8]><link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+   
+     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/template.css" type="text/css" />
+     
+     <?php if($imagenLogo) : ?>
+     
+	     <style type="text/css">
+	     
+	     	#logo h1{
+	     		background: transparent url(<?php echo $this->baseurl."/".$imagenLogo; ?>) no-repeat left top;
+	     	}
+	     
+	     </style>
+	     
+	 <?php endif; ?>
+     
 </head>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Luego, creamos el `Doctype` del documento, insertamos el título y los archivos CSS de nuestra plantilla. Los archivos JavaScript no son necesarios, por lo tanto no los incorporamos. 
+Luego, se crea el `Doctype` del documento, se inserta el título y los archivos CSS de la plantilla. Los archivos JavaScript no son necesarios, por lo tanto no se incorporan. 
 
 
->Notemos que utilizamos `$this->error->getCode()` para obtener el código del error actual de la página y así mostrarlo en el título de la página.
+>Notar que se utiliza `$this->error->getCode()` para obtener el código del error actual de la página y así mostrarlo en el título de la página.
 
 
 **Sección 3**
@@ -248,95 +268,107 @@ Luego, creamos el `Doctype` del documento, insertamos el título y los archivos 
 
 ~~~~~~~~~{.php .numberLines}
 <body>
-<div class="container">
- 
-        <div id="header" class="span-24">
-        
-                <div id="logo" class="span-9 prepend-8">
-                        <a href="<?php echo $this->baseurl ?>" title="<?php echo $app->getCfg('sitename'); ?>">
-                                <h1><?php echo $app->getCfg('sitename'); ?></h1>
-                        </a>
-                        <h2 id="eslogan">
-                                <?php if($eslogan) : ?>
-                                        <?php echo $eslogan; ?>
-                                <?php else : ?>
-                                        Lorem ipsum dolor sit amet
-                                <?php endif; ?>
-                        </h2>
-                </div>
-                
-        </div>
+  <div class="container">
+  
+  	<!-- Comienzo Header -->
+	<div id="header" class="span-24">
+	
+		<!-- Comienzo Logo -->
+		<div id="logo" class="span-9 prepend-8">
+			<a href="<?php echo $this->baseurl ?>" title="<?php echo $app->getCfg('sitename'); ?>">
+				<h1><?php echo $app->getCfg('sitename'); ?></h1>
+			</a>
+			<h2 id="eslogan">
+				<?php if($eslogan) : ?>
+					<?php echo $eslogan; ?>
+				<?php else : ?>
+					Lorem ipsum dolor sit amet
+				<?php endif; ?>
+			</h2>
+		</div>
+		
+	</div>
+	<!-- Fin Header -->
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Para la cabecera, solo mostraremos el logo de nuestro sitio y lo alinearemos en el centro.
+Para la cabecera, se mostrará el logotipo del sitio y se lo alineará en el centro.
 
 **Sección 4**
 
 
 ~~~~~~~~~{.php .numberLines}
+<!-- Comienzo Error -->
 <div id="error" class="span-18 push-3">
 
-        <?php if ($this->error->getCode() == 404) :         ?>
-        
-                <p>La página que esta buscando ya no se encuentra disponible.</p>
-                <p>Lo invitamos a realizar una búsqueda...</p>
-                
-                        <?php 
-                                $module = JModuleHelper::getModule( 'search' );
-                                echo JModuleHelper::renderModule( $module);        
-                        ?>
-                
-                <p>ó ir a la <a href="<?php echo $this->baseurl ?>" title="<?php echo $app->getCfg('sitename'); ?>">página principal del sitio</a>.</p>
-        
-        <?php elseif ($this->error->getCode() == 500) :         ?>
-        
-                <p>Un error desconocido ha ocurrido.</p>
-                <p>Mientras solucionamos el asunto, lo invitamos a continuar por la <a href="<?php echo $this->baseurl ?>" title="<?php echo $app->getCfg('sitename'); ?>">página principal del sitio</a>.</p>
-                
-                <div id="error_descripcion">
-                        <p>Descripción del error:</p>
-                        <p><?php echo $this->error->getMessage(); ?></p>
-                </div>
-        
-        <?php endif; ?>
+	<!-- Error 404 -->
+	<?php if ($this->error->getCode() == 404) : 	?>
+	
+		<p>La página que esta buscando ya no se encuentra disponible.</p>
+		<p>Lo invitamos a realizar un busqueda...</p>
+		
+			<?php 
+				$module = JModuleHelper::getModule( 'search' );
+				echo JModuleHelper::renderModule( $module);	
+			?>
+		
+		<p>ó ir a la <a href="<?php echo $this->baseurl ?>" title="<?php echo $app->getCfg('sitename'); ?>">página principal del sitio</a>.</p>
+	
+	<!-- Error 500 -->
+	<?php elseif ($this->error->getCode() == 500) : 	?>
+	
+		<p>Un error desconocido ha ocurrido.</p>
+		<p>Mientras solucionamos el asunto, lo invitamos a continuar por la <a href="<?php echo $this->baseurl ?>" title="<?php echo $app->getCfg('sitename'); ?>">página principal del sitio</a>.</p>
+		
+		<div id="error_descripcion">
+			<p>Descripción del error:</p>
+			<p><?php echo $this->error->getMessage(); ?></p>
+		</div>
+	
+	<?php endif; ?>
+	
 </div>
+<!-- Fin Error -->
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Esta es la parte más importante. Tenemos dos bloques condicionales:
+Esta sección es la más importante. En ella existen dos bloques condicionales:
 
 
-* En caso que la página sea no encontrada (404), mostramos un mensaje conveniente e invitamos al usuario a realizar una búsqueda o continuar por la página principal del sitio. Algo importante es que la caja de búsqueda la insertamos a través de la directiva `JModuleHelper::getModule()` la cual entre parentesis se le indica el tipo de módulo a mostrar (en este caso `search`).
+* En caso que la página sea no encontrada (404), se mostrará un mensaje conveniente e se invitará al usuario a realizar una búsqueda o continuar por la página principal del sitio. Algo importante es que la caja de búsqueda se incorpora a través de la directiva `JModuleHelper::getModule()` en la cual entre parentesis se le indica el tipo de módulo a mostrar (en este caso `search`).
 
 
 >Más información sobre getModule: <http://docs.joomla.org/JModuleHelper::getModule>
 
 
-* En caso que la página posea un error interno (500), también mostramos un mensaje conveniente invitando al usuario a continuar por la página principal. Por otro lado, para tener de referencia, mostramos el tipo de error que se produjo a través de la directiva `$this->error->getMessage()`.
+* En caso que la página posea un error interno (500), también se mostrará un mensaje conveniente invitando al usuario a continuar por la página principal. Por otro lado, para tener de referencia, se mostrará el tipo de error que se produjo a través de la directiva `$this->error->getMessage()`.
+
+
+>Una buena práctica es no incorporar los textos en nuestro idioma dentro del archivo, sino utilizar los archivos de lenguajes de la plantilla. Esto se puede realizar una vez comprobado que los textos a mostrar son los correctos.
+
 
 **Sección 5**
 
 
 ~~~~~~~~~{.php .numberLines}
-	<div id="footer" class="span-24">
-	     <div id="legal" class="prepend-3 span-9">
-	             &copy;<?php echo date('Y'); ?> <?php echo $app->getCfg('sitename'); ?>
-	     </div>
-	</div>
-
-</div>
+  	<!-- Comienzo Footer -->
+  	<div id="footer" class="span-24">
+  		<div id="legal" class="prepend-3 span-9">
+  			&copy;<?php echo date('Y'); ?> <?php echo $app->getCfg('sitename'); ?>
+  		</div>
+  	</div>
+  	<!-- Fin Footer -->
+  	
+  </div>
 </body>
-</html>	
+
+</html>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
->Una buena práctica sería no incorporar los textos en nuestro idioma dentro del archivo, sino utilizar los archivos de lenguajes de la plantilla. Esto lo podemos realizar una vez que hemos comprobado que los textos son los correctos.
+El documento se termina mostrando, en el pie, el nombre del sitio y el año corriente.
 
-
-El documento lo terminamos mostrando, en el pie, el nombre del sitio y el año corriente.
-
-Por otro lado, debemos escribir algunos estilos CSS para los elementos de la página de error. En template.css incorporamos:
+Por otro lado, es necesario escribir algunos estilos CSS para los elementos de la página de error. En `template.css` se incorpora:
 
 
 ~~~~~~~~~{.css .numberLines}
@@ -368,13 +400,13 @@ Por otro lado, debemos escribir algunos estilos CSS para los elementos de la pá
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Nuestra página de error 404 personalizada quedará con el siguiente diseño:
+La página de error 404 personalizada quedará con el siguiente diseño:
 
 ![](../incluir/figuras/image47.png)
 
-Mientras que la página de error 500 quedará así:
+Mientras que la página de error 500 quedará de la siguiente manera:
 
 ![](../incluir/figuras/image31.png)
 
-Como podemos ver, dentro de un recuadro queda el error de la página para tener luego de referencia.
+Como se puede ver, dentro de un recuadro queda el error de la página para tener luego de referencia.
 

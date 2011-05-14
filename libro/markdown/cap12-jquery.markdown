@@ -3,21 +3,21 @@
 Incorporación de jQuery
 -----------------------
 
-Anteriormente vimos como podemos aprovechar a **Mootools** para facilitar el armado de funciones JavaScript. Sin embargo, puede suceder que necesitemos utilizar a **jQuery**, otra popular biblioteca JavaScript para dotar de funcionalidades a nuestra plantilla. 
+Anteriormente se mostró el aprovechamiento de **Mootools** para facilitar el armado de funciones JavaScript. Sin embargo, puede suceder que se necesite utilizar a **jQuery**, otra popular biblioteca JavaScript para dotar de funcionalidades a la plantilla. 
 
 
 >Más información sobre jQuery: <http://jquery.com/>
 >Aprender a utilizar jQuery: <http://librojquery.com/>
 
 
-Los pasos para incorporar jQuery en nuestra plantilla son los siguientes:
+Los pasos para incorporar jQuery en la plantilla son los siguientes:
 
 
 * Descargamos la biblioteca jQuery: <http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js>
 
-* Guardamos el archivo `jquery.min.js` dentro de la capeta `js` de nuestra plantilla;
+* Guardar el archivo `jquery.min.js` dentro de la carpeta `js` de la plantilla;
 
-* Abrimos el archivo `index.php` de la plantilla e insertamos la biblioteca dentro de `<head />`, después de la directiva `<jdoc:include type="head" />` pero ántes del llamado al archivo `template.js`:
+* Abrir `index.php` de la plantilla e insertar a la biblioteca dentro de `<head />`, después de la directiva `<jdoc:include type="head" />` pero antes del llamado al archivo `template.js`:
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -33,14 +33,14 @@ Los pasos para incorporar jQuery en nuestra plantilla son los siguientes:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-* Luego, abrimos `template.js` y escribimos en la primera línea:
+* Abrir `template.js` y escribir en la primera línea:
 
 ~~~~~~~~~{.javascript .numberLines}
 jQuery.noConflict();
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	
->La línea anterior permite que jQuery funcione sin problemas con otras bibliotecas JavaScript (como es el caso de Mootools). Hay que tener en cuenta que, cuando escribamos funciones jQuery, en lugar de utilizar el símbolo `$`, utilizaremos la palabra jQuery.
+>La línea anterior permite que jQuery funcione sin problemas con otras bibliotecas JavaScript (como es el caso de Mootools). Hay que tener en cuenta que, cuando se escriban funciones jQuery, en lugar de utilizar el símbolo `$`, se deberá utilizar la palabra `jQuery`.
 >Por ejemplo, la siguiente función:
 >
 >		$(“#footer”).hide();
@@ -52,18 +52,18 @@ jQuery.noConflict();
 >Más información sobre `jQuery.noConflict()`: <http://api.jquery.com/jQuery.noConflict/>
 
 
-Y listo. De esta forma podemos utilizar jQuery sin problemas en nuestra plantilla.
+Y listo. De esta forma es posible utilizar jQuery sin problemas en la plantilla.
 
 
 ### Creación de un slideshow con jQuery
 
-Aprovechando que tenemos a la biblioteca incorporada en nuestra plantilla, vamos a ver como crear un slideshow de imágenes para completar la funcionalidad planeada en la página de inicio de nuestro ejemplo:
+Aprovechando que se incorporó a jQuery en la plantilla, se mostrará la manera de crear un slideshow de imágenes para completar la funcionalidad planeada en la página de inicio:
 
 ![](../incluir/figuras/image26.png)
 
-Para esto, utilizaremos la extensión de la biblioteca **jQuery Cycle Plugin**: <http://jquery.malsup.com/cycle/>
+Para esto, se utilizará la extensión de la biblioteca **jQuery Cycle Plugin**: <http://jquery.malsup.com/cycle/>
 
-Recordemos que, la zona que conforma al slideshow en nuestra plantilla esta compuesta por:
+Recordar que la zona que conforma al slideshow en la plantilla esta compuesta de la siguiente forma:
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -79,7 +79,7 @@ Recordemos que, la zona que conforma al slideshow en nuestra plantilla esta comp
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-La posición `interpoint-slideshow_inferior` mostrará a un módulo del tipo HTML personalizado, en donde incorporaremos varias imágenes para hacer funcionar al slideshow. Al insertar las imagenes, el HTML final quedará así:
+La posición `interpoint-slideshow_inferior` mostrará a un módulo del tipo HTML personalizado, en donde se incorporaran varias imágenes para hacer funcionar al slideshow. Al insertar las imágenes, el HTML final queda de la siguiente manera:
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -98,13 +98,13 @@ La posición `interpoint-slideshow_inferior` mostrará a un módulo del tipo HTM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Es probable que al hacerlo, todo el slideshow se vea mal. Esto por ahora no nos importa, ya que luego, al establecer las funciones relativas al slideshow el problema se habra solucionado.
+Es probable que al hacerlo, todo el slideshow se vea mal. Esto por ahora no importa, ya que luego, al establecer las funciones relativas al slideshow el problema se habrá solucionado.
 
-Lo siguiente que haremos será bajar **jQuery Cycle Plugin**: <http://jquery.malsup.com/cycle/download.html>. Descomprimimos el `.zip` descargado y copiamos el archivo `jquery.cycle.all.min.js` en la carpeta `js` de nuestra plantilla, de forma que quede en conjunto con `jquery.min.js` y `template.js`:
+Lo siguiente a realizar será descargar **jQuery Cycle Plugin**: <http://jquery.malsup.com/cycle/download.html>. Descomprimir el archivo `.zip` descargado y copiar el archivo `jquery.cycle.all.min.js` en la carpeta `js` de la plantilla, de forma que quede en conjunto con `jquery.min.js` y `template.js`:
 
 ![](../incluir/figuras/image32.png)
 
-Luego, insertamos a `jquery.cycle.all.min.js` en nuestra plantilla. El llamado al archivo debe quedar por debajo de `jquery.min.js` pero antes de `template.js`:
+Luego, insertar a `jquery.cycle.all.min.js` en la plantilla. El llamado al archivo debe quedar por debajo de `jquery.min.js` pero antes de `template.js`:
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -114,7 +114,7 @@ Luego, insertamos a `jquery.cycle.all.min.js` en nuestra plantilla. El llamado a
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Por último, en `template.js` establecemos las funciones para hacer funcionar el slideshow. El archivo quedará de esta forma:
+Por último, en `template.js` se establecen las funciones para hacer funcionar el slideshow. El archivo quedará de la siguiente forma:
 
 
 ~~~~~~~~~{.javascript .numberLines}
@@ -132,13 +132,13 @@ jQuery(document).ready(function() {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Como vemos, es muy fácil la creación del slideshow, tan solo debemos especificar:
+La creación del slideshow es muy fácil, tan solo se debe especificar:
 
 
 * El ID del `<div />` contenedor de las imágenes: `#slideshow_contenedor`;
 * El efecto a utilizar entre transiciones: `scrollHorz`;
 * El tiempo de transición entre imagenes: 3000 milisegundos;
-* Los IDs de los elementos para pasar al siguiente o anterior slide: `#slideshow_izq` y `#slideshow_der`.
+* Los IDs de los elementos para pasar a la siguiente o anterior imagen: `#slideshow_izq` y `#slideshow_der`.
 
 ![](../incluir/figuras/image34.png)
 
