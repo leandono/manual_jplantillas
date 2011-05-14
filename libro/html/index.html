@@ -5715,15 +5715,15 @@
          >Evitar que Mootools cargue de forma predeterminada</a
          ></h3
        ><p
-       >Existen ocaciones en que no deseamos cargar a Mootools en nuestra plantilla, ya sea porque vamos a utilizar otra biblioteca JavaScript ó deseamos agilizar la página reduciendo las peticiones a archivos que no se utilizan.</p
+       >Existen ocasiones en que no se desea cargar a Mootools en la plantilla, ya sea porque se va a utilizar otra biblioteca JavaScript ó se necesita agilizar la velocidad de la página reduciendo las peticiones a archivos que no se utilizan.</p
        ><p
-       >Para quitar cualquier archivo .js debemos realizar lo siguiente:</p
+       >Para quitar cualquier archivo .js se debe realizar lo siguiente:</p
        ><p
        >En <code
          >index.php</code
-         >, ántes de la directiva <code
+         >, antes de la directiva <code
          >&lt;jdoc:include type=&quot;head&quot; /&gt;</code
-         > insertamos:</p
+         > insertar:</p
        ><pre class="php numberLines"
        ><code
          >&lt;?php
@@ -5735,7 +5735,7 @@
    </code
          ></pre
        ><p
-       >En este caso, estaremos eliminando de nuestra plantilla los archivos <code
+       >En este caso, se estará eliminando de la plantilla los archivos <code
          >mootools-core.js</code
          >, <code
          >core.js</code
@@ -5743,7 +5743,7 @@
          >caption.js</code
          >, <code
          >mootools-more.js</code
-         >. Algo a tener en cuenta es que Joomla (y muchas extensiones) suelen hacer uso de Mootools, por lo que utilizar este método puede traer problemas posteriores.</p
+         >. Algo a tener en cuenta es que Joomla (y muchas extensiones) suelen hacer uso de Mootools, por lo que realizar esta práctica puede traer problemas posteriores.</p
        ></div
      ><div id="estilos-determinados-para-diferentes-navegadores"
      ><h3
@@ -5751,15 +5751,13 @@
          >Estilos determinados para diferentes navegadores</a
          ></h3
        ><p
-       >Un problema común al diseñar una página es tratar de hacer que el diseño se vea igual en todos los navegadores. Joomla! 1.6 posee una nueva característica que es la incorporación de estilos específicos dependiendo del tipo de navegador web.</p
+       >Un problema común al diseñar una página es tratar de hacer que el diseño sea compatible con la mayoría de los navegadores. Joomla! 1.6 posee una nueva característica que es la incorporación de estilos específicos dependiendo del tipo de navegador web.</p
        ><p
-       >Supongamos que tenemos nuestro archivo <code
-         >template.css</code
-         >. Pero además queremos que para <em
+       >Suponiendo que se desea mostrar estilos diferentes para <em
          >Internet Explorer</em
          > y <em
          >Mozilla Firefox</em
-         > se muestren estilos diferentes. Lo primero que haremos será crear dos archivos: <code
+         >, lo primero a realizar será crear dos archivos: <code
          >template_msie.css</code
          > y <code
          >template_mozilla.css</code
@@ -5769,7 +5767,9 @@
          >Mozilla Firefox</em
          >.</p
        ><p
-       >Luego, en nuestra plantilla incorporamos:</p
+       >Luego, en el archivo <code
+         >index.php</code
+         > de la plantilla se incorpora:</p
        ><pre class="php numberLines"
        ><code
          >&lt;?php
@@ -5789,19 +5789,19 @@
          ></pre
        ><blockquote
        ><p
-         >Ántes de cargar el archivo correspondiente, Joomla comprueba que este exista en el directorio web.</p
+         >Antes de cargar el archivo correspondiente, Joomla comprueba que éste exista en el directorio web.</p
          ></blockquote
        ><p
        ><code
          >JHtml</code
-         > es la función que se encargará de detectar el tipo de navegador y cargará los archivos necesarios. Algo interesante es que además podemos cargar un archivo para una determinada versión de un navegador. Por ejemplo, si deseamos establecer un estilo para <code
+         > es la función que se encargará de detectar el tipo de navegador y cargará los archivos necesarios. Algo interesante es que además es posible cargar un archivo para una determinada versión de un navegador. Por ejemplo, si se desea establecer un estilo para <code
          >Internet Explorer 8</code
          >, el nombre del archivo debe ser <code
          >template_msie_8.css</code
          >.</p
        ><blockquote
        ><p
-         >Podemos encontrar más información sobre las diferentes variantes para cargar archivos específicos para un navegador en los comentarios de la función <code
+         >Es posible encontrar más información sobre las diferentes variantes para cargar archivos específicos para un navegador en los comentarios de la función <code
    	>stylesheet()</code
    	> en el archivo <code
    	>/libraries/joomla/html/html.php</code
@@ -5822,7 +5822,7 @@
          >Detectar la página principal del sitio</a
          ></h3
        ><p
-       >Pueden existir situaciones en que necesitamos detectar cuando estamos en la página principal del sitio. Estilo podemos hacer de forma simple a través del siguiente código:</p
+       >Puede existir una situación en que se necesita detectar cuando el usuario se encuentra en la página principal del sitio. A través del siguiente código es posible realizarlo:</p
        ><pre class="php numberLines"
        ><code
          >&lt;?php
@@ -5830,7 +5830,7 @@
    $menu        = $app-&gt;getMenu();
    if (($menu-&gt;getActive() == $menu-&gt;getDefault()))
    {
-           //Nos encontramos en la página principal del sitio
+           //El usuario se encuentra en la página principal del sitio
    }
    ?&gt;
    </code
@@ -5852,7 +5852,7 @@
          >Detectar si un usuario esta logueado en el sitio</a
          ></h3
        ><p
-       >Si deseamos detectar si un usuario esta (o no) logueado en el sitio, podemos hacerlo con este código:</p
+       >Si se desea detectar si un usuario esta (o no) logueado en el sitio, es posible realizarlo con este código:</p
        ><pre class="php numberLines"
        ><code
          >&lt;?php
@@ -5881,20 +5881,22 @@
          >Detectar un componente determinado</a
          ></h3
        ><p
-       >En algunas situaciones deseamos detectar un componente determinado. Esto lo podemos realizar obteniendo el valor del parámetro option que se establece en la URL de la página:</p
+       >Puede ocurrir en algunas situaciones detectar un componente determinado. Esto es posible realizarlo obteniendo el valor del parámetro <code
+         >option</code
+         > que se establece en la URL de la página:</p
        ><pre class="php numberLines"
        ><code
          >&lt;?php
    $componente = JRequest::getVar('option');
    if ($componente == &quot;com_content&quot;)
    {
-           //Estamos en el componente com_content
+           //Se encuentra en el componente com_content
    }
    ?&gt;
    </code
          ></pre
        ><p
-       >De la misma forma podemos obtener otros parámetros como son <code
+       >De la misma forma es posible obtener otros parámetros como son <code
          >ItemId</code
          >, <code
          >view</code
