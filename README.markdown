@@ -1,6 +1,6 @@
-#Guía definitiva para crear plantillas para Joomla! 1.6
+#Guía definitiva para crear plantillas para Joomla! 1.6 y versiones posteriores
 
-##Esta documentación aún está en fase de desarrollo y correcciones
+>Esta documentación está en fase de correcciones
 
 #Introducción
 
