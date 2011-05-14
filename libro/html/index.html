@@ -3405,27 +3405,29 @@
        >Finalizando la plantilla</a
        ></h2
      ><p
-     >Ya tenemos nuestro trabajo listo, las últimas tareas que podemos realizar son:</p
+     >El trabajo ya esta casi listo, las últimas tareas a realizar son:</p
      ><ul
      ><li
        ><p
-         >Verificar que el diseño se vea correctamente en todos los navegadores soportados. En caso que exista algún problema de diseño con <em
+         >Verificar que el diseño se visualiza correctamente en todos los navegadores soportados. En caso que exista algún problema de diseño con <em
    	>Internet Explorer</em
-   	>, recordemos que tenemos el archivo <code
+   	>, recuerde que existe el archivo <code
    	>template_ie.css</code
-   	> en donde podemos añadir estilos que unicamente serán cargados por dicho navegador.</p
+   	> en donde es posible añadir estilos que únicamente serán cargados por dicho navegador.</p
          ></li
        ><li
        ><p
-         >Experimentar con diferentes tipos de contenidos para poder comprobar que tan flexible es nuestra plantilla y en que situaciones podemos llegar a tener un error.</p
+         >Experimentar con diferentes tipos de contenidos para poder comprobar la flexible es la plantilla y en que situaciones es posible encontrar a tener un error.</p
          ></li
        ><li
        ><p
          >Crear dos capturas de pantallas: <code
    	>template_preview.png</code
-   	> que será una imagen a tamaño real de nuestro template y <code
+   	> que será una imagen a tamaño real del <em
+   	>template</em
+   	> y <code
    	>template_thumbnail.png</code
-   	> que será una imagen miniatura del diseño. Dichas imagenes van dentro de la carpeta raiz de nuestra plantilla:</p
+   	> que será una imagen miniatura del diseño. Dichas imágenes van dentro de la carpeta raiz de la plantilla:</p
          ></li
        ></ul
      ><div class="figure"
@@ -3435,9 +3437,9 @@
        ></div
      ><ul
      ><li
-       >Finalmente podemos crear un instalador de la plantilla, es tan sencillo como seleccionar todos los archivos que componen la plantilla y comprimirlos en un archivo <code
+       >Finalmente crear un instalador de la plantilla: es tan sencillo como seleccionar todos los archivos que componen la plantilla y comprimirlos en un archivo <code
          >.zip</code
-         >. Con esto ya tendremos nuestro instalador para utilizar en múltiples sitios.</li
+         >. Ese archivo será el instalador para utilizar en múltiples sitios.</li
        ></ul
      ></div
    ><div id="temas-avanzados"
@@ -3451,7 +3453,7 @@
          >Estilos de plantillas, parámetros de configuración y maquetaciones diferentes por secciones</a
          ></h3
        ><p
-       >Como hablamos anteriormente, Joomla! posee una nueva funcionalidad llamada estilos de plantillas. Los estilos permiten, a través de parámetros de configuración, variar el diseño de la plantilla en varios aspectos: colores, imagenes, maquetación, tamaños, etc. A su vez cada estilo puede ser asignado a una o varias secciones especificas.</p
+       >Como se comentó la principio del manual, Joomla! 1.6 posee una nueva funcionalidad llamada estilos de plantillas. Dichos estilos permiten, a través de parámetros de configuración, variar el diseño de la plantilla en varios aspectos: colores, imágenes, maquetación, tamaños, etc. A su vez cada estilo puede ser asignado a una o varias secciones especificas.</p
        ><div class="figure"
        ><img src="../incluir/figuras/image44.png"
           /><p class="caption"
@@ -3459,14 +3461,14 @@
          ></div
        ><blockquote
        ><p
-         >Recordemos que el listado de estilos de plantillas se puede encontrar llendo, en la administración, a Extensiones → Gestor de plantillas. Al ingresar a alguno de los items enlistados se puede visualizar los paramétros disponibles para configurar y a que secciones aplicarlos.</p
+         >Recuerde que el listado de estilos de plantillas se puede encontrar yendo, en la administración, a Extensiones → Gestor de plantillas. Al ingresar a alguno de los ítems enlistados se puede visualizar los parámetros disponibles para configurar y a que secciones aplicarlos.</p
          ></blockquote
        ><p
-       >En el caso de nuestra plantilla que hemos creado de ejemplo, vamos a añadirle varios parámetros e configuración para poder:</p
+       >En el caso de la plantilla creada de ejemplo, se le añadirán varios parámetros de configuración para poder:</p
        ><ul
        ><li
          ><p
-   	>Cambiar la imagen del logo;</p
+   	>Cambiar la imagen del logotipo;</p
    	></li
          ><li
          ><p
@@ -3487,7 +3489,9 @@
    	>Modificación de templateDetails.xml</strong
    	></p
          ><p
-         >Los parámetros de configuración de la plantilla se agregan en el archivo templateDetails.xml añadiendo las etiquetas que se muestran a continuación:</p
+         >Los parámetros de configuración de la plantilla se agregan en el archivo <code
+   	>templateDetails.xml</code
+   	> añadiendo las etiquetas que se muestran a continuación:</p
          ><pre class="xml numberLines"
          ><code
    	>&lt;config&gt;
@@ -3501,7 +3505,7 @@
    </code
    	></pre
          ><p
-         >Como se muestra, la etiqueta más importante <code
+         >Como se muestra, la etiqueta más importante es <code
    	>&lt;field /&gt;</code
    	>. Dicha etiqueta posee los siguientes atributos:</p
          ><ul
@@ -3509,13 +3513,19 @@
    	><p
    	  ><code
    	    >name</code
-   	    >: Debe ser un nombre único, a través el cual se hará referencia al parámetro para obtener su valor;</p
+   	    >: Debe ser un nombre único, a través del cual se hará referencia al parámetro para obtener su valor;</p
    	  ></li
    	><li
    	><p
    	  ><code
    	    >type</code
-   	    >: El tipo de campo, el cual puede ser de varios tipos: text (campo de texto), list (lista de opciones), media (campo con selección de archivo);</p
+   	    >: El tipo de campo, el cual puede ser de varios tipos: <code
+   	    >text</code
+   	    > (campo de texto), <code
+   	    >list</code
+   	    > (lista de opciones), <code
+   	    >media</code
+   	    > (campo con selección de archivo);</p
    	  ></li
    	><li
    	><p
@@ -3527,12 +3537,12 @@
    	><p
    	  ><code
    	    >description</code
-   	    >: La descripción será la explicación para que sirve dicho campo.</p
+   	    >: La descripción será la explicación del campo.</p
    	  ></li
    	></ul
          ><blockquote
          ><p
-   	>Notemos que para los atributos <code
+   	>Notar que para los atributos <code
    	  >label</code
    	  > y <code
    	  >description</code
@@ -3550,7 +3560,9 @@
    	></p
    	></div
          ><p
-         >Por lo tanto, templateDetails.xml quedará de la siguiente forma:</p
+         >Por lo tanto, <code
+   	>templateDetails.xml</code
+   	> quedará de la siguiente manera:</p
          ><pre class="xml numberLines"
          ><code
    	>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
@@ -3616,24 +3628,31 @@
          ><p
          >En <code
    	>index.php</code
-   	> lo primero que haremos será declarar una variable y guardar el valor del parámetro que queremos obtener en dicha variable. Esto lo podemos hacer dentro de las etiquetas PHP que se encuentran al principio del documento:</p
+   	> lo primero que se hará es declarar una variable para guardar el valor del parámetro que queremos obtener. Esto es posible realizarlo dentro de las etiquetas PHP que se encuentran al principio del documento:</p
          ><pre class="php numberLines"
          ><code
    	>&lt;?php
+   
    defined('_JEXEC') or die;
+   
    JHTML::_('behavior.framework', true);
+   
    $app = JFactory::getApplication();
+   
    //Parametros de la plantilla
    $imagenLogo = $this-&gt;params-&gt;get('logo');
+   
    ?&gt;
    </code
    	></pre
          ><p
-         >Como podemos ver, los parámetros se obtienen a través de <code
+         >Como se ve, los parámetros se obtienen a través de <code
    	>$this-&gt;params-&gt;get()</code
-   	> pasando como argumento el nombre del parámetro que queremos obtener (en este caso el parámetro logo). Luego, antes del cierre de la etiqueta <code
+   	> pasando como argumento el nombre del parámetro a obtener (en este caso el parámetro <code
+   	>logo</code
+   	>). Luego, antes del cierre de la etiqueta <code
    	>&lt;head /&gt;</code
-   	> incorporamos:</p
+   	> se incorpora:</p
          ><pre class="php numberLines"
          ><code
    	>&lt;?php if($imagenLogo) : ?&gt;
@@ -3665,35 +3684,47 @@
          ><pre class="php numberLines"
          ><code
    	>&lt;?php
+   
    defined('_JEXEC') or die;
+   
    JHTML::_('behavior.framework', true);
+   
    $app = JFactory::getApplication();
+   
    //Parametros de la plantilla
    $imagenLogo = $this-&gt;params-&gt;get('logo');
+   
    ?&gt;
+   
    &lt;?php echo '&lt;?'; ?&gt;xml version=&quot;1.0&quot; encoding=&quot;&lt;?php echo $this-&gt;_charset ?&gt;&quot;?&gt;
    &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
    &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;&lt;?php echo $this-&gt;language; ?&gt;&quot; lang=&quot;&lt;?php echo $this-&gt;language; ?&gt;&quot; dir=&quot;&lt;?php echo $this-&gt;direction; ?&gt;&quot; &gt;
+   
    &lt;head&gt;
-           &lt;jdoc:include type=&quot;head&quot; /&gt;
-           &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot; /&gt;
-           &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
-           &lt;!--[if lt IE 8]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
    
-           &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/template.css&quot; type=&quot;text/css&quot; /&gt;
-           &lt;script type=&quot;text/javascript&quot; src=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/js/template.js&quot;&gt;&lt;/script&gt;
+        &lt;jdoc:include type=&quot;head&quot; /&gt;
    
-           &lt;?php if($imagenLogo) : ?&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot; /&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot; /&gt;
+        &lt;!--[if lt IE 8]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
    
-               &lt;style type=&quot;text/css&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/css/template.css&quot; type=&quot;text/css&quot; /&gt;
    
-                       #logo h1{
-                               background: transparent url(&lt;?php echo $this-&gt;baseurl.&quot;/&quot;.$imagenLogo; ?&gt;) no-repeat left top;
-                       }
+        &lt;script type=&quot;text/javascript&quot; src=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/js/jquery.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/js/jquery.cycle.all.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;/templates/&lt;?php echo $this-&gt;template ?&gt;/js/template.js&quot;&gt;&lt;/script&gt;
    
-               &lt;/style&gt;
+        &lt;?php if($imagenLogo) : ?&gt;
    
-       &lt;?php endif; ?&gt;
+            &lt;style type=&quot;text/css&quot;&gt;
+   
+               #logo h1{
+                   background: transparent url(&lt;?php echo $this-&gt;baseurl.&quot;/&quot;.$imagenLogo; ?&gt;) no-repeat left top;
+               }
+   
+            &lt;/style&gt;
+   
+        &lt;?php endif; ?&gt;
    
    &lt;/head&gt;
    </code
@@ -3705,7 +3736,7 @@
    	>Cambiar el texto del eslogan</a
    	></h4
          ><p
-         >Podemos seguir los mismos pasos anteriores, primero modificamos <code
+         >Siguiendo los mismos pasos anteriores, se modifica <code
    	>templateDetails.xml</code
    	> añadiendo un nuevo parámetro:</p
          ><pre class="xml numberLines"
@@ -3727,7 +3758,7 @@
    	></pre
          ><blockquote
          ><p
-   	>Notemos que se añadieron dos nuevos atributos: * <code
+   	>Notar que se añadieron dos nuevos atributos: * <code
    	  >default</code
    	  >: Será el valor predeterminado en caso que el campo esté imcompleto; * <code
    	  >filter</code
@@ -3747,24 +3778,32 @@
          ><p
          >Luego, en <code
    	>index.php</code
-   	>, agregamos una nueva llamada para obtener el parámetro eslogan:</p
+   	>, se agrega una nueva llamada para obtener el parámetro <code
+   	>eslogan</code
+   	>:</p
          ><pre class="php numberLines"
          ><code
    	>&lt;?php
+   
    defined('_JEXEC') or die;
+   
    JHTML::_('behavior.framework', true);
+   
    $app = JFactory::getApplication();
+   
    //Parametros de la plantilla
    $imagenLogo = $this-&gt;params-&gt;get('logo');
    $eslogan = $this-&gt;params-&gt;get('eslogan');
+   
    ?&gt;
    </code
    	></pre
          ><p
-         >Y en la maquetación correspondiente a la zona del logo cambiamos lo siguiente:</p
+         >Y se modifica la maquetación correspondiente a la zona del logotipo con lo siguiente:</p
          ><pre class="php numberLines"
          ><code
-   	>&lt;div id=&quot;logo&quot; class=&quot;span-9&quot;&gt;
+   	>&lt;!-- Comienzo Logo --&gt;
+   &lt;div id=&quot;logo&quot; class=&quot;span-9&quot;&gt;
        &lt;a href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;&quot; title=&quot;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&quot;&gt;
            &lt;h1&gt;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&lt;/h1&gt;
        &lt;/a&gt;
@@ -3776,20 +3815,13 @@
            &lt;?php endif; ?&gt;
        &lt;/h2&gt;
    &lt;/div&gt;
+   &lt;!-- Fin Logo --&gt;
    </code
    	></pre
-         ><ul
-         ><li
-   	><p
-   	  >Una columna, como es ahora (recordemos que en apariencia son tres columnas debido a que se configuró a Joomla para que muestre los artículos de esa forma, pero la maquetación sigue siendo de una sola columna);</p
-   	  ></li
-   	><li
-   	><p
-   	  >Dos columnas, para poder mostrar los contenidos en un formato del tipo blog: una columna central con los artículos y otra complementaria para mostrar módulos adicionales.</p
-   	  ></li
-   	></ul
          ><p
-         >Lo que se hiso fue: si se configuró el parámetro eslogan, se muestra el texto correspondiente, caso contrario se muestre el predeterminado.</p
+         >Si se configuró el parámetro <code
+   	>eslogan</code
+   	>, se muestra el texto correspondiente, caso contrario se muestre el predeterminado.</p
          ><div class="figure"
          ><img src="../incluir/figuras/image18.png"
    	 /><p class="caption"
@@ -3802,11 +3834,11 @@
    	>Aplicar una maquetación diferente</a
    	></h4
          ><p
-         >La idea de esta configuración es poder tener dos presentaciones distintas para mostrar en la parte central de la plantilla:</p
+         >La idea de esta configuración es poder predisponer de dos presentaciones distintas para mostrar en la parte central de la plantilla:</p
          ><ul
          ><li
    	><p
-   	  >Una columna, como es ahora (recordemos que en apariencia son tres columnas debido a que se configuró a Joomla para que muestre los artículos de esa forma, pero la maquetación sigue siendo de una sola columna);</p
+   	  >Una columna, como es actualmente (recordar que en apariencia son tres columnas debido a que se configuró a Joomla para que muestre los artículos de esa forma, pero la maquetación sigue siendo de una sola columna);</p
    	  ></li
    	><li
    	><p
@@ -3814,7 +3846,7 @@
    	  ></li
    	></ul
          ><p
-         >Por lo tanto, al igual que antes, modificamos nuevamente <code
+         >Por lo tanto, al igual que antes, se modifica <code
    	>templateDetails.xml</code
    	>:</p
          ><pre class="xml numberLines"
@@ -3845,7 +3877,7 @@
    	></pre
          ><blockquote
          ><p
-   	>Notemos que el parámetro, al ser del tipo lista, necesita tener definidas las opciones que se podran seleccionar.</p
+   	>Notar que el parámetro, al ser del tipo lista, necesita tener definido las opciones que se podran seleccionar.</p
    	></blockquote
          ><div class="figure"
          ><img src="../incluir/figuras/image03.png"
@@ -3855,48 +3887,63 @@
          ><p
          >En <code
    	>index.php</code
-   	> vamos a tener que agregar nuevamente una variable que obtenga el valor del parámetro:</p
+   	> se agrega nuevamente una variable que obtenga el valor del parámetro <code
+   	>maquetacion</code
+   	>:</p
          ><pre class="php numberLines"
          ><code
    	>&lt;?php
+   
    defined('_JEXEC') or die;
+   
    JHTML::_('behavior.framework', true);
+   
    $app = JFactory::getApplication();
+   
    //Parametros de la plantilla
    $imagenLogo = $this-&gt;params-&gt;get('logo');
    $eslogan = $this-&gt;params-&gt;get('eslogan');
    $maquetacion = $this-&gt;params-&gt;get('maquetacion');
+   
    ?&gt;
    </code
    	></pre
          ><p
-         >Luego, dentro del cuerpo del documento agregamos una nueva maquetación y posición de módulos:</p
+         >Luego, dentro del cuerpo del documento se agrega una nueva maquetación y posición de módulos:</p
          ><pre class="php numberLines"
          ><code
-   	>&lt;?php if($maquetacion == 1) : ?&gt;
+   	>&lt;!-- Maquetación a una columna --&gt;
+   &lt;?php if($maquetacion == 1) : ?&gt;
    
+       &lt;!-- Comienzo Contenido principal --&gt;
        &lt;div id=&quot;contenido&quot; class=&quot;span-24&quot;&gt;
            &lt;jdoc:include type=&quot;component&quot; /&gt;
        &lt;/div&gt;
+       &lt;!-- Fin Contenido principal --&gt;
    
-   &lt;?php else : ?&gt;    
+   &lt;!-- Maquetación a dos columnas --&gt;
+   &lt;?php else : ?&gt; 
    
+       &lt;!-- Comienzo Contenido principal --&gt;
        &lt;div id=&quot;columna_izquierda&quot; class=&quot;span-17 append-1&quot;&gt;
            &lt;jdoc:include type=&quot;component&quot; /&gt;
        &lt;/div&gt;
+       &lt;!-- Fin Contenido principal --&gt;
    
+       &lt;!-- Comienzo Columna derecha --&gt;
        &lt;div id=&quot;columna_derecha&quot; class=&quot;span-6 last&quot;&gt;
-           &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-columna_derecha&quot; style=&quot;xhtml&quot; /&gt;
+           &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-columna_derecha&quot; style=&quot;personalizado&quot; headerLevel=&quot;3&quot; /&gt;
        &lt;/div&gt;
+       &lt;!-- Fin Columna derecha --&gt;
    
    &lt;?php endif; ?&gt;
    </code
    	></pre
          ><p
-         >La lógica es: En caso que se haya seleccionado la opción “1 columna”, se muestra el contenido en una maquetación de una sola columna. Caso contrario, mostramos una maquetación de dos columnas.</p
+         >En caso que se haya seleccionado la opción “1 columna”, se muestra el contenido en una maquetación de una sola columna. Caso contrario, se muestra una maquetación de dos columnas.</p
          ><blockquote
          ><p
-   	>Notemos que se agregó una nueva posición de módulo: <code
+   	>Notar que se agregó una nueva posición de módulo: <code
    	  >interpoint-columna_derecha</code
    	  >. Esta deber ser agregada además en <code
    	  >templateDetails.xml</code
@@ -3905,7 +3952,7 @@
    	  >.</p
    	></blockquote
          ><p
-         >Para poder aplicar la nueva maquetación en nuestro sitio, deberemos:</p
+         >Para poder aplicar la nueva maquetación en el sitio utilizando los estilos de plantillas, se debe:</p
          ><ul
          ><li
    	>En la administración, ir al gestor de estilos de plantillas;</li
@@ -3915,23 +3962,23 @@
    	>Acceder a esta copia, cambiar la opción de maquetación y decidir a que items del menú se desea ver el nuevo diseño.</li
    	></ul
          ><p
-         >Por ejemplo, si seleccionamos que queremos asignar el nuevo diseño a una categoría dada, al ingresar a un articulo de esa categoría veremos:</p
+         >Por ejemplo, si se selecciona asignar el nuevo diseño a una categoría dada, al ingresar a un articulo de esa categoría se visualizará:</p
          ><div class="figure"
          ><img src="../incluir/figuras/image10.png"
    	 /><p class="caption"
    	></p
    	></div
          ><p
-         >Si despublicamos los módulos superiores e inferiores y asignamos algunos en la columna derecha tendremos:</p
+         >Si se despublican los módulos superiores e inferiores y se asignan algunos en la columna derecha:</p
          ><div class="figure"
          ><img src="../incluir/figuras/image23.png"
    	 /><p class="caption"
    	></p
    	></div
          ><p
-         >Lo cual no esta mal, pero podemos mejorar el diseño agregando algunos estilos en <code
+         >Agregando algunos estilos en <code
    	>template.css</code
-   	>:</p
+   	> es posible mejorar el diseño:</p
          ><pre class="css numberLines"
          ><code
    	>/* Columna izquierda
@@ -4031,7 +4078,7 @@
    	></p
    	></div
          ><p
-         >Como podemos ver, los estilos en plantillas son una opción interesante que le otorgan flexibilidad a la plantilla, permitiendo cambiar su diseño ante distintas situaciones.</p
+         >Como se puede ver, los estilos en plantillas son una opción interesante que le otorgan flexibilidad a la plantilla, permitiendo cambiar su diseño ante distintas situaciones.</p
          ></div
        ></div
      ></div
