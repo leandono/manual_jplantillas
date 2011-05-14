@@ -4093,46 +4093,46 @@
          >Extensiones desarrolladas en MVC</a
          ></h3
        ><p
-       >Desde la versión 1.5, Joomla permite la sobrescritura del HTML que posean módulos y componentes, otorgándonos mucho más control sobre lo que queremos que se visualice en nuestro sitio, sin tener que modificar archivos del núcleo de dichas extensiones ó del mismo CMS.</p
+       >Desde la versión 1.5, Joomla permite la sobrescritura del HTML que poseen módulos y componentes, otorgando mucho más control sobre lo que se desea mostrar en el sitio, sin tener que modificar archivos del núcleo de dichas extensiones o del mismo CMS.</p
        ><p
        >Para poder sobrescribir la estructura HTML que posea una extensión, es requisito que esta esté creada utilizando el patrón de arquitectura MVC (Modelo-Vista-Controlador).</p
        ><p
-       >Desde el punto de vista del usuario común, no existe una forma automática de saber si una extensión utiliza MVC. La única manera de saberlo es llendo a la carpeta de dicha extensión y mirando sus estructura de carpetas y archivos. Por ejemplo, los componentes creados con MVC suelen tener una estructura así:</p
+       >Desde el punto de vista del usuario común, no existe una forma automática de saber si una extensión utiliza MVC. La única manera de saberlo es yendo a la carpeta de dicha extensión y mirando su estructura de carpetas y archivos. Por ejemplo, los componentes creados con MVC suelen tener una estructura de esta forma:</p
        ><div class="figure"
        ><img src="../incluir/figuras/image43.png"
           /><p class="caption"
          ></p
          ></div
        ><p
-       >En donde encontraremos una carpeta llamada <code
+       >En donde existe una carpeta <code
          >controllers</code
-         >, otra llamada <code
+         >, otra <code
          >models</code
-         > y otra llamada <code
+         > y otra <code
          >views</code
-         >. Es esta última carpeta la que nos interesa, ya que en ella se encuentran carpetas y archivos que utilizaremos como base para personalizar el HTML del componente.</p
+         >. En esta última carpeta se encuentran archivos que se utilizaran como base para personalizar el HTML del componente.</p
        ><p
-       >Por otro lado, los módulos desarrollados en MVC tienen este aspecto:</p
+       >Por otro lado, los módulos desarrollados en MVC poseen el siguiente aspecto:</p
        ><div class="figure"
        ><img src="../incluir/figuras/image35.png"
           /><p class="caption"
          ></p
          ></div
        ><p
-       >En este caso, la carpeta que nos interesa es <code
+       >En este caso, la carpeta <code
          >tmpl</code
-         >, ya que, al igual que la carpeta <code
-         >views</code
-         > (en el caso de componentes), posee archivos que se utilizaran para personalizar a nuestro gusto el módulo.</p
+         > posee archivos que se utilizaran para personalizar a gusto el HTML del módulo.</p
        ><blockquote
        ><p
-         >En Joomla, los archivos que componen cada componente pueden encontrarse dentro de la components, en el directorio raiz del CMS. Allí cada componente esta separado por carpetas diferentes (<code
+         >En Joomla, los archivos que componen cada componente pueden encontrarse dentro de la carpeta <code
+   	>components</code
+   	>, en el directorio raíz del CMS. Allí cada componente esta separado por carpetas diferentes (<code
    	>com_banners</code
    	>, <code
    	>com_contact</code
    	>, etc). En el caso de los módulos, estos se encuentran en la carpeta <code
    	>modules</code
-   	>, también en el directorio raiz del CMS. Y al igual que el caso anterior, cada módulo esta separado en una carpeta diferente (<code
+   	>, también en el directorio raíz del CMS. Y al igual que el caso anterior, cada módulo esta separado en una carpeta diferente (<code
    	>mod_articles_archive</code
    	>, <code
    	>mod_articles_categories</code
@@ -4140,20 +4140,26 @@
          ></blockquote
        ><blockquote
        ><p
-         >Si desea conocer un poco más sobre MVC puede consultar: <a href="http://es.wikipedia.org/wiki/Modelo_Vista_Controlador"
-   	><code class="url"
-   	  >http://es.wikipedia.org/wiki/Modelo_Vista_Controlador</code
-   	  ></a
-   	> <a href="http://docs.joomla.org/MVC"
-   	><code class="url"
-   	  >http://docs.joomla.org/MVC</code
-   	  ></a
-   	></p
+         >Si desea conocer un poco más sobre MVC puede consultar:</p
+         ><ul
+         ><li
+   	><a href="http://es.wikipedia.org/wiki/Modelo_Vista_Controlador"
+   	  ><code class="url"
+   	    >http://es.wikipedia.org/wiki/Modelo_Vista_Controlador</code
+   	    ></a
+   	  ></li
+   	><li
+   	><a href="http://docs.joomla.org/MVC"
+   	  ><code class="url"
+   	    >http://docs.joomla.org/MVC</code
+   	    ></a
+   	  ></li
+   	></ul
          ></blockquote
        ><p
-       >Tanto la personalización de módulos, como de componentes, se trabajan dentro de la carpeta <code
+       >Tanto la personalización de módulos como de componentes, se trabajan dentro de la carpeta <code
          >html</code
-         > de nuestra plantilla.</p
+         > de la plantilla.</p
        ></div
      ><div id="m&#243;dulos-personalizados"
      ><h3
@@ -4161,31 +4167,21 @@
          >Módulos personalizados</a
          ></h3
        ><p
-       >Vamos a comenzar por la personalización del HTML de módulos. En este aspecto, podremos adaptar a nuestras necesidades:</p
+       >En este aspecto, es posible adaptar a los módulos en varios aspectos:</p
        ><ul
        ><li
          ><p
-   	>La forma con que se muestra el módulo: Anteriormente, al analizar las secciones que componen a <code
+   	>La manera con que se muestra el módulo: Anteriormente, en el análisis de las secciones que componen a <code
    	  >index.php</code
-   	  >, se explicó que los diferentes módulos se pueden cargar de diferentes formas con solo cambiar el valor del atributo style en la directiva <code
+   	  >, se explicó que los módulos se pueden cargar de diferentes formas cambiando el valor del atributo <code
+   	  >style</code
+   	  > en la directiva <code
    	  >&lt;jdoc:include type=&quot;modules&quot; name=&quot;&quot; style=&quot;&quot; /&gt;</code
-   	  >: <code
-   	  >xhtml</code
-   	  >, <code
-   	  >rounded</code
-   	  >, <code
-   	  >table</code
-   	  >, <code
-   	  >horz</code
-   	  >, <code
-   	  >none</code
-   	  > y <code
-   	  >outline</code
-   	  >. Sin embargo, existen situaciones en que necesitamos que un módulo se cargue dentro de una estructura determinada, por eso mismo, Joomla nos permite crear nuestros propios estilos de visualización de módulos.</p
+   	  >. Sin embargo, existen situaciones en que se necesita que un módulo cargue dentro de una estructura determinada. Por eso mismo, Joomla permite crear estilos personalizados de visualización de módulos.</p
    	></li
          ><li
          ><p
-   	>El mismo HTML que compone un módulo: No solo podremos personalizar la forma con que los módulos están contenidos sino también las etiquetas HTML que componen a uno o varios módulos en particular, dándonos la flexibilidad para adaptar el diseño a nuestro gusto.</p
+   	>El mismo HTML que compone un módulo: También es posible personalizar las etiquetas HTML que componen a uno o varios módulos en particular, otorgando la flexibilidad para adaptar un diseño a gusto.</p
    	></li
          ></ul
        ><div id="personalizar-la-forma-con-que-muestran-los-m&#243;dulos"
@@ -4194,20 +4190,20 @@
    	>Personalizar la forma con que muestran los módulos</a
    	></h4
          ><p
-         >Como dijimos antes, todo el trabajo de personalización de módulos (y también de componentes) ocurren en la carpeta <code
+         >Como se comentó anteriormente, el trabajo de personalización de módulos (y también de componentes) ocurre en la carpeta <code
    	>html</code
-   	> de nuestra plantilla. En el caso de la plantilla que hemos creado de ejemplo, al acceder a la carpeta <code
+   	> de la plantilla. En el caso de la plantilla creada de ejemplo, al acceder a la carpeta <code
    	>html</code
-   	> veremos:</p
+   	> se visualizará:</p
          ><div class="figure"
          ><img src="../incluir/figuras/image46.png"
    	 /><p class="caption"
    	></p
    	></div
          ><p
-         >Para la personalización de la carga de módulos, a nosotros nos interesa el archivo <code
+         >Es el archivo <code
    	>modules.php</code
-   	>. Si lo analizamos, veremos que el mismo tiene tres funciones definidas:</p
+   	> quien se encarga de contener los diferentes estilos personalizados de visualización de módulos. Al abrir a dicho archivo, el mismo posee tres funciones definidas:</p
          ><pre class="php numberLines"
          ><code
    	>function modChrome_container($module, &amp;$params, &amp;$attribs)
@@ -4241,9 +4237,9 @@
    </code
    	></pre
          ><p
-         >Cada función corresponde a una manera personalizada de mostrar un módulo (las cuales ya venian definidas en la plantilla <code
+         >Cada función corresponde a una manera personalizada de mostrar un módulo (las cuales ya venían definidas en la plantilla <code
    	>atomic</code
-   	> a modo de ejemplo). Lo que haremos será definir un nuevo estilo de carga de módulos escribiendo una nueva función:</p
+   	> a modo de ejemplo). Lo que se hará es crear una nueva función para definir un nuevo estilo de visualización de módulos:</p
          ><pre class="php numberLines"
          ><code
    	>&lt;?php
@@ -4276,7 +4272,7 @@
    </code
    	></pre
          ><p
-         >Vamos a descomponer la función creada:</p
+         >Al descomponer la función en detalles, se obtiene una análisis más profundo:</p
          ><p
          ><strong
    	>Sección 1</strong
@@ -4291,29 +4287,27 @@
    </code
    	></pre
          ><p
-         >Aca definimos la función para nuestro estilo personalizado. El nombre de la función debe estar conformado por <code
+         >Definición de función para el estilo personalizado. El nombre de la función debe estar conformado por <code
    	>modChrome_(nombre_del_estilo)</code
-   	>. Por lo tanto, cuando llamemos a este estilo en nuestra plantilla lo haremos a través de <code
-   	>&lt;jdoc:include type=&quot;modules&quot; name=&quot;(nombre_de_la_posicion)&quot; style=&quot;personalizado&quot; /&gt;</code
-   	>. Luego, entre parentesis se pasan tres argumentos:</p
+   	>. Entre paréntesis se pasan tres argumentos:</p
          ><ul
          ><li
    	><p
    	  ><code
    	    >$module</code
-   	    >: Es el objeto PHP perteneciente al módulo que mostraremos en la posición definida. Este objeto posee información relacionada al módulo: título (y si se debe mostrar), contenido, id identificatorio;</p
+   	    >: Es el objeto PHP perteneciente al módulo que se mostrará en la posición definida. Este objeto posee información relacionada al módulo: título (y si se debe mostrar), contenido, ID único;</p
    	  ></li
    	><li
    	><p
    	  ><code
    	    >&amp;$params</code
-   	    >: Contendrá información relacionada a los parametros de configuración del módulo, los cuales se especifican al editarlo desde el panel de administración;</p
+   	    >: Contendrá información relacionada a los parámetros de configuración del módulo, los cuales se especifican al editarlo desde el panel de administración;</p
    	  ></li
    	><li
    	><p
    	  ><code
    	    >&amp;$attribs</code
-   	    >: Hemos visto que la directiva <code
+   	    >: Antes se señaló que la directiva <code
    	    >&lt;jdoc:include type=&quot;modules&quot; /&gt;</code
    	    > posee los atributos <code
    	    >type</code
@@ -4321,15 +4315,25 @@
    	    >name</code
    	    > y <code
    	    >style</code
-   	    >. Sin embargo es posible agregar más atributos personalizados con el nombre y valor que queramos. Para poder obtener el valor de los nuevos atributos, utilizaremos a <code
+   	    >. Sin embargo es posible agregar más atributos personalizados con el nombre y valor que se desee. Luego, para poder obtener el valor de los nuevos atributos, se utiliza a <code
    	    >$attribs</code
-   	    >. Para nuestra estilo personalizado, agregaremos un nuevo atributo llamado <code
+   	    >. En el caso del estilo creado, se agregará un nuevo atributo llamado <code
    	    >headerLevel</code
    	    >, quedando la directiva de esta forma: <code
    	    >&lt;jdoc:include type=&quot;modules&quot; name=&quot;(nombre_de_la_posicion)&quot; style=&quot;personalizado&quot; headerLevel=&quot;3&quot; /&gt;</code
    	    >.</p
    	  ></li
    	></ul
+         ><blockquote
+         ><p
+   	>Notar que el atributo <code
+   	  >style</code
+   	  > para poder utilizar el estilo personalizado, posee el valor <code
+   	  >personalizado</code
+   	  > no <code
+   	  >modChrome_personalizado</code
+   	  > (que es el nombre de la función).</p
+   	></blockquote
          ><p
          ><strong
    	>Sección 2</strong
@@ -4344,11 +4348,11 @@
    </code
    	></pre
          ><p
-         >En este bloque de código, preguntamos si el atributo <code
+         >En este bloque de código, se pregunta si el atributo <code
    	>headerLevel</code
-   	> posee algún valor. Si lo posee asignamos a la variable <code
+   	> posee algún valor. Si lo posee se asigna a la variable <code
    	>$headerLevel</code
-   	> dicho valor, caso contrario establecemos a 4 como valor predeterminado.</p
+   	> dicho valor ó caso contrario se establece a 4 como valor predeterminado.</p
          ><p
          ><strong
    	>Sección 3</strong
@@ -4361,7 +4365,7 @@
    </code
    	></pre
          ><p
-         >Luego preguntamos si el módulo posee algún contenido HTML, ya que no nos interesa continuar si este se encuentra vacío.</p
+         >Luego se pregunta si el módulo posee algún contenido HTML, ya que no tiene sentido mostrar un módulo vacío.</p
          ><p
          ><strong
    	>Sección 4</strong
@@ -4378,7 +4382,7 @@
    </code
    	></pre
          ><p
-         >Continuando, preguntamos si el módulo posee un título asignado. Si lo posee, mostramos el título entre etiquetas <code
+         >Continuando, se pregunta si el módulo posee un título asignado. Si lo posee, se muestra a dicho título entre etiquetas <code
    	>&lt;h /&gt;</code
    	>, la cual podrá variar dependiendo del valor establecido en el atributo <code
    	>headerLevel</code
@@ -4395,23 +4399,23 @@
    </code
    	></pre
          ><p
-         >Finalmente mostramos el contenido del módulo. Para nuestras necesidades, a este lo encerramos en una etiqueta <code
+         >Finalmente se muestra el contenido del módulo, el cual se lo encierra en una etiqueta <code
    	>&lt;div /&gt;</code
-   	>, el cual posee el atributo id conformado por <code
+   	> que posee el atributo <code
+   	>id</code
+   	> conformado por <code
    	>module_(id_del_modulo)</code
    	> y el atributo <code
    	>class</code
    	> por <code
    	>moduletable(parametro_moduleclass_sfx)</code
-   	> (recordemos nuevamente que este parametro se especifica en la configuración del módulo en la administración, más precisamente, <code
-   	>moduleclass_sfx</code
-   	> corresponde al parámetro <em
+   	> (recordar nuevamente que este parámetro se especifica en la configuración del módulo, en la administración del CMS. Más precisamente corresponde al parámetro <em
    	>Clase CSS</em
    	> del módulo).</p
          ><p
          >El archivo <code
    	>modules.php</code
-   	> quedará conformado de esta forma:</p
+   	> quedará conformado de la siguiente forma:</p
          ><pre class="php numberLines"
          ><code
    	>function modChrome_container($module, &amp;$params, &amp;$attribs)
@@ -4471,9 +4475,7 @@
    </code
    	></pre
          ><p
-         >Y para mostrar en la plantilla los módulos de la forma que definimos, tan solo debemos agregar una nueva directiva <code
-   	>&lt;jdoc:include type=&quot;modules&quot; /&gt;</code
-   	> ó reemplazar alguna. Por ejemplo, para la sección de dos columnas, en la izquierda incorporamos nuestro estilo:</p
+         >Para mostrar en la plantilla los módulos de la nueva forma definida, tan solo es necesario agregar una nueva directiva en algún lugar ó reemplazar alguna por la nueva. Por ejemplo, para la sección de dos columnas, en la parte derecha, se incorpora el nuevo estilo:</p
          ><pre class="php numberLines"
          ><code
    	>&lt;div id=&quot;columna_izquierda&quot; class=&quot;span-17 append-1&quot;&gt;
@@ -4486,7 +4488,7 @@
    </code
    	></pre
          ><p
-         >Si verificamos el código HTML generado en cada módulo izquierdo, veremos que cada uno posee una estructura así:</p
+         >Si se verifica el código HTML generado en cada módulo derecho, se podrá notar una estructura de esta forma:</p
          ><pre class="php numberLines"
          ><code
    	>&lt;h3&gt;(título del módulo)&lt;/h3&gt;
@@ -4496,7 +4498,7 @@
    </code
    	></pre
          ><p
-         >Por lo tanto, nuestro estilo de módulo se ha aplicado correctamente.</p
+         >Por lo tanto, el nuevo estilo personalizado de módulo se ha aplicado correctamente.</p
          ></div
        ><div id="personalizar-el-html-de-un-m&#243;dulo-en-particular"
        ><h4
@@ -4504,17 +4506,17 @@
    	>Personalizar el HTML de un módulo en particular</a
    	></h4
          ><p
-         >Anteriormente vimos que los módulos en Joomla, creados bajo el patrón MVC, poseen una subcarpeta llamada <code
+         >Anteriormente se comentó que los módulos creados bajo el patrón MVC, poseen una subcarpeta llamada <code
    	>tmpl</code
    	>. Dicha carpeta contendrá uno o más archivos <code
    	>.php</code
    	> con las etiquetas HTML que conforman al módulo.</p
          ><p
-         >Por ejemplo, si vamos a la carpeta <code
+         >Por ejemplo, si se dirige a la carpeta <code
    	>tmpl</code
    	> del módulo <code
    	>mod_stats</code
-   	> (módulo que muestra las estadísticas de nuestro sitio), encontraremos un archivo llamado <code
+   	> (módulo que muestra las estadísticas del sitio), encontrará un archivo llamado <code
    	>default.php</code
    	> que contiene:</p
          ><pre class="php numberLines"
@@ -4539,36 +4541,36 @@
    </code
    	></pre
          ><p
-         >Supongamos el caso que nosotros necesitamos que los datos de estadísticas de nuestro sitio, en lugar de mostrarse dentro de etiquetas <code
+         >Suponiendo el caso que se necesita que los datos de estadísticas del sitio, en lugar de mostrarse dentro de etiquetas <code
    	>&lt;dl /&gt;</code
    	>, <code
    	>&lt;dt /&gt;</code
    	> y <code
    	>&lt;dd /&gt;</code
-   	>, las queremos dentro de una lista desordenada (<code
+   	>, se muestren dentro de una lista desordenada (<code
    	>&lt;ul /&gt;</code
    	>, <code
    	>&lt;li /&gt;</code
-   	>). Para realizarlo, utilizando nuestra plantilla, deberemos:</p
+   	>). Para realizarlo, utilizando la plantilla creada, se debe:</p
          ><pre
          ><code
-   	>* En la carpeta `html` de nuestra plantilla, crear una carpeta llamada `mod_stats`;
+   	>* En la carpeta `html` de la plantilla, crear una carpeta llamada `mod_stats`;
    * Dentro de la carpeta creada, copiar los archivos `default.php` y `index.html` que estan en la carpeta `tmpl`;
    </code
    	></pre
          ><p
-         >De modo que nuestra carpeta <code
+         >De modo que la carpeta <code
    	>html</code
-   	> tenga la siguiente estructura de archivos:</p
+   	> posea la siguiente estructura de archivos:</p
          ><div class="figure"
          ><img src="../incluir/figuras/image20.png"
    	 /><p class="caption"
    	></p
    	></div
          ><p
-         >Lo siguiente que haremos será abrir el archivo <code
+         >Lo siguiente será abrir el archivo <code
    	>default.php</code
-   	> copiado y modificarlo a nuestro gusto:</p
+   	> copiado y modificarlo con las nuevas etiquetas:</p
          ><pre class="php numberLines"
          ><code
    	>&lt;?php
@@ -4585,22 +4587,26 @@
    </code
    	></pre
          ><p
-         >Si publicamos el módulo estadísticas en nuestro sitio, veremos que en lugar de utilizar las etiquetas HTML que posee el archivo <code
+         >Si se publica el módulo <strong
+   	>estadísticas</strong
+   	> en el sitio, se podrá ver que en lugar de utilizar las etiquetas HTML que posee el archivo <code
    	>default.php</code
    	> en la carpeta <code
    	>tmpl</code
-   	>, se utilizará el que nosotros poseemos en la carpeta <code
+   	>, se utilizaran las etiquetas del archivo creado en la carpeta <code
    	>mod_stats</code
    	> del directorio <code
    	>html</code
-   	> de nuestra plantilla.</p
+   	> de la plantilla.</p
          ><p
-         >En caso de querer personalizar otros módulos, debemos realizar los mismos pasos descriptos.</p
+         >En caso de querer personalizar otros módulos, se deben realizar los mismos pasos descriptos.</p
          ><blockquote
          ><p
-   	>Podemos notar que <code
+   	>Notar que <code
    	  >atomic</code
-   	  >, la plantilla que utilizamos como base para nuestro trabajo, ya poseia varios módulos personalizados dentro de la carpeta html:</p
+   	  >, la plantilla utilizada como base para el trabajo, ya posee varios módulos personalizados dentro de la carpeta <code
+   	  >html</code
+   	  >:</p
    	><ul
    	><li
    	  ><code
@@ -4620,7 +4626,7 @@
    	    ></li
    	  ></ul
    	><p
-   	>Por lo tanto, si necesitamos personalizar alguno de estos módulos, tan solo debemos modificar los archivos <code
+   	>Por lo tanto, si se necesita personalizar alguno de estos módulos, tan solo se debe modificar los archivos <code
    	  >.php</code
    	  > que estan dentro de cada directorio.</p
    	></blockquote
@@ -4632,24 +4638,24 @@
          >Componentes personalizados</a
          ></h3
        ><p
-       >Los componentes suelen ser extensiones más complejas que los módulos, ya que abarcan la parte principal de la página (y no zonas determinadas como los módulos).</p
+       >Los componentes suelen ser extensiones más complejas que los módulos, ya que abarcan la parte principal de la página.</p
        ><p
-       >El mecanismo para personalizar el HTML de un componente determinado es exactamente igual que el descripto para los módulos, con algunas diferencias. Por ejemplo, supongamos que queremos personalizar los resultados de búsqueda. Actualmente, esta pantalla posee el siguiente diseño:</p
+       >El mecanismo para personalizar el HTML de un componente determinado es exactamente igual que el descripto para los módulos, con algunas diferencias. Por ejemplo, suponiendo que se necesita personalizar los resultados de búsqueda, actualmente, dicha pantalla posee el siguiente diseño:</p
        ><div class="figure"
        ><img src="../incluir/figuras/image50.png"
           /><p class="caption"
          ></p
          ></div
        ><p
-       >Nosotros deseamos que las zonas “<strong
+       >Para la personalización, se desea las zonas “<strong
          >Condiciones de búsqueda</strong
          >” y “<strong
          >Buscar solo en</strong
-         >” aparezcan ocultas y que estas sean visibles al hacer click en un enlace con el texto “<strong
+         >” aparezcan ocultas y que éstas sean visibles al hacer click en un enlace con el texto “<strong
          >Búsqueda avanzada</strong
          >”.</p
        ><p
-       >Para realizarlo, haremos lo siguiente:</p
+       >Para realizarlo, se hará lo siguiente:</p
        ><ul
        ><li
          >Ir a la carpeta del componente de búsqueda. En este caso <code
@@ -4658,21 +4664,21 @@
    	>components</code
    	>);</li
          ><li
-         >Allí dentro encontraremos la carpeta <code
+         >Allí dentro se encontrará a la carpeta <code
    	>views</code
-   	>. Si entramos a ella, veremos que existe una carpeta <code
+   	>. Al entrar a ella, existirá otra carpeta con el nombre <code
    	>search</code
    	>.</li
          ></ul
        ><blockquote
        ><p
-         >Dependiendo del tipo de componente, podremos encontrar más de una carpeta dentro del directorio <code
+         >Dependiendo del tipo de componente, es posible encontrar más de una carpeta dentro del directorio <code
    	>views</code
-   	>. Por ejemplo, si nos dirigimos a la carpeta <code
+   	>. Por ejemplo, al ir a la carpeta <code
    	>views</code
    	> del componente <code
    	>com_content</code
-   	> veremos 6 carpetas: <code
+   	> se encontraran 6 directorios: <code
    	>archive</code
    	>, <code
    	>article</code
@@ -4688,13 +4694,13 @@
          ></blockquote
        ><ul
        ><li
-         >Si entramos a la carpeta <code
+         >Al entrar a la carpeta <code
    	>search</code
-   	>, encontraremos varios archivos y además una carpeta <code
+   	>, se encontraran varios archivos y además un directorio con el nombre <code
    	>tmpl</code
-   	>, la cual contiene (al igual que en el caso de los módulos) archivos <code
+   	>, el cual contiene (al igual que en el caso de los módulos) archivos <code
    	>.php</code
-   	> con las etiquetas HTML que conformaran al componente:</li
+   	> con las etiquetas HTML que conforman al componente:</li
          ></ul
        ><div class="figure"
        ><img src="../incluir/figuras/image13.png"
@@ -4703,7 +4709,7 @@
          ></div
        ><blockquote
        ><p
-         >Podemos notar que existe más de un archivo <code
+         >Notar que existe más de un archivo <code
    	>.php</code
    	> dentro del directorio. Esto es debido a que, los componentes al ser más complejos, suelen dividir su HTML en varios archivos para reunirlos en uno solo (<code
    	>default.php</code
@@ -4712,23 +4718,23 @@
        ><ul
        ><li
          ><p
-   	>El archivo que nos interesa a nosotros es <code
+   	>El archivo a copiar es <code
    	  >default_form.php</code
-   	  >, ya que posee las etiquetas HTML que conforman las zonas que queremos personalizar.</p
+   	  >, ya que posee las etiquetas HTML que conforman las zonas a personalizar.</p
    	></li
          ><li
          ><p
-   	>Lo siguiente que haremos es crear una carpeta <code
+   	>Lo siguiente a realizar es crear una carpeta <code
    	  >com_search</code
    	  > dentro del directorio <code
    	  >html</code
-   	  > de nuestra plantilla. Allí dentro crearemos otra carpeta llamada <code
+   	  > de la plantilla. Allí dentro se creará otra carpeta llamada <code
    	  >search</code
-   	  > y pegaremos el archivo <code
+   	  > para luego pegar el archivo <code
    	  >default_form.php</code
-   	  > que ubicamos en el paso anterior. La estructura del directorio <code
+   	  > ubicado en el paso anterior. La estructura del directorio <code
    	  >html</code
-   	  > debería quedar de esta forma:</p
+   	  > debería quedar de la siguiente manera:</p
    	></li
          ></ul
        ><div class="figure"
@@ -4738,20 +4744,20 @@
          ></div
        ><blockquote
        ><p
-         >Notemos que hemos creado una carpeta <code
+         >Notar que se ha creado una carpeta <code
    	>search</code
    	>. Esta corresponde al nombre de la carpeta <code
    	>search</code
    	> que se encuentra dentro del directorio <code
    	>views</code
-   	> del componente. En caso que existan otras carpetas con otros nombres, deberemos seguir la misma lógica.</p
+   	> del componente. En caso que existan otras carpetas con otros nombres, se debe seguir la misma lógica.</p
          ></blockquote
        ><p
-       >Lo siguiente que haremos será abrir el archivo <code
+       >Lo siguiente será abrir el archivo <code
          >default_form.php</code
-         > que hemos copiado, y modificarlo a nuestro gusto.</p
+         > copiado, y modificarlo a gusto.</p
        ><p
-       >Las etiquetas que corresponden a la zona que queremos personalizar son:</p
+       >Las etiquetas que corresponden a la zona a personalizar son:</p
        ><pre class="xml numberLines"
        ><code
          >&lt;fieldset class=&quot;phrases&quot;&gt;
@@ -4784,9 +4790,9 @@
    </code
          ></pre
        ><p
-       >Como comentamos, deseamos ocultar estas zonas de manera predeterminada y agregar un enlace, que al clickearlo, haga visibles las opciones de búsqueda.</p
+       >Como se comentó, se desea ocultar estas zonas de manera predeterminada y agregar un enlace, que al hacerle click, haga visibles las opciones de búsqueda.</p
        ><p
-       >Lo que haremos será crear el enlace y además encerrar las zonas que contienen las opciones en un <code
+       >Lo primero será crear el enlace y además encerrar las zonas que contienen las opciones en un <code
          >&lt;div /&gt;</code
          >:</p
        ><pre class="php numberLines"
@@ -4829,7 +4835,7 @@
    </code
          ></pre
        ><p
-       >Luego, incorporamos unos estilos CSS para darle más presencia al enlace y una función JavaScript que realizará el trabajo de ocultar/mostrar las opciones de búsqueda:</p
+       >Luego, se incorporan unos estilos CSS para darle más presencia al enlace y una función JavaScript que realizará el trabajo de ocultar/mostrar las opciones de búsqueda:</p
        ><pre class="php numberLines"
        ><code
          >&lt;?php
@@ -4857,15 +4863,15 @@
          ></pre
        ><blockquote
        ><p
-         >Notemos que, para insertar el estilo CSS y la función JavaScript, utilizamos <code
+         >Notar que, para insertar el estilo CSS y la función JavaScript, se utilizó <code
    	>JFactory::getDocument()</code
    	>, <code
    	>addStyleDeclaration()</code
    	> y <code
    	>addScriptDeclaration()</code
-   	>. El beneficio que tenemos de utilizar esta funciones es que Joomla se encarga de insertar todo el código dentro de las etiquetas <code
+   	>. El beneficio de utilizar estas funciones es que Joomla se encarga de insertar todo el código dentro de las etiquetas <code
    	>&lt;head /&gt;</code
-   	> de nuestra plantilla.</p
+   	> de la plantilla.</p
          ><p
          >Más información sobre: * <code
    	>JDocument</code
@@ -4893,7 +4899,7 @@
    	  ></a
    	></p
          ><p
-         >Otra forma sería utilizando las etiquetas <code
+         >Otra manera de realizar el trabajo es utilizando las etiquetas <code
    	>&lt;style type=&quot;text/css&quot; /&gt;</code
    	> y <code
    	>&lt;script type=&quot;text/javascript&quot; /&gt;</code
@@ -4907,9 +4913,9 @@
    	>Mootools</strong
    	> como <em
    	>framework</em
-   	> JavaScript. Esta biblioteca posee una clase llamada <code
+   	> JavaScript. Esta biblioteca posee una clase JavaScript llamada <code
    	>Fx.Slide</code
-   	> que permite realizar el tipo de efecto que necesitamos para nuestro caso. Más información sobre <code
+   	> que permite realizar el tipo de efecto se necesita. Más información sobre <code
    	>Fx.Slide</code
    	>: <a href="http://mootools.net/docs/more/Fx/Fx.Slide"
    	><code class="url"
@@ -4918,7 +4924,7 @@
    	></p
          ></blockquote
        ><p
-       >Si realizamos todo bien, nuestra página de resultados quedará de la siguiente forma:</p
+       >Si todo se realiza correctamente, la página de resultados quedará de la siguiente forma:</p
        ><div class="figure"
        ><img src="../incluir/figuras/image15.png"
           /><p class="caption"
@@ -4926,7 +4932,7 @@
          ></div
        ><p
        >Al hacer click en el enlace <strong
-         >Busqueda avanzada</strong
+         >Búsqueda avanzada</strong
          >, se desplegarán las opciones:</p
        ><div class="figure"
        ><img src="../incluir/figuras/image19.png"
@@ -4935,12 +4941,14 @@
          ></div
        ><blockquote
        ><p
-         >Una buena práctica sería incorporar el texto Busqueda avanzada dentro de los archivos de lenguajes de la plantilla y no en el mismo archivo <code
+         >Una buena práctica sería incorporar el texto <strong
+   	>Búsqueda avanzada</strong
+   	> dentro de los archivos de lenguajes de la plantilla y no en el mismo archivo <code
    	>.php</code
    	>.</p
          ></blockquote
        ><p
-       >Y de esta forma tenemos terminada la personalización del componente. En caso que queramos hacer lo mismo con otros componentes, debemos realizar los mismos pasos descriptos anteriormente.</p
+       >De esta manera ya se tiene terminada la personalización del componente. En caso que se quiera realizar lo mismo con otros componentes se deben realizar los mismos pasos descriptos anteriormente.</p
        ></div
      ><div id="conclusi&#243;n"
      ><h3
@@ -4948,14 +4956,16 @@
          >Conclusión</a
          ></h3
        ><p
-       >Pudimos comprobar el potencial de las plantillas de Joomla para la personalización de los componentes y extensiones de nuestro sitio. Esta práctica posee varias claras ventajas:</p
+       >Se pudo comprobar el potencial de las plantillas de Joomla para la personalización de componentes y módulos. Esta práctica posee varias ventajas importantes:</p
        ><ul
        ><li
-         >Adaptación a nuestras necesidades sin mucho esfuerzo;</li
+         >Adaptación a las necesidades sin mucho esfuerzo;</li
          ><li
-         >No se modificó ningún archivo del núcleo de la extensión permitiendo que, en caso de actualización, no perdamos nuestro trabajo, minificando el tiempo de mantenimiento;</li
+         >No se modificó ningún archivo del núcleo de la extensión permitiendo que, en caso de actualización, no se pierda el trabajo realizado, minimizando el tiempo de mantenimiento;</li
          ><li
-         >Centralización del trabajo: todo el trabajo transcurrió dentro de la carpeta html de nuestra plantilla.</li
+         >Centralización del trabajo: el mismo transcurrió dentro de la carpeta <code
+   	>html</code
+   	> de la plantilla.</li
          ></ul
        ></div
      ></div

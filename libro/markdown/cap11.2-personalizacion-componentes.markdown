@@ -2,47 +2,47 @@
 
 ### Componentes personalizados
 
-Los componentes suelen ser extensiones más complejas que los módulos, ya que abarcan la parte principal de la página (y no zonas determinadas como los módulos).
+Los componentes suelen ser extensiones más complejas que los módulos, ya que abarcan la parte principal de la página.
 
-El mecanismo para personalizar el HTML de un componente determinado es exactamente igual que el descripto para los módulos, con algunas diferencias. Por ejemplo, supongamos que queremos personalizar los resultados de búsqueda. Actualmente, esta pantalla posee el siguiente diseño:
+El mecanismo para personalizar el HTML de un componente determinado es exactamente igual que el descripto para los módulos, con algunas diferencias. Por ejemplo, suponiendo que se necesita personalizar los resultados de búsqueda, actualmente, dicha pantalla posee el siguiente diseño:
 
 ![](../incluir/figuras/image50.png)
 
-Nosotros deseamos que las zonas "**Condiciones de búsqueda**" y "**Buscar solo en**" aparezcan ocultas y que estas sean visibles al hacer click en un enlace con el texto "**Búsqueda avanzada**".
+Para la personalización, se desea las zonas "**Condiciones de búsqueda**" y "**Buscar solo en**" aparezcan ocultas y que éstas sean visibles al hacer click en un enlace con el texto "**Búsqueda avanzada**".
 
-Para realizarlo, haremos lo siguiente:
+Para realizarlo, se hará lo siguiente:
 
 
 * Ir a la carpeta del componente de búsqueda. En este caso `com_search` (la cual se encuentra dentro del directorio `components`);
-* Allí dentro encontraremos la carpeta `views`. Si entramos a ella, veremos que existe una carpeta `search`.
+* Allí dentro se encontrará a la carpeta `views`. Al entrar a ella, existirá otra carpeta con el nombre `search`.
 
 
->Dependiendo del tipo de componente, podremos encontrar más de una carpeta dentro del directorio `views`. Por ejemplo, si nos dirigimos a la carpeta `views` del componente `com_content` veremos 6 carpetas: `archive`, `article`, `categories`, `category`, `featured` y `form`. Cada carpeta es una funcionalidad distinta del componente.
+>Dependiendo del tipo de componente, es posible encontrar más de una carpeta dentro del directorio `views`. Por ejemplo, al ir a la carpeta `views` del componente `com_content` se encontraran 6 directorios: `archive`, `article`, `categories`, `category`, `featured` y `form`. Cada carpeta es una funcionalidad distinta del componente.
 
 
-* Si entramos a la carpeta `search`, encontraremos varios archivos y además una carpeta `tmpl`, la cual contiene (al igual que en el caso de los módulos) archivos `.php` con las etiquetas HTML que conformaran al componente:
+* Al entrar a la carpeta `search`, se encontraran varios archivos y además un directorio con el nombre `tmpl`, el cual contiene (al igual que en el caso de los módulos) archivos `.php` con las etiquetas HTML que conforman al componente:
 
 
 ![](../incluir/figuras/image13.png)
 
 
->Podemos notar que existe más de un archivo `.php` dentro del directorio. Esto es debido a que, los componentes al ser más complejos, suelen dividir su HTML en varios archivos para reunirlos en uno solo (`default.php`).
+>Notar que existe más de un archivo `.php` dentro del directorio. Esto es debido a que, los componentes al ser más complejos, suelen dividir su HTML en varios archivos para reunirlos en uno solo (`default.php`).
 
 
-* El archivo que nos interesa a nosotros es `default_form.php`, ya que posee las etiquetas HTML que conforman las zonas que queremos personalizar.
+* El archivo a copiar es `default_form.php`, ya que posee las etiquetas HTML que conforman las zonas a personalizar.
 
-* Lo siguiente que haremos es crear una carpeta `com_search` dentro del directorio `html` de nuestra plantilla. Allí dentro crearemos otra carpeta llamada `search` y pegaremos el archivo `default_form.php` que ubicamos en el paso anterior. La estructura del directorio `html` debería quedar de esta forma:
+* Lo siguiente a realizar es crear una carpeta `com_search` dentro del directorio `html` de la plantilla. Allí dentro se creará otra carpeta llamada `search` para luego pegar el archivo `default_form.php` ubicado en el paso anterior. La estructura del directorio `html` debería quedar de la siguiente manera:
 
 
 ![](../incluir/figuras/image12.png)
 
 
->Notemos que hemos creado una carpeta `search`. Esta corresponde al nombre de la carpeta `search` que se encuentra dentro del directorio `views` del componente. En caso que existan otras carpetas con otros nombres, deberemos seguir la misma lógica.
+>Notar que se ha creado una carpeta `search`. Esta corresponde al nombre de la carpeta `search` que se encuentra dentro del directorio `views` del componente. En caso que existan otras carpetas con otros nombres, se debe seguir la misma lógica.
 
 
-Lo siguiente que haremos será abrir el archivo `default_form.php` que hemos copiado, y modificarlo a nuestro gusto.
+Lo siguiente será abrir el archivo `default_form.php` copiado, y modificarlo a gusto.
 
-Las etiquetas que corresponden a la zona que queremos personalizar son:
+Las etiquetas que corresponden a la zona a personalizar son:
 
 
 ~~~~~~~~~{.xml .numberLines}
@@ -76,9 +76,9 @@ Las etiquetas que corresponden a la zona que queremos personalizar son:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Como comentamos, deseamos ocultar estas zonas de manera predeterminada y agregar un enlace, que al clickearlo, haga visibles las opciones de búsqueda.
+Como se comentó, se desea ocultar estas zonas de manera predeterminada y agregar un enlace, que al hacerle click, haga visibles las opciones de búsqueda.
 
-Lo que haremos será crear el enlace y además encerrar las zonas que contienen las opciones en un `<div />`:
+Lo primero será crear el enlace y además encerrar las zonas que contienen las opciones en un `<div />`:
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -120,7 +120,7 @@ Lo que haremos será crear el enlace y además encerrar las zonas que contienen 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Luego, incorporamos unos estilos CSS para darle más presencia al enlace y una función JavaScript que realizará el trabajo de ocultar/mostrar las opciones de búsqueda:
+Luego, se incorporan unos estilos CSS para darle más presencia al enlace y una función JavaScript que realizará el trabajo de ocultar/mostrar las opciones de búsqueda:
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -148,7 +148,7 @@ $doc->addScriptDeclaration ($js);
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
->Notemos que, para insertar el estilo CSS y la función JavaScript, utilizamos `JFactory::getDocument()`, `addStyleDeclaration()` y `addScriptDeclaration()`. El beneficio que tenemos de utilizar esta funciones es que Joomla se encarga de insertar todo el código dentro de las etiquetas `<head />` de nuestra plantilla. 
+>Notar que, para insertar el estilo CSS y la función JavaScript, se utilizó `JFactory::getDocument()`, `addStyleDeclaration()` y `addScriptDeclaration()`. El beneficio de utilizar estas funciones es que Joomla se encarga de insertar todo el código dentro de las etiquetas `<head />` de la plantilla. 
 >
 >Más información sobre:
 >* `JDocument`: <http://docs.joomla.org/JDocument>
@@ -156,33 +156,33 @@ $doc->addScriptDeclaration ($js);
 >* `addScriptDeclaration`: <http://docs.joomla.org/JDocument/addScriptDeclaration>
 >* `addStyleDeclaration`: <http://docs.joomla.org/JDocument/addStyleDeclaration>
 >
->Otra forma sería utilizando las etiquetas `<style type="text/css" />` y `<script type="text/javascript" />`. El funcionamiento sería el mismo, pero todo el código quedaría dentro del `<body />` del documento.
+>Otra manera de realizar el trabajo es utilizando las etiquetas `<style type="text/css" />` y `<script type="text/javascript" />`. El funcionamiento sería el mismo, pero todo el código quedaría dentro del `<body />` del documento.
 
 
->Para realizar la funcionalidad JavaScript, se aprovechó que Joomla utiliza **Mootools** como *framework* JavaScript. Esta biblioteca posee una clase llamada `Fx.Slide` que permite realizar el tipo de efecto que necesitamos para nuestro caso. Más información sobre `Fx.Slide`: <http://mootools.net/docs/more/Fx/Fx.Slide>
+>Para realizar la funcionalidad JavaScript, se aprovechó que Joomla utiliza **Mootools** como *framework* JavaScript. Esta biblioteca posee una clase JavaScript llamada `Fx.Slide` que permite realizar el tipo de efecto se necesita. Más información sobre `Fx.Slide`: <http://mootools.net/docs/more/Fx/Fx.Slide>
 
 
-Si realizamos todo bien, nuestra página de resultados quedará de la siguiente forma:
+Si todo se realiza correctamente, la página de resultados quedará de la siguiente forma:
 
 ![](../incluir/figuras/image15.png)
 
-Al hacer click en el enlace **Busqueda avanzada**, se desplegarán las opciones:
+Al hacer click en el enlace **Búsqueda avanzada**, se desplegarán las opciones:
 
 ![](../incluir/figuras/image19.png)
 
 
->Una buena práctica sería incorporar el texto Busqueda avanzada dentro de los archivos de lenguajes de la plantilla y no en el mismo archivo `.php`.
+>Una buena práctica sería incorporar el texto **Búsqueda avanzada** dentro de los archivos de lenguajes de la plantilla y no en el mismo archivo `.php`.
 
 
-Y de esta forma tenemos terminada la personalización del componente. En caso que queramos hacer lo mismo con otros componentes, debemos realizar los mismos pasos descriptos anteriormente.
+De esta manera ya se tiene terminada la personalización del componente. En caso que se quiera realizar lo mismo con otros componentes se deben realizar los mismos pasos descriptos anteriormente.
 
 
 ### Conclusión
 
-Pudimos comprobar el potencial de las plantillas de Joomla para la personalización de los componentes y extensiones de nuestro sitio. Esta práctica posee varias claras ventajas:
+Se pudo comprobar el potencial de las plantillas de Joomla para la personalización de componentes y módulos. Esta práctica posee varias ventajas importantes:
 
 
-* Adaptación a nuestras necesidades sin mucho esfuerzo;
-* No se modificó ningún archivo del núcleo de la extensión permitiendo que, en caso de actualización, no perdamos nuestro trabajo, minificando el tiempo de mantenimiento;
-* Centralización del trabajo: todo el trabajo transcurrió dentro de la carpeta html de nuestra plantilla.
+* Adaptación a las necesidades sin mucho esfuerzo;
+* No se modificó ningún archivo del núcleo de la extensión permitiendo que, en caso de actualización, no se pierda el trabajo realizado, minimizando el tiempo de mantenimiento;
+* Centralización del trabajo: el mismo transcurrió dentro de la carpeta `html` de la plantilla.
 
