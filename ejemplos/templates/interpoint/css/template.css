@@ -1,0 +1,530 @@
+
+
+/* Estilos generales
+---------------------------------------------------------*/
+
+body{
+	background: #FFF;
+	color: #5f5d5d;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+/* Parte superior
+---------------------------------------------------------*/
+
+#header{
+	padding: 15px 0 20px 0;
+	border-bottom: 1px solid #bcb9b9;
+}
+
+/* Logo y eslogan
+---------------------------------------------------------*/
+
+#logo{
+	position: relative;
+}
+
+#logo h1{
+	width: 330px;
+	height: 80px;
+	background: transparent url(../images/interpoint-logo.png) no-repeat left top;
+	margin: 0;
+	text-indent: -3000px;
+}
+
+#logo a{
+	display: block;
+}
+
+#eslogan{
+	color: #696767;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+	position: absolute;
+	right: 20px;
+	bottom: 0px;
+}
+
+/* Menú ingresar
+---------------------------------------------------------*/
+
+#menu_ingresar ul{
+	margin: 0;
+	overflow: hidden;
+}
+
+#menu_ingresar li{
+	width: 72px;
+	float: right;
+	list-style: none;
+	margin: 0 0 0 20px;
+}
+
+#menu_ingresar li a{
+	display: block;
+	width: 72px;
+	height: 31px;
+	line-height: 30px;
+	text-align: center;
+	text-decoration: none;
+	color: #FFF;
+	background: transparent url(../images/interpoint-boton.png) no-repeat center top;
+}
+
+#menu_ingresar li a:hover{
+	text-decoration: underline;
+}
+
+
+/* Menú superior principal
+---------------------------------------------------------*/
+
+#menu_superior ul{
+	margin: 20px 0 0 30px;
+	overflow: hidden;
+	padding: 0;
+}
+
+#menu_superior li{
+	width: auto;
+	float: left;
+	list-style: none;
+	margin: 0 0 0 20px;
+}
+
+#menu_superior li a{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #959393;
+}
+
+#menu_superior li a:hover{
+	text-decoration: underline;
+}
+
+#menu_superior .selected a{
+	color: #036e9e;
+}
+
+/* Destacado superior
+---------------------------------------------------------*/
+
+#destacado_superior{
+	margin: 40px 0 0 0;
+}
+
+#destacado_superior h3{
+	color: #035f88;
+	font-size: 28px;
+	font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+	font-weight: 600;
+}
+
+#destacado_superior p{
+	font-size: 18px;
+	color: #5f5d5d;
+}
+
+#destacado_superior a{
+	display: block;
+	width: 262px;
+	height: 64px;
+	color: #FFF;
+	font-size: 28px;
+	font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+	font-weight: 600;
+	line-height: 55px;
+	text-decoration: none;
+	text-align: center;
+    text-shadow: 1px 1px 3px #000; 
+	margin: 0 auto;
+	background: transparent url(../images/interpoint-boton-grande.png) no-repeat top center;
+}
+
+#destacado_superior a:hover{
+	text-decoration: underline;
+}
+
+/* Video
+---------------------------------------------------------*/
+
+#video{
+	height: 355px;
+	margin: 40px 0 0 0;
+	background: transparent url(../images/interpoint-video.png) no-repeat top center;
+	position: relative;
+}
+
+#reproductor{
+	position: absolute;
+	left: 72px;
+	top: 17px;
+}
+
+/* Caja medio
+---------------------------------------------------------*/
+
+#caja_medio{
+	background: #d9eef7;
+	margin: 50px 0 0 0;
+}
+
+#caja_medio p{
+	padding: 10px;
+	color: #181818;
+	font-size: 18px;
+	font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+
+/* Contenido / Columnas centrales
+---------------------------------------------------------*/
+
+#contenido{
+	margin: 50px 0 0 0;
+}
+
+#contenido .leading-0, #contenido .leading-1, #contenido .leading-2{
+	width: 280px;
+	float: left;
+}
+
+#contenido h2{
+	line-height: 55px;
+	margin: 0 0 10px 0;
+}
+
+#contenido h2 a{
+	color: #035f88;
+	font-size: 20px;
+	font-weight: 600;
+	font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+
+#contenido h2 a:hover{
+	text-decoration: underline;
+}
+
+#contenido .leading-0{
+	margin: 0 50px 0 0;
+}
+
+#contenido .leading-1{
+	margin: 0 50px 0 0;
+}
+
+#contenido .leading-2{
+	margin: 0;
+}
+
+#contenido .leading-0 h2{
+	padding: 0 0 0 69px;
+	background: transparent url(../images/interpoint-icono-1.png) no-repeat left center;
+}
+
+#contenido .leading-1 h2{
+	padding: 0 0 0 60px;
+	background: transparent url(../images/interpoint-icono-2.png) no-repeat left center;
+}
+
+#contenido .leading-2 h2{
+	padding: 0 0 0 71px;
+	background: transparent url(../images/interpoint-icono-3.png) no-repeat left center;
+}
+
+#contenido .readmore a{
+	color: #3c8203;
+	text-decoration: none;
+}
+
+#contenido .readmore a:hover{
+	text-decoration: underline;
+}
+
+#contenido .readmore a:before {
+  content: ">> ";
+}
+
+/* Destacado inferior
+---------------------------------------------------------*/
+
+#destacado_inferior{
+	margin: 50px 0 0 0;
+}
+
+#destacado_inferior .newsflash-title{
+	color: #035f88;
+	font-size: 20px;
+	font-weight: 600;
+	font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+}
+
+#destacado_inferior .readmore{
+	display: block;
+	width: 94px;
+	height: 30px;
+	line-height: 30px;
+	background: transparent url(../images/interpoint-leermas.png) no-repeat center center;
+	color: #5f5d5d;
+	text-decoration: none;
+	text-align: center;
+}
+
+#destacado_inferior .readmore:hover{
+	text-decoration: underline;
+}
+
+/* Slideshow inferior
+---------------------------------------------------------*/
+
+#slideshow_inferior{
+	margin: 50px 0 0;
+	position: relative;
+}
+
+#slideshow_contenedor{
+	border: 10px solid #eeeded;
+	height: 195px;
+	width: 290px;
+	float: right;
+}
+
+#slideshow_inferior .slideshow_nav{
+	width: 29px;
+	height: 29px;
+	position: absolute;
+	top: 90px;
+	cursor: pointer;
+	z-index: 100;
+}
+
+#slideshow_izq{
+	background: transparent url(../images/interpoint-slideshow-izq.png) no-repeat center center;
+	left: -10px;
+}
+
+#slideshow_der{
+	background: transparent url(../images/interpoint-slideshow-der.png) no-repeat center center;
+	right: -10px;
+}
+
+/* Footer y menú inferior
+---------------------------------------------------------*/
+
+#footer{
+	height: 200px;
+	background: transparent url(../images/interpoint-footer.png) no-repeat top center;
+}
+
+#legal{
+	color: #6e6d6d;
+	font-size: 12px;
+	font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+	margin: 175px 0 0 0;
+	line-height: 12px;
+}
+
+#menu_inferior{
+	margin: 175px 0 0 0;
+}
+
+#menu_inferior ul{
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+#menu_inferior li{
+	width: auto;
+	float: left;
+	list-style: none;
+	margin: 0 0 0 10px;
+}
+
+#menu_inferior li a{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #6e6d6d;
+	font-size: 12px;
+	font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+	border-left: 1px solid #6e6d6d;
+	padding: 0 0 0 10px;
+	line-height: 12px;
+}
+
+#menu_inferior li:first-child a{
+	border: 0px;
+}
+
+#menu_inferior li a:hover{
+	text-decoration: underline;
+}
+
+#menu_inferior .selected a{
+	color: #036e9e;
+}
+
+/* Estilos pertenecientes al CMS
+---------------------------------------------------------*/
+
+/* Mensajes del sistema
+---------------------------------------------------------*/
+
+#system-message{
+   display: block;
+   clear: both;
+   padding: 15px 0 0 0;
+}
+
+#system-message dt, #system-message dd{
+   margin: 5px 0;
+}
+
+#system-message ul{
+   margin: 0;
+}
+
+/* Acciones
+---------------------------------------------------------*/
+
+ul.actions {
+   clear:both;
+   margin-top: -50px;
+   float:right;
+}
+ul.actions li {
+   list-style-type: none;
+   float:right;
+   margin-left: 10px;
+}
+
+/* Tooltips
+---------------------------------------------------------*/
+
+.tip-wrap{
+   background: #D9EEF7;
+   padding: 5px;
+   font-size: 12px;
+}
+
+/* Columna izquierda
+---------------------------------------------------------*/
+
+#columna_izquierda{
+	margin: 50px 0 0 0;
+}
+
+#columna_izquierda h2 a {
+	color: #035F88;
+	font-family: "Myriad Pro",Arial,Helvetica,sans-serif;
+	font-size: 35px;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+#columna_izquierda h2 a:hover{
+	text-decoration: underline;
+}
+
+#columna_izquierda .article-info{
+	background: #D9EEF7;
+	color: #181818;
+	font-size: 13px;
+	margin: 0 0 20px 0;
+	padding: 10px;
+}
+
+
+/* Columna derecha
+---------------------------------------------------------*/
+
+#columna_derecha{
+	margin: 50px 0 0 0;
+}
+
+/* Modulos derechos
+---------------------------------------------------------*/
+
+#columna_derecha .moduletable{
+	margin: 0 0 30px 0;
+}
+
+#columna_derecha h3{
+	color: #035F88;
+	font-family: "Myriad Pro",Arial,Helvetica,sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	margin: 0 0 10px 0;
+}
+
+#columna_derecha .moduletable ul{
+	list-style: none;
+	padding: 0;
+}
+
+#columna_derecha .search .inputbox{
+	font-size: 14px;
+	padding: 5px;
+}
+
+#columna_derecha .mostread a{
+	display: block;
+	text-decoration: none;
+	border-bottom: 1px solid #CCC;
+	padding: 0 0 5px 0;
+	color: #3C8203;
+}
+
+#columna_derecha .mostread a:hover{
+	text-decoration: underline;
+}
+
+#columna_derecha #modlgn_username, #columna_derecha #modlgn_passwd{
+	width: 100%;
+}
+
+/* Paginacion
+---------------------------------------------------------*/
+
+.pagenav, .pagination{
+	list-style: none;
+	text-align: center;
+	margin: 20px 0;
+}
+
+.pagenav li, .pagination li{
+	display: inline-block;
+	margin: 0 10px;
+}
+
+/* Páginas de error
+---------------------------------------------------------*/
+
+#error {
+	text-align: center;
+	padding: 50px 0;
+}
+
+#error p{
+	font-size: 25px;
+	margin: 0;
+}
+
+#error input{
+	font-size: 25px;
+	border: 5px solid #ccc;
+}
+
+#error_descripcion{
+	border: 1px solid #CCC;
+	margin: 20px 0;
+}
+
+#error_descripcion p{
+	font-size: 9px;
+}

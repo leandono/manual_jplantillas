@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension
+   version="1.6"
+   type="template"
+   client="site">
+   <name>InterPoint</name>
+   <creationDate>2011</creationDate>
+   <author>Comunidad Joomla</author>
+   <authorEmail>contacto@comunidadjoomla.org</authorEmail>
+   <authorUrl>http://www.comunidadjoomla.org/</authorUrl>
+   <copyright>Comunidad Joomla 2011</copyright>
+   <license>GNU General Public License version 2</license>
+   <version>1.0</version>
+   <description>TPL_INTERPOINT_XML_DESCRIPTION</description>
+   <files>
+       <folder>html</folder>
+       <folder>css</folder>
+       <folder>images</folder>
+       <folder>language</folder>
+       <folder>js</folder>
+       <filename>index.php</filename>
+       <filename>index.html</filename>
+       <filename>favicon.ico</filename>
+       <filename>templateDetails.xml</filename>
+       <filename>template_preview.png</filename>
+       <filename>template_thumbnail.png</filename>
+       <filename>component.php</filename>
+       <filename>error.php</filename>
+   </files>
+
+   <positions>
+       <position>interpoint-menu_ingresar</position>
+       <position>interpoint-menu_superior</position>
+       <position>interpoint-destacado_superior</position>
+       <position>interpoint-video</position>
+       <position>interpoint-caja_medio</position>
+       <position>interpoint-destacado_inferior</position>
+       <position>interpoint-slideshow_inferior</position>
+       <position>interpoint-menu_inferior</position>
+       <position>interpoint-columna_derecha</position>
+   </positions>
+
+   <languages folder="language">
+       <language tag="es-ES">es-ES/es-ES.tpl_interpoint.ini</language>
+       <language tag="es-ES">es-ES/es-ES.tpl_interpoint.sys.ini</language>
+   </languages>
+   
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="logo" type="media"
+					label="TPL_INTERPOINT_LOGO_LABEL" description="TPL_INTERPOINT_LOGO_DESC" />
+					
+				<field name="eslogan"  type="text" default=""
+					label="TPL_INTERPOINT_ESLOGAN_LABEL"
+					description="TPL_INTERPOINT_ESLOGAN_DESC"
+					filter="string" />
+
+				<field name="maquetacion" type="list" default="1"
+					label="TPL_INTERPOINT_MAQUETACION_LABEL"
+					description="TPL_INTERPOINT_MAQUETACION_DESC"
+					filter="integer"
+				>
+
+					<option value="1">TPL_INTERPOINT_OPCION_1COLUMNA</option>
+					<option value="2">TPL_INTERPOINT_OPCION_2COLUMNAS</option>
+				
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>
