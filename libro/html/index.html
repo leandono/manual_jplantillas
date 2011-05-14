@@ -1938,7 +1938,9 @@
        >Maquetación del diseño</a
        ></h2
      ><p
-     >Ahora que ya conocemos el sistema de grillas de BluePrint, vamos a comenzar a modificar index.php para adaptarlo a nuestras necesidades y agregar la maquetación del diseño.</p
+     >Ya explicado el sistema de grillas de BluePrint, se comenzará la modificación de <code
+       >index.php</code
+       > para agregar la maquetación del diseño.</p
      ><p
      ><strong
        >Modificaciones en <code
@@ -1948,23 +1950,23 @@
      ><p
      >El <code
        >&lt;header /&gt;</code
-       > quedará practicamente igual a como lo teniamos, con algunas modificaciones:</p
+       > quedará prácticamente igual a como estaba antes, con algunas modificaciones:</p
      ><ul
      ><li
        ><p
-         >Se eliminan los comentarios (si lo deseamos podemos agregar los nuestros);</p
+         >Se eliminan algunos comentarios y se agregan otros;</p
          ></li
        ><li
        ><p
-         >Quitamos las llamadas a los estilos <code
+         >Se quitan las llamadas a los estilos <code
    	>/plugins/fancy-type/screen.css</code
    	> y <code
    	>/plugins/joomla-nav/screen.css</code
-   	> ya que no los vamos a necesitar;</p
+   	> ya que no se utilizaran;</p
          ></li
        ><li
        ><p
-         >También eliminamos las llamadas a los estilos utilizados para adaptar los textos a sentido de lectura de derecha a izquierda (<em
+         >También se eliminan las llamadas a los estilos utilizados para adaptar los textos al sentido de lectura de derecha a izquierda (<em
    	>RTL</em
    	>).</p
          ></li
@@ -2000,20 +2002,24 @@
        ></p
        ></div
      ><p
-     >Dentro del cuerpo del documento, la sección superior la podemos dividir en dos columnas: una dedicada al logo y otra dedicada a los dos menús:</p
+     >Dentro del cuerpo del documento, la sección superior de dividirá en dos columnas: una dedicada al logo y otra dedicada a los dos menús:</p
      ><pre class="php numberLines"
      ><code
        >&lt;body&gt;
        &lt;div class=&quot;container&quot;&gt;
+           &lt;!-- Comienzo header --&gt;
            &lt;div id=&quot;header&quot; class=&quot;span-24&quot;&gt;
    
+               &lt;!-- Comienzo Logo --&gt;
                &lt;div id=&quot;logo&quot; class=&quot;span-9&quot;&gt;
                    &lt;a href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;&quot; title=&quot;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&quot;&gt;
                        &lt;h1&gt;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&lt;/h1&gt;
                    &lt;/a&gt;
                    &lt;h2 id=&quot;eslogan&quot;&gt;Lorem ipsum dolor sit amet&lt;/h2&gt;
                &lt;/div&gt;
+               &lt;!-- Fin Logo --&gt;
    
+               &lt;!-- Comienzo Menús Superiores --&gt;
                &lt;div id=&quot;menus_superiores&quot; class=&quot;span-15 last&quot;&gt;
    
                    &lt;?php if($this-&gt;countModules('interpoint-menu_ingresar')) : ?&gt;
@@ -2029,8 +2035,10 @@
                    &lt;?php endif; ?&gt;
    
                &lt;/div&gt;
+               &lt;!-- Fin Menús superiores --&gt;
    
            &lt;/div&gt;
+           &lt;!-- Fin Header --&gt;
        &lt;/div&gt;
    &lt;/body&gt;
    </code
@@ -2045,17 +2053,21 @@
        ></p
        ></div
      ><p
-     >En esta sección también tendremos, en primer lugar dos columnas y luego un espacio ocupando el total del espacio:</p
+     >En esta sección se tendrá en primer lugar dos columnas y luego una columna ocupando el total del espacio:</p
      ><pre class="php numberLines"
      ><code
-       >&lt;jdoc:include type=&quot;message&quot; /&gt;
+       >&lt;!-- Mensajes del CMS --&gt;
+   &lt;jdoc:include type=&quot;message&quot; /&gt;
    
+   &lt;!-- Comienzo Destacado superior --&gt;
    &lt;?php if($this-&gt;countModules('interpoint-destacado_superior')) : ?&gt;
        &lt;div id=&quot;destacado_superior&quot; class=&quot;span-10&quot;&gt;
            &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-destacado_superior&quot; style=&quot;xhtml&quot; /&gt;
        &lt;/div&gt;
    &lt;?php endif; ?&gt;
+   &lt;!-- Fin Destacado superior --&gt;
    
+   &lt;!-- Comienzo Video --&gt;
    &lt;?php if($this-&gt;countModules('interpoint-video')) : ?&gt;
        &lt;div id=&quot;video&quot; class=&quot;span-14 last&quot;&gt;
            &lt;div id=&quot;reproductor&quot;&gt;
@@ -2063,17 +2075,20 @@
            &lt;/div&gt;
        &lt;/div&gt;
    &lt;?php endif; ?&gt;
+   &lt;!-- Fin Video --&gt;
    
+   &lt;!-- Comienzo Caja medio --&gt;
    &lt;?php if($this-&gt;countModules('interpoint-caja_medio')) : ?&gt;
        &lt;div id=&quot;caja_medio&quot; class=&quot;span-24&quot;&gt;
            &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-caja_medio&quot; style=&quot;none&quot; /&gt;
        &lt;/div&gt;
    &lt;?php endif; ?&gt;
+   &lt;!-- Fin Caja medio --&gt;
    </code
        ></pre
      ><blockquote
      ><p
-       >Notar que hemos agregado <code
+       >Notar que se ha agregado <code
          >&lt;jdoc:include type=&quot;message&quot; /&gt;</code
          > para que aparezcan los mensajes del sistema debajo de cabecera del diseño.</p
        ></blockquote
@@ -2087,20 +2102,22 @@
        ></p
        ></div
      ><p
-     >Las columnas del medio cargaran tres artículos que esten publicados en el home del sitio. Para eso utilizaremos la etiqueta <code
+     >Las columnas del medio cargaran tres artículos publicados en el home del sitio. Para eso se utilizará la etiqueta <code
        >&lt;jdoc:include type=&quot;component&quot; /&gt;</code
        >:</p
      ><pre class="php numberLines"
      ><code
-       >&lt;div id=&quot;contenido&quot; class=&quot;span-24&quot;&gt;
+       >&lt;!-- Comienzo Contenido principal --&gt;
+   &lt;div id=&quot;contenido&quot; class=&quot;span-24&quot;&gt;
        &lt;jdoc:include type=&quot;component&quot; /&gt;
    &lt;/div&gt;
+   &lt;!-- Fin Contenido principal --&gt;
    </code
        ></pre
      ><p
-     >Luego, para hacer que se muestren tres columnas, tenemos que ir, en la administración del CMS a <strong
-       >Menús ? Menú principal</strong
-       > y luego acceder al ítem que tengamos marcado como página de Inicio:</p
+     >Para hacer que cada artículo ocupe una columna, en la administración del CMS, ir a <strong
+       >Menús → Menú principal</strong
+       > y luego acceder al ítem que se tenga marcado como página de Inicio:</p
      ><div class="figure"
      ><img src="../incluir/figuras/image06.png"
         /><p class="caption"
@@ -2109,14 +2126,14 @@
      ><p
      >En la columna derecha, en el apartado <strong
        >Opciones de presentación</strong
-       > establecemos los siguientes valores:</p
+       > establecer los siguientes valores:</p
      ><div class="figure"
      ><img src="../incluir/figuras/image45.png"
         /><p class="caption"
        ></p
        ></div
      ><p
-     >De esta forma hacemos que se muestren, como máximo, tres artículos, separados cada uno en columnas. Al mostrar dichos articulos, el HTML generado por el CMS será:</p
+     >De esta forma se hará que se muestren, como máximo, tres artículos, separados cada uno en columnas. Al mostrar dichos artículos, el HTML generado por el CMS será:</p
      ><pre class="php numberLines"
      ><code
        >&lt;div class=&quot;span-24&quot; id=&quot;contenido&quot;&gt;
@@ -2201,10 +2218,13 @@
      >Para la siguiente parte del diseño, se crearan dos columnas, una para el texto destacado y otra para la zona del slideshow.</p
      ><pre class="php numberLines"
      ><code
-       >&lt;div id=&quot;destacado_inferior&quot; class=&quot;span-15 append-1&quot;&gt;
+       >&lt;!-- Comienzo Destacado inferior --&gt;
+   &lt;div id=&quot;destacado_inferior&quot; class=&quot;span-15 append-1&quot;&gt;
        &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-destacado_inferior&quot; style=&quot;xhtml&quot; /&gt;
    &lt;/div&gt;
+   &lt;!-- Fin Destacado inferior --&gt;
    
+   &lt;!-- Comienzo Slideshow inferior --&gt;
    &lt;div id=&quot;slideshow_inferior&quot; class=&quot;span-8 last&quot;&gt;
        &lt;?php if($this-&gt;countModules('interpoint-slideshow_inferior')) : ?&gt;
            &lt;div id=&quot;slideshow_contenedor&quot;&gt;
@@ -2214,6 +2234,7 @@
            &lt;span id=&quot;slideshow_izq&quot; class=&quot;slideshow_nav&quot;&gt;&lt;/span&gt;
        &lt;?php endif; ?&gt;
    &lt;/div&gt;
+   &lt;!-- Fin Slideshow inferior --&gt;
    </code
        ></pre
      ><p
@@ -2221,7 +2242,7 @@
        >&lt;div /&gt;</code
        > que va a contener el slideshow, se han agregado dos etiquetas <code
        >&lt;span /&gt;</code
-       > que servirán para construir la navegación de slides.</p
+       > que servirán para construir la navegación entre imágenes.</p
      ><p
      ><strong
        >Maquetación del footer y zona inferior</strong
@@ -2232,10 +2253,11 @@
        ></p
        ></div
      ><p
-     >Finalmente para esta zona también usaremos dos columnas, una para el texto legal y otra para el menú inferior:</p
+     >Finalmente para esta zona también se utilizarán dos columnas, una para el texto legal y otra para el menú inferior:</p
      ><pre class="php numberLines"
      ><code
-       >&lt;div id=&quot;footer&quot; class=&quot;span-24&quot;&gt;
+       >&lt;!-- Comienzo Footer --&gt;
+   &lt;div id=&quot;footer&quot; class=&quot;span-24&quot;&gt;
        &lt;div id=&quot;legal&quot; class=&quot;prepend-3 span-9&quot;&gt;
            &amp;copy;&lt;?php echo date('Y'); ?&gt; &lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;
        &lt;/div&gt;
@@ -2243,6 +2265,7 @@
            &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-menu_inferior&quot; style=&quot;none&quot; /&gt;
        &lt;/div&gt;
    &lt;/div&gt;
+   &lt;!-- Fin Footer --&gt;
    </code
        ></pre
      ><blockquote
@@ -2250,7 +2273,9 @@
        >Notar que además de las clases span–8 se utilizó prepend–3 para mover el contenido de las columnas hacia la derecha en cada columna.</p
        ></blockquote
      ><p
-     >Si juntamos todas las partes, el index.php quedará conformado así:</p
+     >Si se juntan todas las partes, el archivo <code
+       >index.php</code
+       > quedará conformado de la siguiente forma:</p
      ><pre class="php numberLines"
      ><code
        >&lt;?php
@@ -2272,88 +2297,110 @@
    
    &lt;/head&gt;
    &lt;body&gt;
-    &lt;div class=&quot;container&quot;&gt;
-      &lt;div id=&quot;header&quot; class=&quot;span-24&quot;&gt;
+       &lt;div class=&quot;container&quot;&gt;
+           &lt;!-- Comienzo header --&gt;
+           &lt;div id=&quot;header&quot; class=&quot;span-24&quot;&gt;
    
-                 &lt;div id=&quot;logo&quot; class=&quot;span-9&quot;&gt;
-                      &lt;a href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;&quot; title=&quot;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&quot;&gt;
-                              &lt;h1&gt;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&lt;/h1&gt;
-                      &lt;/a&gt;
-                      &lt;h2 id=&quot;eslogan&quot;&gt;Lorem ipsum dolor sit amet&lt;/h2&gt;
-              &lt;/div&gt;
+               &lt;!-- Comienzo Logo --&gt;
+               &lt;div id=&quot;logo&quot; class=&quot;span-9&quot;&gt;
+                   &lt;a href=&quot;&lt;?php echo $this-&gt;baseurl ?&gt;&quot; title=&quot;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&quot;&gt;
+                       &lt;h1&gt;&lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;&lt;/h1&gt;
+                   &lt;/a&gt;
+                   &lt;h2 id=&quot;eslogan&quot;&gt;Lorem ipsum dolor sit amet&lt;/h2&gt;
+               &lt;/div&gt;
+               &lt;!-- Fin Logo --&gt;
    
-              &lt;div id=&quot;menus_superiores&quot; class=&quot;span-15 last&quot;&gt;
+               &lt;!-- Comienzo Menús Superiores --&gt;
+               &lt;div id=&quot;menus_superiores&quot; class=&quot;span-15 last&quot;&gt;
    
-                      &lt;?php if($this-&gt;countModules('interpoint-menu_ingresar')) : ?&gt;
-                              &lt;div id=&quot;menu_ingresar&quot;&gt;
-                                      &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-menu_ingresar&quot; style=&quot;none&quot; /&gt;
-                              &lt;/div&gt;
-                      &lt;?php endif; ?&gt;
+                   &lt;?php if($this-&gt;countModules('interpoint-menu_ingresar')) : ?&gt;
+                       &lt;div id=&quot;menu_ingresar&quot;&gt;
+                           &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-menu_ingresar&quot; style=&quot;none&quot; /&gt;
+                       &lt;/div&gt;
+                   &lt;?php endif; ?&gt;
    
-                      &lt;?php if($this-&gt;countModules('interpoint-menu_superior')) : ?&gt;
-                              &lt;div id=&quot;menu_superior&quot;&gt;
-                                      &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-menu_superior&quot; style=&quot;none&quot; /&gt;
-                              &lt;/div&gt;
-                      &lt;?php endif; ?&gt;
+                   &lt;?php if($this-&gt;countModules('interpoint-menu_superior')) : ?&gt;
+                       &lt;div id=&quot;menu_superior&quot;&gt;
+                           &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-menu_superior&quot; style=&quot;none&quot; /&gt;
+                       &lt;/div&gt;
+                   &lt;?php endif; ?&gt;
    
-              &lt;/div&gt;
+               &lt;/div&gt;
+               &lt;!-- Fin Menús superiores --&gt;
    
-      &lt;/div&gt;
+           &lt;/div&gt;
+           &lt;!-- Fin Header --&gt;
    
-      &lt;jdoc:include type=&quot;message&quot; /&gt;
+           &lt;!-- Mensajes del CMS --&gt;
+           &lt;jdoc:include type=&quot;message&quot; /&gt;
    
-      &lt;?php if($this-&gt;countModules('interpoint-destacado_superior')) : ?&gt;
-              &lt;div id=&quot;destacado_superior&quot; class=&quot;span-10&quot;&gt;
-                      &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-destacado_superior&quot; style=&quot;xhtml&quot; /&gt;
-              &lt;/div&gt;
-      &lt;?php endif; ?&gt;
+           &lt;!-- Comienzo Destacado superior --&gt;
+           &lt;?php if($this-&gt;countModules('interpoint-destacado_superior')) : ?&gt;
+               &lt;div id=&quot;destacado_superior&quot; class=&quot;span-10&quot;&gt;
+                   &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-destacado_superior&quot; style=&quot;xhtml&quot; /&gt;
+               &lt;/div&gt;
+           &lt;?php endif; ?&gt;
+           &lt;!-- Fin Destacado superior --&gt;
    
-      &lt;?php if($this-&gt;countModules('interpoint-video')) : ?&gt;
-              &lt;div id=&quot;video&quot; class=&quot;span-14 last&quot;&gt;
-                              &lt;div id=&quot;reproductor&quot;&gt;
-                                      &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-video&quot; style=&quot;none&quot; /&gt;
-                              &lt;/div&gt;
-              &lt;/div&gt;
-      &lt;?php endif; ?&gt;
+           &lt;!-- Comienzo Video --&gt;
+           &lt;?php if($this-&gt;countModules('interpoint-video')) : ?&gt;
+               &lt;div id=&quot;video&quot; class=&quot;span-14 last&quot;&gt;
+                   &lt;div id=&quot;reproductor&quot;&gt;
+                       &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-video&quot; style=&quot;none&quot; /&gt;
+                   &lt;/div&gt;
+               &lt;/div&gt;
+           &lt;?php endif; ?&gt;
+           &lt;!-- Fin Video --&gt;
    
-      &lt;?php if($this-&gt;countModules('interpoint-caja_medio')) : ?&gt;
-              &lt;div id=&quot;caja_medio&quot; class=&quot;span-24&quot;&gt;
-                      &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-caja_medio&quot; style=&quot;none&quot; /&gt;
-              &lt;/div&gt;
-      &lt;?php endif; ?&gt;
+           &lt;!-- Comienzo Caja medio --&gt;
+           &lt;?php if($this-&gt;countModules('interpoint-caja_medio')) : ?&gt;
+               &lt;div id=&quot;caja_medio&quot; class=&quot;span-24&quot;&gt;
+                   &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-caja_medio&quot; style=&quot;none&quot; /&gt;
+               &lt;/div&gt;
+           &lt;?php endif; ?&gt;
+           &lt;!-- Fin Caja medio --&gt;
    
-      &lt;div id=&quot;contenido&quot; class=&quot;span-24&quot;&gt;
-              &lt;jdoc:include type=&quot;component&quot; /&gt;
-      &lt;/div&gt;
-        &lt;div id=&quot;destacado_inferior&quot; class=&quot;span-15 append-1&quot;&gt;
-                &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-destacado_inferior&quot; style=&quot;xhtml&quot; /&gt;
-        &lt;/div&gt;
+           &lt;!-- Comienzo Contenido principal --&gt;
+           &lt;div id=&quot;contenido&quot; class=&quot;span-24&quot;&gt;
+               &lt;jdoc:include type=&quot;component&quot; /&gt;
+           &lt;/div&gt;
+           &lt;!-- Fin Contenido principal --&gt;
    
-        &lt;div id=&quot;slideshow_inferior&quot; class=&quot;span-8 last&quot;&gt;
-                &lt;?php if($this-&gt;countModules('interpoint-slideshow_inferior')) : ?&gt;
-                        &lt;div id=&quot;slideshow_contenedor&quot;&gt;
-                                &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-slideshow_inferior&quot; style=&quot;none&quot; /&gt;
-                        &lt;/div&gt;
-                        &lt;span id=&quot;slideshow_der&quot; class=&quot;slideshow_nav&quot;&gt;&lt;/span&gt;
-                        &lt;span id=&quot;slideshow_izq&quot; class=&quot;slideshow_nav&quot;&gt;&lt;/span&gt;
-                &lt;?php endif; ?&gt;
-        &lt;/div&gt;
+           &lt;!-- Comienzo Destacado inferior --&gt;
+           &lt;div id=&quot;destacado_inferior&quot; class=&quot;span-15 append-1&quot;&gt;
+               &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-destacado_inferior&quot; style=&quot;xhtml&quot; /&gt;
+           &lt;/div&gt;
+           &lt;!-- Fin Destacado inferior --&gt;
    
-        &lt;div id=&quot;footer&quot; class=&quot;span-24&quot;&gt;
-                &lt;div id=&quot;legal&quot; class=&quot;prepend-3 span-9&quot;&gt;
-                        &amp;copy;&lt;?php echo date('Y'); ?&gt; &lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;
-                &lt;/div&gt;
-                &lt;div id=&quot;menu_inferior&quot; class=&quot;prepend-3 span-9 last&quot;&gt;
-                        &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-menu_inferior&quot; style=&quot;none&quot; /&gt;
-                &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+           &lt;!-- Comienzo Slideshow inferior --&gt;
+           &lt;div id=&quot;slideshow_inferior&quot; class=&quot;span-8 last&quot;&gt;
+               &lt;?php if($this-&gt;countModules('interpoint-slideshow_inferior')) : ?&gt;
+                   &lt;div id=&quot;slideshow_contenedor&quot;&gt;
+                       &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-slideshow_inferior&quot; style=&quot;none&quot; /&gt;
+                   &lt;/div&gt;
+                   &lt;span id=&quot;slideshow_der&quot; class=&quot;slideshow_nav&quot;&gt;&lt;/span&gt;
+                   &lt;span id=&quot;slideshow_izq&quot; class=&quot;slideshow_nav&quot;&gt;&lt;/span&gt;
+               &lt;?php endif; ?&gt;
+           &lt;/div&gt;
+           &lt;!-- Fin Slideshow inferior --&gt;
+   
+           &lt;!-- Comienzo Footer --&gt;
+           &lt;div id=&quot;footer&quot; class=&quot;span-24&quot;&gt;
+               &lt;div id=&quot;legal&quot; class=&quot;prepend-3 span-9&quot;&gt;
+                   &amp;copy;&lt;?php echo date('Y'); ?&gt; &lt;?php echo $app-&gt;getCfg('sitename'); ?&gt;
+               &lt;/div&gt;
+               &lt;div id=&quot;menu_inferior&quot; class=&quot;prepend-3 span-9 last&quot;&gt;
+                   &lt;jdoc:include type=&quot;modules&quot; name=&quot;interpoint-menu_inferior&quot; style=&quot;none&quot; /&gt;
+               &lt;/div&gt;
+           &lt;/div&gt;
+           &lt;!-- Fin Footer --&gt;
+       &lt;/div&gt;
    &lt;/body&gt;
    &lt;/html&gt;
    </code
        ></pre
      ><p
-     >Y si miramos como esta quedando nuestro sitio, podremos visualizar algo parecido a esto:</p
+     >Si se observa al sitio, se visualizará algo parecido a:</p
      ><div class="figure"
      ><img src="../incluir/figuras/image33.png"
         /><p class="caption"
@@ -2361,7 +2408,7 @@
        ></div
      ><blockquote
      ><p
-       >En caso de no tener ningún artículo publicado en la página de inicio, la parte centrada aparecerá vacía.</p
+       >En caso de no tener ningún artículo publicado en la página de inicio, la parte del centro aparecerá vacía.</p
        ></blockquote
      ></div
    ><div id="template.css"
@@ -2370,12 +2417,14 @@
        >template.css</a
        ></h2
      ><p
-     >Llegó el momento de añadir diseño a la plantilla. Vamos a la carpeta css de nuestra plantilla y abrimos el archivo <code
+     >Llegó el momento de añadir diseño a la plantilla. Para eso se editará el archivo <code
        >template.css</code
-       >. Podremos ver que ya existen varios estilos escritos, lo que haremos es borrarlos para incorporar los nuestros.</p
+       > que se encuentra dentro de la carpeta <code
+       >css</code
+       > de la plantilla. Notará ya existe contenido dentro del archivo, lo que se hará es borrarlo para luego incorporar los estilos apropiados.</p
      ><blockquote
      ><p
-       >Ántes de comenzar a escribir los estilos, es muy importante tener preparado los recortes de las diferentes imagenes que componen el diseño. Dichas imagenes deben ir guardadas en la carpeta <code
+       >Antes de comenzar a escribir los estilos, es muy importante tener preparado los recortes de las diferentes imágenes que componen el diseño. Dichas imágenes deben ir guardadas en la carpeta <code
          >images</code
          > de la plantilla.</p
        ></blockquote
@@ -2386,7 +2435,7 @@
        ></div
      ><blockquote
      ><p
-       >En Todo-Photoshop existe un artículo explicando el recorte de imágenes utilizando Photoshop <a href="http://www.todo-photoshop.com/tutorial-photoshop/basicos/recortando_imagenes_photoshop.html"
+       >Si no sabe recortar imágenes con Photoshop, puede consultar el siguiente artículo: <a href="http://www.todo-photoshop.com/tutorial-photoshop/basicos/recortando_imagenes_photoshop.html"
          ><code class="url"
    	>http://www.todo-photoshop.com/tutorial-photoshop/basicos/recortando_imagenes_photoshop.html</code
    	></a
@@ -2394,26 +2443,24 @@
        ></blockquote
      ><blockquote
      ><p
-       >A medida que se van aplicando los estilos es conveniente ir rellenando el sitio con contenidos (menús, artículos, etc) para poder visualizar de mejor manera nuestro trabajo.</p
+       >A medida que se van aplicando los estilos es conveniente ir rellenando el sitio con contenidos (menús, artículos, etc.) para poder visualizar de mejor manera el trabajo.</p
        ></blockquote
      ><blockquote
      ><p
-       >El nivel de comprensión de los estilos mostrados a continuación dependen de los conocimientos de CSS que posea el lector. Si quiere introducirse más en profundidad con CSS, puede consultar la colección de <strong
-         >LibroWeb</strong
+       >El nivel de comprensión de los estilos mostrados a continuación dependaran de los conocimientos de CSS que posea. Si desea introducirse más en profundidad con los estilos en cascada, puede consultar la colección referente a este tema en <strong
+         >LibrosWeb</strong
          >: <a href="http://www.librosweb.es/"
          ><code class="url"
    	>http://www.librosweb.es/</code
    	></a
-         ></p
+         >. Aún así, los estilos descriptos son de ejemplo, los cuales pueden mejorarse o implementarse de otra forma.</p
        ></blockquote
-     ><p
-     >Aún así, los estilos descriptos son de ejemplo, los cuales pueden mejorarse o implementarse de otra forma.</p
      ><p
      ><strong
        >Estilos generales</strong
        ></p
      ><p
-     >Lo primero que haremos será escribir algunos estilos para elementos generales del sitio: Tipografías, colores de enlaces, etc:</p
+     >Los primeros estilos corresponden para elementos generales del sitio: Tipografías, colores de enlaces, etc:</p
      ><pre class="css numberLines"
      ><code
        >/* Estilos generales
@@ -2431,7 +2478,7 @@
        >Estilos para la parte superior</strong
        ></p
      ><p
-     >Continuamos con los estilos para la parte superior:</p
+     >Se continua con los estilos para la parte superior:</p
      ><pre class="css numberLines"
      ><code
        >/* Parte superior
@@ -2538,13 +2585,15 @@
        ></p
        ></div
      ><p
-     >Para completar los espacios superiores, se utilizaron dos módulos del tipo menú.</p
+     >Para completar los espacios superiores, se utilizaron dos módulos del tipo <strong
+       >Menú</strong
+       >.</p
      ><p
      ><strong
-       >Estilos para el texto superior, video y caja destacada</strong
+       >Estilos para el destacado superior, video y caja media</strong
        ></p
      ><p
-     >Continuamos con los estilos para estas zonas del diseño:</p
+     >Luego se continua con los estilos para el destacado superior, video y caja del medio:</p
      ><pre class="css numberLines"
      ><code
        >/* Destacado superior
@@ -2624,13 +2673,15 @@
        ></p
        ></div
      ><p
-     >Para completar los espacios se utilizaron tres módulos del tipo HTML personalizado (uno con el texto destacado/botón, otro con el video y otro con un pequeño texto para la caja media).</p
+     >Para completar los espacios se utilizaron tres módulos del tipo <strong
+       >HTML personalizado</strong
+       > (uno con el texto destacado/botón, otro con el video y otro con un pequeño texto para la caja media).</p
      ><p
      ><strong
        >Estilos para las columnas centrales</strong
        ></p
      ><p
-     >Seguimos con los estilos para las columnas medias:</p
+     >Luego se incorporan los estilos para las columnas medias:</p
      ><pre class="css numberLines"
      ><code
        >/* Contenido / Columnas centrales
@@ -2708,7 +2759,7 @@
        ></p
        ></div
      ><p
-     >Como se explicó anteriormente, los contenidos de las columnas estan conformados por tres artículos seleccionados para ser publicados en la página de inicio.</p
+     >Como se explicó anteriormente, los contenidos de las columnas están conformados por tres artículos seleccionados para ser publicados en la página de inicio.</p
      ><p
      ><strong
        >Estilos para el texto destacado inferior y slideshow</strong
@@ -2784,9 +2835,13 @@
        ></p
        ></div
      ><p
-     >Para los mostrar el artículo se utilizó un módulo del tipo Artículos - Noticias de actualidad. Se lo configuró para mostrar un solo artículo, de una categoría definida, ordenado por fecha. De esta forma, en esta sección pueden ir, por ejemplo, las últimas noticias del sitio y cada vez que se carga una noticia nueva, esta aparece en dicho lugar.</p
+     >Para los mostrar el artículo se utilizó un módulo del tipo <strong
+       >Artículos - Noticias de actualidad</strong
+       >. Se lo configuró para mostrar un solo artículo, de una categoría definida, ordenado por fecha. De esta forma, en esta sección pueden ir, por ejemplo, las últimas noticias del sitio y cada vez que se carga una noticia nueva, esta aparece en dicho lugar.</p
      ><p
-     >Para la sección de slideshow, se utilizó un módulo de HTML personalizado. Se incorporó una sola imagen de modo demostración.</p
+     >Para la sección de slideshow, se utilizó un módulo de <strong
+       >HTML personalizado</strong
+       >. Se incorporó una sola imagen en modo de demostración.</p
      ><blockquote
      ><p
        >El slideshow aún no es funcional. Más adelante se explicará como agregar la funcionalidad a la plantilla utilizando JavaScript.</p
@@ -2860,13 +2915,15 @@
        ></p
        ></div
      ><p
-     >Para completar las zonas inferiores se usó un solo módulo menú con distintos enlaces hacia secciones del sitio.</p
+     >Para completar las zonas inferiores se usó un solo módulo <strong
+       >Menú</strong
+       > con distintos enlaces hacia secciones del sitio.</p
      ><p
      ><strong
        >Estilos para elementos y mensajes del sistema</strong
        ></p
      ><p
-     >Por último agregamos algunos estilos pertenecientes a elementos de comunes en el CMS: Mensajes del sistema, iconos de acciones y tooltips.</p
+     >Por último se agregan estilos pertenecientes a elementos comunes en el CMS: Mensajes del sistema, iconos de acciones y tooltips.</p
      ><pre class="css numberLines"
      ><code
        >/* Estilos pertenecientes al CMS
@@ -2913,7 +2970,7 @@
    </code
        ></pre
      ><p
-     >Estos elementos aparecen en ciertas situaciones. Por ejemplo: cuando un usuario quiere ingresar al sitio y la acción es rechazada, el CMS muestra un mensaje. Los iconos de acciones y tooltips suelen aparecer cuando se ingresa al sitio con permisos de edición de artículos:</p
+     >Estos elementos aparecen en ciertas situaciones, por ejemplo: cuando un usuario quiere ingresar al sitio y la acción es rechazada, el CMS muestra un mensaje. Los iconos de acciones y tooltips suelen aparecer cuando se ingresa al sitio con permisos de edición de artículos:</p
      ><div class="figure"
      ><img src="../incluir/figuras/image29.png"
         /><p class="caption"
@@ -2924,7 +2981,9 @@
        >Estilos completos</strong
        ></p
      ><p
-     >Juntando todos los estilos, el archivo template.css queda de esta forma:</p
+     >Al juntar todos los estilos, el archivo <code
+       >template.css</code
+       > conformado de la siguiente forma:</p
      ><pre class="css numberLines"
      ><code
        >/* Estilos generales

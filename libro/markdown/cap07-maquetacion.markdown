@@ -3,19 +3,19 @@
 Maquetación del diseño
 ----------------------
 
-Ahora que ya conocemos el sistema de grillas de BluePrint, vamos a comenzar a modificar index.php para adaptarlo a nuestras necesidades y agregar la maquetación del diseño.
+Ya explicado el sistema de grillas de BluePrint, se comenzará la modificación de `index.php` para agregar la maquetación del diseño.
 
 
 **Modificaciones en `<head />`**
 
-El `<header />` quedará practicamente igual a como lo teniamos, con algunas modificaciones:
+El `<header />` quedará prácticamente igual a como estaba antes, con algunas modificaciones:
 
 
-* Se eliminan los comentarios (si lo deseamos podemos agregar los nuestros);
+* Se eliminan algunos comentarios y se agregan otros;
 
-* Quitamos las llamadas a los estilos `/plugins/fancy-type/screen.css` y `/plugins/joomla-nav/screen.css` ya que no los vamos a necesitar;
+* Se quitan las llamadas a los estilos `/plugins/fancy-type/screen.css` y `/plugins/joomla-nav/screen.css` ya que no se utilizaran;
 
-* También eliminamos las llamadas a los estilos utilizados para adaptar los textos a sentido de lectura de derecha a izquierda (*RTL*).
+* También se eliminan las llamadas a los estilos utilizados para adaptar los textos al sentido de lectura de derecha a izquierda (*RTL*).
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -43,21 +43,25 @@ $app = JFactory::getApplication();
 
 ![](../incluir/figuras/image01.png)
 
-Dentro del cuerpo del documento, la sección superior la podemos dividir en dos columnas: una dedicada al logo y otra dedicada a los dos menús:
+Dentro del cuerpo del documento, la sección superior de dividirá en dos columnas: una dedicada al logo y otra dedicada a los dos menús:
 
 
 ~~~~~~~~~{.php .numberLines}
 <body>
 	<div class="container">
+	  	<!-- Comienzo header -->
 		<div id="header" class="span-24">
-
+			
+			<!-- Comienzo Logo -->
 			<div id="logo" class="span-9">
 				<a href="<?php echo $this->baseurl ?>" title="<?php echo $app->getCfg('sitename'); ?>">
 					<h1><?php echo $app->getCfg('sitename'); ?></h1>
 				</a>
 				<h2 id="eslogan">Lorem ipsum dolor sit amet</h2>
 			</div>
-
+			<!-- Fin Logo -->
+			
+			<!-- Comienzo Menús Superiores -->
 			<div id="menus_superiores" class="span-15 last">
 
 				<?php if($this->countModules('interpoint-menu_ingresar')) : ?>
@@ -73,8 +77,10 @@ Dentro del cuerpo del documento, la sección superior la podemos dividir en dos 
 				<?php endif; ?>
 
 			</div>
+			<!-- Fin Menús superiores -->
 			
 		</div>
+		<!-- Fin Header -->
 	</div>
 </body>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -84,18 +90,22 @@ Dentro del cuerpo del documento, la sección superior la podemos dividir en dos 
 
 ![](../incluir/figuras/image17.png)
 
-En esta sección también tendremos, en primer lugar dos columnas y luego un espacio ocupando el total del espacio:
+En esta sección se tendrá en primer lugar dos columnas y luego una columna ocupando el total del espacio:
 
 
 ~~~~~~~~~{.php .numberLines}
+<!-- Mensajes del CMS -->
 <jdoc:include type="message" />
 
+<!-- Comienzo Destacado superior -->
 <?php if($this->countModules('interpoint-destacado_superior')) : ?>
 	<div id="destacado_superior" class="span-10">
 		<jdoc:include type="modules" name="interpoint-destacado_superior" style="xhtml" />
 	</div>
 <?php endif; ?>
+<!-- Fin Destacado superior -->
 
+<!-- Comienzo Video -->
 <?php if($this->countModules('interpoint-video')) : ?>
 	<div id="video" class="span-14 last">
 		<div id="reproductor">
@@ -103,41 +113,46 @@ En esta sección también tendremos, en primer lugar dos columnas y luego un esp
 		</div>
 	</div>
 <?php endif; ?>
+<!-- Fin Video -->
 
+<!-- Comienzo Caja medio -->
 <?php if($this->countModules('interpoint-caja_medio')) : ?>
 	<div id="caja_medio" class="span-24">
 		<jdoc:include type="modules" name="interpoint-caja_medio" style="none" />
 	</div>
 <?php endif; ?>
+<!-- Fin Caja medio -->
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	
->Notar que hemos agregado `<jdoc:include type="message" />` para que aparezcan los mensajes del sistema debajo de cabecera del diseño.
+>Notar que se ha agregado `<jdoc:include type="message" />` para que aparezcan los mensajes del sistema debajo de cabecera del diseño.
 
 
 **Maquetación de las columnas del medio**
 
 ![](../incluir/figuras/image08.png)
 
-Las columnas del medio cargaran tres artículos que esten publicados en el home del sitio. Para eso utilizaremos la etiqueta `<jdoc:include type="component" />`:
+Las columnas del medio cargaran tres artículos publicados en el home del sitio. Para eso se utilizará la etiqueta `<jdoc:include type="component" />`:
 
 
 ~~~~~~~~~{.php .numberLines}
+<!-- Comienzo Contenido principal -->
 <div id="contenido" class="span-24">
 	<jdoc:include type="component" />
 </div>
+<!-- Fin Contenido principal -->
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Luego, para hacer que se muestren tres columnas, tenemos que ir, en la administración del CMS a **Menús ? Menú principal** y luego acceder al ítem que tengamos marcado como página de Inicio:
+Para hacer que cada artículo ocupe una columna, en la administración del CMS, ir a **Menús → Menú principal** y luego acceder al ítem que se tenga marcado como página de Inicio:
 
 ![](../incluir/figuras/image06.png)
 
-En la columna derecha, en el apartado **Opciones de presentación** establecemos los siguientes valores:
+En la columna derecha, en el apartado **Opciones de presentación** establecer los siguientes valores:
 
 ![](../incluir/figuras/image45.png)
 
-De esta forma hacemos que se muestren, como máximo, tres artículos, separados cada uno en columnas. Al mostrar dichos articulos, el HTML generado por el CMS será:
+De esta forma se hará que se muestren, como máximo, tres artículos, separados cada uno en columnas. Al mostrar dichos artículos, el HTML generado por el CMS será:
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -219,10 +234,13 @@ Para la siguiente parte del diseño, se crearan dos columnas, una para el texto 
 
 
 ~~~~~~~~~{.php .numberLines}
+<!-- Comienzo Destacado inferior -->
 <div id="destacado_inferior" class="span-15 append-1">
 	<jdoc:include type="modules" name="interpoint-destacado_inferior" style="xhtml" />
 </div>
+<!-- Fin Destacado inferior -->
 
+<!-- Comienzo Slideshow inferior -->
 <div id="slideshow_inferior" class="span-8 last">
 	<?php if($this->countModules('interpoint-slideshow_inferior')) : ?>
 		<div id="slideshow_contenedor">
@@ -232,20 +250,22 @@ Para la siguiente parte del diseño, se crearan dos columnas, una para el texto 
 		<span id="slideshow_izq" class="slideshow_nav"></span>
 	<?php endif; ?>
 </div>
+<!-- Fin Slideshow inferior -->
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Dentro del `<div />` que va a contener el slideshow, se han agregado dos etiquetas `<span />` que servirán para construir la navegación de slides.
+Dentro del `<div />` que va a contener el slideshow, se han agregado dos etiquetas `<span />` que servirán para construir la navegación entre imágenes.
 
 
 **Maquetación del footer y zona inferior**
 
 ![](../incluir/figuras/image16.png)
 
-Finalmente para esta zona también usaremos dos columnas, una para el texto legal y otra para el menú inferior:
+Finalmente para esta zona también se utilizarán dos columnas, una para el texto legal y otra para el menú inferior:
 
 
 ~~~~~~~~~{.php .numberLines}
+<!-- Comienzo Footer -->
 <div id="footer" class="span-24">
 	<div id="legal" class="prepend-3 span-9">
 		&copy;<?php echo date('Y'); ?> <?php echo $app->getCfg('sitename'); ?>
@@ -254,13 +274,14 @@ Finalmente para esta zona también usaremos dos columnas, una para el texto lega
 		<jdoc:include type="modules" name="interpoint-menu_inferior" style="none" />
 	</div>
 </div>
+<!-- Fin Footer -->
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 >Notar que además de las clases span-8 se utilizó prepend-3 para mover el contenido de las columnas hacia la derecha en cada columna.
 
 
-Si juntamos todas las partes, el index.php quedará conformado así:
+Si se juntan todas las partes, el archivo `index.php` quedará conformado de la siguiente forma:
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -283,91 +304,113 @@ $app = JFactory::getApplication();
 		 
 </head>
 <body>
- <div class="container">
-   <div id="header" class="span-24">
+	<div class="container">
+	  	<!-- Comienzo header -->
+		<div id="header" class="span-24">
+			
+			<!-- Comienzo Logo -->
+			<div id="logo" class="span-9">
+				<a href="<?php echo $this->baseurl ?>" title="<?php echo $app->getCfg('sitename'); ?>">
+					<h1><?php echo $app->getCfg('sitename'); ?></h1>
+				</a>
+				<h2 id="eslogan">Lorem ipsum dolor sit amet</h2>
+			</div>
+			<!-- Fin Logo -->
+			
+			<!-- Comienzo Menús Superiores -->
+			<div id="menus_superiores" class="span-15 last">
+
+				<?php if($this->countModules('interpoint-menu_ingresar')) : ?>
+					<div id="menu_ingresar">
+						<jdoc:include type="modules" name="interpoint-menu_ingresar" style="none" />
+					</div>
+				<?php endif; ?>
+
+				<?php if($this->countModules('interpoint-menu_superior')) : ?>
+					<div id="menu_superior">
+						<jdoc:include type="modules" name="interpoint-menu_superior" style="none" />
+					</div>
+				<?php endif; ?>
+
+			</div>
+			<!-- Fin Menús superiores -->
+			
+		</div>
+		<!-- Fin Header -->
    
-			  <div id="logo" class="span-9">
-				   <a href="<?php echo $this->baseurl ?>" title="<?php echo $app->getCfg('sitename'); ?>">
-						   <h1><?php echo $app->getCfg('sitename'); ?></h1>
-				   </a>
-				   <h2 id="eslogan">Lorem ipsum dolor sit amet</h2>
-		   </div>
-		   
-		   <div id="menus_superiores" class="span-15 last">
-				   
-				   <?php if($this->countModules('interpoint-menu_ingresar')) : ?>
-						   <div id="menu_ingresar">
-								   <jdoc:include type="modules" name="interpoint-menu_ingresar" style="none" />
-						   </div>
-				   <?php endif; ?>
-				   
-				   <?php if($this->countModules('interpoint-menu_superior')) : ?>
-						   <div id="menu_superior">
-								   <jdoc:include type="modules" name="interpoint-menu_superior" style="none" />
-						   </div>
-				   <?php endif; ?>
-				   
-		   </div>
-		   
-   </div>
-   
-   <jdoc:include type="message" />
-   
-   <?php if($this->countModules('interpoint-destacado_superior')) : ?>
-		   <div id="destacado_superior" class="span-10">
-				   <jdoc:include type="modules" name="interpoint-destacado_superior" style="xhtml" />
-		   </div>
-   <?php endif; ?>
-   
-   <?php if($this->countModules('interpoint-video')) : ?>
-		   <div id="video" class="span-14 last">
-						   <div id="reproductor">
-								   <jdoc:include type="modules" name="interpoint-video" style="none" />
-						   </div>
-		   </div>
-   <?php endif; ?>
-   
-   <?php if($this->countModules('interpoint-caja_medio')) : ?>
-		   <div id="caja_medio" class="span-24">
-				   <jdoc:include type="modules" name="interpoint-caja_medio" style="none" />
-		   </div>
-   <?php endif; ?>
-   
-   <div id="contenido" class="span-24">
-		   <jdoc:include type="component" />
-   </div>
-	 <div id="destacado_inferior" class="span-15 append-1">
-			 <jdoc:include type="modules" name="interpoint-destacado_inferior" style="xhtml" />
-	 </div>
+		<!-- Mensajes del CMS -->
+		<jdoc:include type="message" />
+		
+		<!-- Comienzo Destacado superior -->
+		<?php if($this->countModules('interpoint-destacado_superior')) : ?>
+			<div id="destacado_superior" class="span-10">
+				<jdoc:include type="modules" name="interpoint-destacado_superior" style="xhtml" />
+			</div>
+		<?php endif; ?>
+		<!-- Fin Destacado superior -->
+		
+		<!-- Comienzo Video -->
+		<?php if($this->countModules('interpoint-video')) : ?>
+			<div id="video" class="span-14 last">
+				<div id="reproductor">
+					<jdoc:include type="modules" name="interpoint-video" style="none" />
+				</div>
+			</div>
+		<?php endif; ?>
+		<!-- Fin Video -->
+		
+		<!-- Comienzo Caja medio -->
+		<?php if($this->countModules('interpoint-caja_medio')) : ?>
+			<div id="caja_medio" class="span-24">
+				<jdoc:include type="modules" name="interpoint-caja_medio" style="none" />
+			</div>
+		<?php endif; ?>
+		<!-- Fin Caja medio -->
+		
+		<!-- Comienzo Contenido principal -->
+		<div id="contenido" class="span-24">
+			<jdoc:include type="component" />
+		</div>
+		<!-- Fin Contenido principal -->
+		
+		<!-- Comienzo Destacado inferior -->
+		<div id="destacado_inferior" class="span-15 append-1">
+			<jdoc:include type="modules" name="interpoint-destacado_inferior" style="xhtml" />
+		</div>
+		<!-- Fin Destacado inferior -->
+		
+		<!-- Comienzo Slideshow inferior -->
+		<div id="slideshow_inferior" class="span-8 last">
+			<?php if($this->countModules('interpoint-slideshow_inferior')) : ?>
+				<div id="slideshow_contenedor">
+					<jdoc:include type="modules" name="interpoint-slideshow_inferior" style="none" />
+				</div>
+				<span id="slideshow_der" class="slideshow_nav"></span>
+				<span id="slideshow_izq" class="slideshow_nav"></span>
+			<?php endif; ?>
+		</div>
+		<!-- Fin Slideshow inferior -->
 	 
-	 <div id="slideshow_inferior" class="span-8 last">
-			 <?php if($this->countModules('interpoint-slideshow_inferior')) : ?>
-					 <div id="slideshow_contenedor">
-							 <jdoc:include type="modules" name="interpoint-slideshow_inferior" style="none" />
-					 </div>
-					 <span id="slideshow_der" class="slideshow_nav"></span>
-					 <span id="slideshow_izq" class="slideshow_nav"></span>
-			 <?php endif; ?>
-	 </div>
-	 
-	 <div id="footer" class="span-24">
-			 <div id="legal" class="prepend-3 span-9">
-					 &copy;<?php echo date('Y'); ?> <?php echo $app->getCfg('sitename'); ?>
-			 </div>
-			 <div id="menu_inferior" class="prepend-3 span-9 last">
-					 <jdoc:include type="modules" name="interpoint-menu_inferior" style="none" />
-			 </div>
-	 </div>
- </div>
+		<!-- Comienzo Footer -->
+		<div id="footer" class="span-24">
+			<div id="legal" class="prepend-3 span-9">
+				&copy;<?php echo date('Y'); ?> <?php echo $app->getCfg('sitename'); ?>
+			</div>
+			<div id="menu_inferior" class="prepend-3 span-9 last">
+				<jdoc:include type="modules" name="interpoint-menu_inferior" style="none" />
+			</div>
+		</div>
+		<!-- Fin Footer -->
+	</div>
 </body>
 </html>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Y si miramos como esta quedando nuestro sitio, podremos visualizar algo parecido a esto:
+Si se observa al sitio, se visualizará algo parecido a:
 
 ![](../incluir/figuras/image33.png)
 
 
->En caso de no tener ningún artículo publicado en la página de inicio, la parte centrada aparecerá vacía.
+>En caso de no tener ningún artículo publicado en la página de inicio, la parte del centro aparecerá vacía.
 

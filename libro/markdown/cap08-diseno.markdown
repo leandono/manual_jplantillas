@@ -3,30 +3,28 @@
 template.css
 ------------
 
-Llegó el momento de añadir diseño a la plantilla. Vamos a la carpeta css de nuestra plantilla y abrimos el archivo `template.css`. Podremos ver que ya existen varios estilos escritos, lo que haremos es borrarlos para incorporar los nuestros. 
+Llegó el momento de añadir diseño a la plantilla. Para eso se editará el archivo `template.css` que se encuentra dentro de la carpeta `css` de la plantilla. Notará ya existe contenido dentro del archivo, lo que se hará es borrarlo para luego incorporar los estilos apropiados. 
 
 
->Ántes de comenzar a escribir los estilos, es muy importante tener preparado los recortes de las diferentes imagenes que componen el diseño. Dichas imagenes deben ir guardadas en la carpeta `images` de la plantilla.
+>Antes de comenzar a escribir los estilos, es muy importante tener preparado los recortes de las diferentes imágenes que componen el diseño. Dichas imágenes deben ir guardadas en la carpeta `images` de la plantilla.
 
 
 ![](../incluir/figuras/image11.png)
 
 
->En Todo-Photoshop existe un artículo explicando el recorte de imágenes utilizando Photoshop <http://www.todo-photoshop.com/tutorial-photoshop/basicos/recortando_imagenes_photoshop.html>
+>Si no sabe recortar imágenes con Photoshop, puede consultar el siguiente artículo: <http://www.todo-photoshop.com/tutorial-photoshop/basicos/recortando_imagenes_photoshop.html>
 
 
->A medida que se van aplicando los estilos es conveniente ir rellenando el sitio con contenidos (menús, artículos, etc) para poder visualizar de mejor manera nuestro trabajo.
+>A medida que se van aplicando los estilos es conveniente ir rellenando el sitio con contenidos (menús, artículos, etc.) para poder visualizar de mejor manera el trabajo.
 
 
->El nivel de comprensión de los estilos mostrados a continuación dependen de los conocimientos de CSS que posea el lector. Si quiere introducirse más en profundidad con CSS, puede consultar la colección de **LibroWeb**: <http://www.librosweb.es/>
-
-
-Aún así, los estilos descriptos son de ejemplo, los cuales pueden mejorarse o implementarse de otra forma.
+>El nivel de comprensión de los estilos mostrados a continuación dependaran de los conocimientos de CSS que posea. Si desea introducirse más en profundidad con los estilos en cascada, puede consultar la colección referente a este tema en **LibrosWeb**: <http://www.librosweb.es/>.
+>Aún así, los estilos descriptos son de ejemplo, los cuales pueden mejorarse o implementarse de otra forma.
 
 
 **Estilos generales**
 
-Lo primero que haremos será escribir algunos estilos para elementos generales del sitio: Tipografías, colores de enlaces, etc:
+Los primeros estilos corresponden para elementos generales del sitio: Tipografías, colores de enlaces, etc:
 
 
 ~~~~~~~~~{.css .numberLines}
@@ -43,7 +41,7 @@ body{
 
 **Estilos para la parte superior**
 
-Continuamos con los estilos para la parte superior:
+Se continua con los estilos para la parte superior:
 
 
 ~~~~~~~~~{.css .numberLines}
@@ -148,13 +146,13 @@ Continuamos con los estilos para la parte superior:
 
 ![](../incluir/figuras/image00.png)
 	
-Para completar los espacios superiores, se utilizaron dos módulos del tipo menú.
+Para completar los espacios superiores, se utilizaron dos módulos del tipo **Menú**.
 
 
 
-**Estilos para el texto superior, video y caja destacada**
+**Estilos para el destacado superior, video y caja media**
 
-Continuamos con los estilos para estas zonas del diseño:
+Luego se continua con los estilos para el destacado superior, video y caja del medio:
 
 
 ~~~~~~~~~{.css .numberLines}
@@ -232,13 +230,13 @@ Continuamos con los estilos para estas zonas del diseño:
 
 ![](../incluir/figuras/image04.png)
 	
-Para completar los espacios se utilizaron tres módulos del tipo HTML personalizado (uno con el texto destacado/botón, otro con el video y otro con un pequeño texto para la caja media).
+Para completar los espacios se utilizaron tres módulos del tipo **HTML personalizado** (uno con el texto destacado/botón, otro con el video y otro con un pequeño texto para la caja media).
 
 
 
 **Estilos para las columnas centrales**
 
-Seguimos con los estilos para las columnas medias:
+Luego se incorporan los estilos para las columnas medias:
 
 
 ~~~~~~~~~{.css .numberLines}
@@ -314,7 +312,7 @@ Seguimos con los estilos para las columnas medias:
 
 ![](../incluir/figuras/image21.png)
 	
-Como se explicó anteriormente, los contenidos de las columnas estan conformados por tres artículos seleccionados para ser publicados en la página de inicio.
+Como se explicó anteriormente, los contenidos de las columnas están conformados por tres artículos seleccionados para ser publicados en la página de inicio.
 
 
 
@@ -388,9 +386,9 @@ Como se explicó anteriormente, los contenidos de las columnas estan conformados
 
 ![](../incluir/figuras/image38.png)
 	
-Para los mostrar el artículo se utilizó un módulo del tipo Artículos - Noticias de actualidad. Se lo configuró para mostrar un solo artículo, de una categoría definida, ordenado por fecha. De esta forma, en esta sección pueden ir, por ejemplo, las últimas noticias del sitio y cada vez que se carga una noticia nueva, esta aparece en dicho lugar. 
+Para los mostrar el artículo se utilizó un módulo del tipo **Artículos - Noticias de actualidad**. Se lo configuró para mostrar un solo artículo, de una categoría definida, ordenado por fecha. De esta forma, en esta sección pueden ir, por ejemplo, las últimas noticias del sitio y cada vez que se carga una noticia nueva, esta aparece en dicho lugar. 
 
-Para la sección de slideshow, se utilizó un módulo de HTML personalizado. Se incorporó una sola imagen de modo demostración.
+Para la sección de slideshow, se utilizó un módulo de **HTML personalizado**. Se incorporó una sola imagen en modo de demostración.
 
 
 >El slideshow aún no es funcional. Más adelante se explicará como agregar la funcionalidad a la plantilla utilizando JavaScript.
@@ -461,13 +459,13 @@ Para la sección de slideshow, se utilizó un módulo de HTML personalizado. Se 
 
 ![](../incluir/figuras/image39.png)
 	
-Para completar las zonas inferiores se usó un solo módulo menú con distintos enlaces hacia secciones del sitio.
+Para completar las zonas inferiores se usó un solo módulo **Menú** con distintos enlaces hacia secciones del sitio.
 
 
 
 **Estilos para elementos y mensajes del sistema**
 
-Por último agregamos algunos estilos pertenecientes a elementos de comunes en el CMS: Mensajes del sistema, iconos de acciones y tooltips.
+Por último se agregan estilos pertenecientes a elementos comunes en el CMS: Mensajes del sistema, iconos de acciones y tooltips.
 
 
 ~~~~~~~~~{.css .numberLines}
@@ -515,7 +513,7 @@ ul.actions li {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Estos elementos aparecen en ciertas situaciones. Por ejemplo: cuando un usuario quiere ingresar al sitio y la acción es rechazada, el CMS muestra un mensaje. Los iconos de acciones y tooltips suelen aparecer cuando se ingresa al sitio con permisos de edición de artículos:
+Estos elementos aparecen en ciertas situaciones, por ejemplo: cuando un usuario quiere ingresar al sitio y la acción es rechazada, el CMS muestra un mensaje. Los iconos de acciones y tooltips suelen aparecer cuando se ingresa al sitio con permisos de edición de artículos:
 
 ![](../incluir/figuras/image29.png)
 
@@ -523,7 +521,7 @@ Estos elementos aparecen en ciertas situaciones. Por ejemplo: cuando un usuario 
 
 **Estilos completos**
 
-Juntando todos los estilos, el archivo template.css queda de esta forma:
+Al juntar todos los estilos, el archivo `template.css` conformado de la siguiente forma:
 
 
 ~~~~~~~~~{.css .numberLines}
