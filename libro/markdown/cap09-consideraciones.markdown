@@ -12,7 +12,7 @@ El trabajo ya esta casi listo, las últimas tareas a realizar son:
 
 * Crear dos capturas de pantallas: `template_preview.png` que será una imagen a tamaño real del *template* y `template_thumbnail.png` que será una imagen miniatura del diseño. Dichas imágenes van dentro de la carpeta raiz de la plantilla:
 
-![](../incluir/figuras/image37.png)
+![](incluir/figuras/image37.png)
 
 * Finalmente crear un instalador de la plantilla: es tan sencillo como seleccionar todos los archivos que componen la plantilla y comprimirlos en un archivo `.zip`. Ese archivo será el instalador para utilizar en múltiples sitios.
 

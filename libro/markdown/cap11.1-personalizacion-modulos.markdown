@@ -11,13 +11,13 @@ Para poder sobrescribir la estructura HTML que posea una extensión, es requisit
 
 Desde el punto de vista del usuario común, no existe una forma automática de saber si una extensión utiliza MVC. La única manera de saberlo es yendo a la carpeta de dicha extensión y mirando su estructura de carpetas y archivos. Por ejemplo, los componentes creados con MVC suelen tener una estructura de esta forma: 
 
-![](../incluir/figuras/image43.png)
+![](incluir/figuras/image43.png)
 
 En donde existe una carpeta `controllers`, otra `models` y otra `views`. En esta última carpeta se encuentran archivos que se utilizaran como base para personalizar el HTML del componente.
 
 Por otro lado, los módulos desarrollados en MVC poseen el siguiente aspecto:
 
-![](../incluir/figuras/image35.png)
+![](incluir/figuras/image35.png)
 
 En este caso, la carpeta `tmpl` posee archivos que se utilizaran para personalizar a gusto el HTML del módulo.
 
@@ -50,7 +50,7 @@ En este aspecto, es posible adaptar a los módulos en varios aspectos:
 
 Como se comentó anteriormente, el trabajo de personalización de módulos (y también de componentes) ocurre en la carpeta `html` de la plantilla. En el caso de la plantilla creada de ejemplo, al acceder a la carpeta `html` se visualizará:
 
-![](../incluir/figuras/image46.png)
+![](incluir/figuras/image46.png)
 
 Es el archivo `modules.php` quien se encarga de contener los diferentes estilos personalizados de visualización de módulos. Al abrir a dicho archivo, el mismo posee tres funciones definidas:
 
@@ -329,7 +329,7 @@ Suponiendo el caso que se necesita que los datos de estadísticas del sitio, en 
 	
 De modo que la carpeta `html` posea la siguiente estructura de archivos:
 
-![](../incluir/figuras/image20.png)
+![](incluir/figuras/image20.png)
 
 Lo siguiente será abrir el archivo `default.php` copiado y modificarlo con las nuevas etiquetas:
 

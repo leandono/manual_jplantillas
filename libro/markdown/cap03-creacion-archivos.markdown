@@ -34,7 +34,7 @@ A continuación de enumeran algunas cuestiones que deberá tener en cuenta al mo
 
 En el caso de este manual, se utilizará el siguiente diseño para la realización de la plantilla:
 
-![](../incluir/figuras/image14.png)
+![](incluir/figuras/image14.png)
 
 
 >Créditos del diseño: [PSD Style](http://psdstyle.net/)
@@ -42,7 +42,7 @@ En el caso de este manual, se utilizará el siguiente diseño para la realizaci�
 
 Al realizar el análisis, es posible definir las siguientes posiciones de módulos y funcionalidades:
 
-![](../incluir/figuras/image22.png)
+![](incluir/figuras/image22.png)
 
 
 * Tres espacios para módulos de menús (dos en la parte superior, uno en la parte inferior);
@@ -84,7 +84,7 @@ Para comenzar, lo primero será ir a la carpeta `templates` para copiar y pegar 
 >El nombre debe estar en minúscula y con guiones bajos (en caso de tener espacios de por medio).
 
 
-![](../incluir/figuras/image51.png)
+![](incluir/figuras/image51.png)
 
 Lo siguiente será ir por cada uno de los archivos para modificarlos en base a las necesidades solitatas.
 

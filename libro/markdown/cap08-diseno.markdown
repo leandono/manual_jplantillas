@@ -9,7 +9,7 @@ Llegó el momento de añadir diseño a la plantilla. Para eso se editará el arc
 >Antes de comenzar a escribir los estilos, es muy importante tener preparado los recortes de las diferentes imágenes que componen el diseño. Dichas imágenes deben ir guardadas en la carpeta `images` de la plantilla.
 
 
-![](../incluir/figuras/image11.png)
+![](incluir/figuras/image11.png)
 
 
 >Si no sabe recortar imágenes con Photoshop, puede consultar el siguiente artículo: <http://www.todo-photoshop.com/tutorial-photoshop/basicos/recortando_imagenes_photoshop.html>
@@ -144,7 +144,7 @@ Se continua con los estilos para la parte superior:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-![](../incluir/figuras/image00.png)
+![](incluir/figuras/image00.png)
 	
 Para completar los espacios superiores, se utilizaron dos módulos del tipo **Menú**.
 
@@ -228,7 +228,7 @@ Luego se continua con los estilos para el destacado superior, video y caja del m
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-![](../incluir/figuras/image04.png)
+![](incluir/figuras/image04.png)
 	
 Para completar los espacios se utilizaron tres módulos del tipo **HTML personalizado** (uno con el texto destacado/botón, otro con el video y otro con un pequeño texto para la caja media).
 
@@ -310,7 +310,7 @@ Luego se incorporan los estilos para las columnas medias:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-![](../incluir/figuras/image21.png)
+![](incluir/figuras/image21.png)
 	
 Como se explicó anteriormente, los contenidos de las columnas están conformados por tres artículos seleccionados para ser publicados en la página de inicio.
 
@@ -384,7 +384,7 @@ Como se explicó anteriormente, los contenidos de las columnas están conformado
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-![](../incluir/figuras/image38.png)
+![](incluir/figuras/image38.png)
 	
 Para los mostrar el artículo se utilizó un módulo del tipo **Artículos - Noticias de actualidad**. Se lo configuró para mostrar un solo artículo, de una categoría definida, ordenado por fecha. De esta forma, en esta sección pueden ir, por ejemplo, las últimas noticias del sitio y cada vez que se carga una noticia nueva, esta aparece en dicho lugar. 
 
@@ -457,7 +457,7 @@ Para la sección de slideshow, se utilizó un módulo de **HTML personalizado**.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-![](../incluir/figuras/image39.png)
+![](incluir/figuras/image39.png)
 	
 Para completar las zonas inferiores se usó un solo módulo **Menú** con distintos enlaces hacia secciones del sitio.
 
@@ -515,7 +515,7 @@ ul.actions li {
 
 Estos elementos aparecen en ciertas situaciones, por ejemplo: cuando un usuario quiere ingresar al sitio y la acción es rechazada, el CMS muestra un mensaje. Los iconos de acciones y tooltips suelen aparecer cuando se ingresa al sitio con permisos de edición de artículos:
 
-![](../incluir/figuras/image29.png)
+![](incluir/figuras/image29.png)
 
 
 

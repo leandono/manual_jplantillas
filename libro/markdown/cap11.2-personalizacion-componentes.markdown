@@ -6,7 +6,7 @@ Los componentes suelen ser extensiones más complejas que los módulos, ya que a
 
 El mecanismo para personalizar el HTML de un componente determinado es exactamente igual que el descripto para los módulos, con algunas diferencias. Por ejemplo, suponiendo que se necesita personalizar los resultados de búsqueda, actualmente, dicha pantalla posee el siguiente diseño:
 
-![](../incluir/figuras/image50.png)
+![](incluir/figuras/image50.png)
 
 Para la personalización, se desea las zonas "**Condiciones de búsqueda**" y "**Buscar solo en**" aparezcan ocultas y que éstas sean visibles al hacer click en un enlace con el texto "**Búsqueda avanzada**".
 
@@ -23,7 +23,7 @@ Para realizarlo, se hará lo siguiente:
 * Al entrar a la carpeta `search`, se encontraran varios archivos y además un directorio con el nombre `tmpl`, el cual contiene (al igual que en el caso de los módulos) archivos `.php` con las etiquetas HTML que conforman al componente:
 
 
-![](../incluir/figuras/image13.png)
+![](incluir/figuras/image13.png)
 
 
 >Notar que existe más de un archivo `.php` dentro del directorio. Esto es debido a que, los componentes al ser más complejos, suelen dividir su HTML en varios archivos para reunirlos en uno solo (`default.php`).
@@ -34,7 +34,7 @@ Para realizarlo, se hará lo siguiente:
 * Lo siguiente a realizar es crear una carpeta `com_search` dentro del directorio `html` de la plantilla. Allí dentro se creará otra carpeta llamada `search` para luego pegar el archivo `default_form.php` ubicado en el paso anterior. La estructura del directorio `html` debería quedar de la siguiente manera:
 
 
-![](../incluir/figuras/image12.png)
+![](incluir/figuras/image12.png)
 
 
 >Notar que se ha creado una carpeta `search`. Esta corresponde al nombre de la carpeta `search` que se encuentra dentro del directorio `views` del componente. En caso que existan otras carpetas con otros nombres, se debe seguir la misma lógica.
@@ -165,11 +165,11 @@ $doc->addScriptDeclaration ($js);
 
 Si todo se realiza correctamente, la página de resultados quedará de la siguiente forma:
 
-![](../incluir/figuras/image15.png)
+![](incluir/figuras/image15.png)
 
 Al hacer click en el enlace **Búsqueda avanzada**, se desplegarán las opciones:
 
-![](../incluir/figuras/image19.png)
+![](incluir/figuras/image19.png)
 
 
 >Una buena práctica sería incorporar el texto **Búsqueda avanzada** dentro de los archivos de lenguajes de la plantilla y no en el mismo archivo `.php`.

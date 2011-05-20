@@ -11,7 +11,7 @@ El sistema de grillas de BluePrint
 
 El sistema de grillas de `BluePrint` es muy fácil de utilizar, permitiendo agilizar de forma severa el proceso de maquetación. Su mecanismo permite crear un máximo de 24 columnas (o grillas) las cuales se pueden combinar dependiendo de las necesidades:
 
-![](../incluir/figuras/image02.png)
+![](incluir/figuras/image02.png)
 
 La clave de su utilización es añadir una serie de clases predefinidas en los elementos del documento para poder crear las columnas y el ancho necesitado. 
 

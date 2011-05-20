@@ -7,7 +7,7 @@ Temas avanzados
 
 Como se comentó la principio del manual, Joomla! 1.6 posee una nueva funcionalidad llamada estilos de plantillas. Dichos estilos permiten, a través de parámetros de configuración, variar el diseño de la plantilla en varios aspectos: colores, imágenes, maquetación, tamaños, etc. A su vez cada estilo puede ser asignado a una o varias secciones especificas.
 
-![](../incluir/figuras/image44.png)
+![](incluir/figuras/image44.png)
 
 
 >Recuerde que el listado de estilos de plantillas se puede encontrar yendo, en la administración, a Extensiones → Gestor de plantillas. Al ingresar a alguno de los ítems enlistados se puede visualizar los parámetros disponibles para configurar y a que secciones aplicarlos.
@@ -56,7 +56,7 @@ Como se muestra, la etiqueta más importante es `<field />`. Dicha etiqueta pose
 >Notar que para los atributos `label` y `description` se utiliza `TPL_INTERPOINT_LOGO_LABEL` y `TPL_INTERPOINT_LOGO_DESC`. Estas dos referencias se deben agregar en el archivo `es-ES.tpl_interpoint.ini` junto a los textos correspondientes.
 
 
-![](../incluir/figuras/image49.png)
+![](incluir/figuras/image49.png)
 
 
 Por lo tanto, `templateDetails.xml` quedará de la siguiente manera:
@@ -162,7 +162,7 @@ Luego, antes del cierre de la etiqueta `<head />`  se incorpora:
 
 De modo que, si se configuró el parámetro, se añada un estilo que sobrescriba el establecido en `template.css` y agregue la nueva imagen del logo en el diseño:
 
-![](../incluir/figuras/image41.png)
+![](incluir/figuras/image41.png)
 
 La cabecera del archivo `index.php` queda de la siguiente forma:
 
@@ -243,7 +243,7 @@ Siguiendo los mismos pasos anteriores, se modifica `templateDetails.xml` añadie
 >* `filter`: Este permite especificar el tipo de información que se espera en el campo (`string`, `word`, `integer`);
 
 
-![](../incluir/figuras/image24.png)
+![](incluir/figuras/image24.png)
 
 Luego, en `index.php`, se agrega una nueva llamada para obtener el parámetro `eslogan`:
 
@@ -288,7 +288,7 @@ Y se modifica la maquetación correspondiente a la zona del logotipo con lo sigu
 
 Si se configuró el parámetro `eslogan`, se muestra el texto correspondiente, caso contrario se muestre el predeterminado.
   
-![](../incluir/figuras/image18.png)
+![](incluir/figuras/image18.png)
   
   
   
@@ -334,7 +334,7 @@ Por lo tanto, al igual que antes, se modifica `templateDetails.xml`:
 >Notar que el parámetro, al ser del tipo lista, necesita tener definido las opciones que se podran seleccionar.
 
 
-![](../incluir/figuras/image03.png)
+![](incluir/figuras/image03.png)
 
 En `index.php` se agrega nuevamente una variable que obtenga el valor del parámetro `maquetacion`:
 
@@ -405,11 +405,11 @@ Para poder aplicar la nueva maquetación en el sitio utilizando los estilos de p
 
 Por ejemplo, si se selecciona asignar el nuevo diseño a una categoría dada, al ingresar a un articulo de esa categoría se visualizará:
 
-![](../incluir/figuras/image10.png)
+![](incluir/figuras/image10.png)
 
 Si se despublican los módulos superiores e inferiores y se asignan algunos en la columna derecha:
 
-![](../incluir/figuras/image23.png)
+![](incluir/figuras/image23.png)
 
 Agregando algunos estilos en `template.css` es posible mejorar el diseño:
 
@@ -507,7 +507,7 @@ Agregando algunos estilos en `template.css` es posible mejorar el diseño:
 
 Quedando finalmente:
 
-![](../incluir/figuras/image40.png)
+![](incluir/figuras/image40.png)
 
 Como se puede ver, los estilos en plantillas son una opción interesante que le otorgan flexibilidad a la plantilla, permitiendo cambiar su diseño ante distintas situaciones.
 

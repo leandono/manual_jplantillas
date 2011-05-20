@@ -17,7 +17,7 @@ Cada error siempre va acompañado por un código de estado HTTP. Los tipos de er
 
 De forma predeterminada, la página de error 404 en Joomla posee el siguiente diseño:
 
-![](../incluir/figuras/image36.png)
+![](incluir/figuras/image36.png)
 
 Como se puede observar, no posee un aspecto "muy amigable".
 
@@ -402,11 +402,11 @@ Por otro lado, es necesario escribir algunos estilos CSS para los elementos de l
 
 La página de error 404 personalizada quedará con el siguiente diseño:
 
-![](../incluir/figuras/image47.png)
+![](incluir/figuras/image47.png)
 
 Mientras que la página de error 500 quedará de la siguiente manera:
 
-![](../incluir/figuras/image31.png)
+![](incluir/figuras/image31.png)
 
 Como se puede ver, dentro de un recuadro queda el error de la página para tener luego de referencia.
 

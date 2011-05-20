@@ -59,7 +59,7 @@ Y listo. De esta forma es posible utilizar jQuery sin problemas en la plantilla.
 
 Aprovechando que se incorporó a jQuery en la plantilla, se mostrará la manera de crear un slideshow de imágenes para completar la funcionalidad planeada en la página de inicio:
 
-![](../incluir/figuras/image26.png)
+![](incluir/figuras/image26.png)
 
 Para esto, se utilizará la extensión de la biblioteca **jQuery Cycle Plugin**: <http://jquery.malsup.com/cycle/>
 
@@ -102,7 +102,7 @@ Es probable que al hacerlo, todo el slideshow se vea mal. Esto por ahora no impo
 
 Lo siguiente a realizar será descargar **jQuery Cycle Plugin**: <http://jquery.malsup.com/cycle/download.html>. Descomprimir el archivo `.zip` descargado y copiar el archivo `jquery.cycle.all.min.js` en la carpeta `js` de la plantilla, de forma que quede en conjunto con `jquery.min.js` y `template.js`:
 
-![](../incluir/figuras/image32.png)
+![](incluir/figuras/image32.png)
 
 Luego, insertar a `jquery.cycle.all.min.js` en la plantilla. El llamado al archivo debe quedar por debajo de `jquery.min.js` pero antes de `template.js`:
 
@@ -140,7 +140,7 @@ La creación del slideshow es muy fácil, tan solo se debe especificar:
 * El tiempo de transición entre imagenes: 3000 milisegundos;
 * Los IDs de los elementos para pasar a la siguiente o anterior imagen: `#slideshow_izq` y `#slideshow_der`.
 
-![](../incluir/figuras/image34.png)
+![](incluir/figuras/image34.png)
 
 Más información y otras opciones sobre la utilización de `jQuery Cycle Plugin`: <http://jquery.malsup.com/cycle/>
 

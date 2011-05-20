@@ -41,7 +41,7 @@ $app = JFactory::getApplication();
 
 **Maquetación de la parte superior**
 
-![](../incluir/figuras/image01.png)
+![](incluir/figuras/image01.png)
 
 Dentro del cuerpo del documento, la sección superior de dividirá en dos columnas: una dedicada al logo y otra dedicada a los dos menús:
 
@@ -88,7 +88,7 @@ Dentro del cuerpo del documento, la sección superior de dividirá en dos column
 
 **Maquetación del texto superior, video y caja destacada**
 
-![](../incluir/figuras/image17.png)
+![](incluir/figuras/image17.png)
 
 En esta sección se tendrá en primer lugar dos columnas y luego una columna ocupando el total del espacio:
 
@@ -130,7 +130,7 @@ En esta sección se tendrá en primer lugar dos columnas y luego una columna ocu
 
 **Maquetación de las columnas del medio**
 
-![](../incluir/figuras/image08.png)
+![](incluir/figuras/image08.png)
 
 Las columnas del medio cargaran tres artículos publicados en el home del sitio. Para eso se utilizará la etiqueta `<jdoc:include type="component" />`:
 
@@ -146,11 +146,11 @@ Las columnas del medio cargaran tres artículos publicados en el home del sitio.
 
 Para hacer que cada artículo ocupe una columna, en la administración del CMS, ir a **Menús → Menú principal** y luego acceder al ítem que se tenga marcado como página de Inicio:
 
-![](../incluir/figuras/image06.png)
+![](incluir/figuras/image06.png)
 
 En la columna derecha, en el apartado **Opciones de presentación** establecer los siguientes valores:
 
-![](../incluir/figuras/image45.png)
+![](incluir/figuras/image45.png)
 
 De esta forma se hará que se muestren, como máximo, tres artículos, separados cada uno en columnas. Al mostrar dichos artículos, el HTML generado por el CMS será:
 
@@ -228,7 +228,7 @@ Por lo tanto, Joomla se encarga de generar el HTML que necesitamos para poder lo
 
 **Maquetación del texto destacado inferior y slideshow**
 
-![](../incluir/figuras/image27.png)
+![](incluir/figuras/image27.png)
 
 Para la siguiente parte del diseño, se crearan dos columnas, una para el texto destacado y otra para la zona del slideshow.
 
@@ -259,7 +259,7 @@ Dentro del `<div />` que va a contener el slideshow, se han agregado dos etiquet
 
 **Maquetación del footer y zona inferior**
 
-![](../incluir/figuras/image16.png)
+![](incluir/figuras/image16.png)
 
 Finalmente para esta zona también se utilizarán dos columnas, una para el texto legal y otra para el menú inferior:
 
@@ -409,7 +409,7 @@ $app = JFactory::getApplication();
 
 Si se observa al sitio, se visualizará algo parecido a:
 
-![](../incluir/figuras/image33.png)
+![](incluir/figuras/image33.png)
 
 
 >En caso de no tener ningún artículo publicado en la página de inicio, la parte del centro aparecerá vacía.

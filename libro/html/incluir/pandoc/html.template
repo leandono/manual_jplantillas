@@ -3,8 +3,8 @@
 	<head>
 		<title>Guía definitiva para crear plantillas para Joomla! 1.6</title>
 		<meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
-		<link href='../incluir/css/estilos.css' media='screen' rel='stylesheet' type='text/css'/>
-		<link href='../incluir/css/estilos-imprimir.css' media='print' rel='stylesheet' type='text/css'/>
+		<link href='incluir/css/estilos.css' media='screen' rel='stylesheet' type='text/css'/>
+		<link href='incluir/css/estilos-imprimir.css' media='print' rel='stylesheet' type='text/css'/>
 	</head>
 	<body>
 		<div id='libro'>
