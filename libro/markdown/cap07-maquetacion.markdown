@@ -414,3 +414,6 @@ Si se observa al sitio, se visualizará algo parecido a:
 
 >En caso de no tener ningún artículo publicado en la página de inicio, la parte del centro aparecerá vacía.
 
+
+
+********************************

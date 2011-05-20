@@ -511,3 +511,6 @@ Quedando finalmente:
 
 Como se puede ver, los estilos en plantillas son una opción interesante que le otorgan flexibilidad a la plantilla, permitiendo cambiar su diseño ante distintas situaciones.
 
+
+
+********************************

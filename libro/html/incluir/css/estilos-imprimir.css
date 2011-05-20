@@ -1,8 +1,6 @@
 
 body {
-  width:100%;
-  font-family:Georgia, serif;
-  margin:20px auto;
+  font-family: Georgia, serif;
 }
 
 #libro {
@@ -49,6 +47,7 @@ body {
   border: 1px solid #DDDDDD;
   color: #000000;
   font-size: 12px;
+  overflow: auto;
   width: 745px;
   margin: 0;
 }

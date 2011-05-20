@@ -88,3 +88,6 @@ Para comenzar, lo primero será ir a la carpeta `templates` para copiar y pegar 
 
 Lo siguiente será ir por cada uno de los archivos para modificarlos en base a las necesidades solitatas.
 
+
+
+********************************

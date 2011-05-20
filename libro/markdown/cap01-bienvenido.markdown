@@ -78,4 +78,8 @@ Para trabajar con los contenidos de la guía, las siguientes herramientas son ne
 	
 * Un servidor local ([XAMPP](http://www.apachefriends.org/es/xampp.html) / [MAMP](http://www.mamp.info/en/index.html)) ó un cliente FTP/SSH/SFTP para acceder a un servidor remoto ([Filezilla](http://filezilla-project.org/) / [WinSCP](http://winscp.net/) / [Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html));
 
-* [Joomla! 1.6 ó posterior](http://www.joomla.org/) instalado en el servidor local ó remoto.	
+* [Joomla! 1.6 ó posterior](http://www.joomla.org/) instalado en el servidor local ó remoto.
+
+
+
+********************************

@@ -401,3 +401,6 @@ Finalmente, llegando al final del archivo, se incorporan una serie de etiquetas 
 
 Lo siguiente a realizar es la modificación de `index.php` para crear una maquetación en base a las necesidades requeridas. Como se utilizará a `BluePrint` como herramienta, es necesario primero entender su funcionamiento.
 
+
+
+********************************

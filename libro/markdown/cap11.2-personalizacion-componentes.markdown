@@ -187,3 +187,6 @@ Se pudo comprobar el potencial de las plantillas de Joomla para la personalizaci
 * No se modificó ningún archivo del núcleo de la extensión permitiendo que, en caso de actualización, no se pierda el trabajo realizado, minimizando el tiempo de mantenimiento;
 * Centralización del trabajo: el mismo transcurrió dentro de la carpeta `html` de la plantilla.
 
+
+
+********************************

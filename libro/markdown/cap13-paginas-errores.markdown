@@ -410,3 +410,6 @@ Mientras que la página de error 500 quedará de la siguiente manera:
 
 Como se puede ver, dentro de un recuadro queda el error de la página para tener luego de referencia.
 
+
+
+********************************

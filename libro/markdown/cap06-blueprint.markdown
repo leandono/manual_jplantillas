@@ -41,3 +41,6 @@ Finalmente notar que el último elemento (es decir, la última columna) debe ten
 
 También existen otras clases que permiten modificar la disposición de las columnas: `prepend-x` y `append-x`. La primera permite mover una columna más hacia la derecha, mientras que la otra más hacia la izquierda, todo dependerá del valor que se le asigne a `x` (por ejemplo: `prepend-4` / `append-4`).
 
+
+
+********************************

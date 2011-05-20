@@ -1,22 +1,82 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="es-es" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="es-es" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="es-es" class="ie8"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="es-es">
+<!--<![endif]-->
 	<head>
-		<title>Guía definitiva para crear plantillas para Joomla! 1.6</title>
-		<meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
-		<link href='incluir/css/estilos.css' media='screen' rel='stylesheet' type='text/css'/>
-		<link href='incluir/css/estilos-imprimir.css' media='print' rel='stylesheet' type='text/css'/>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<meta name="robots" content="index, follow"/>
+	<title>Desarrollo de plantillas para Joomla! 1.6</title>
+	<link rel="stylesheet" href="incluir/css/blueprint/screen.css" type="text/css" media="screen, projection">
+	<!--[if lt IE 8]><link rel="stylesheet" href="incluir/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link  href="http://fonts.googleapis.com/css?family=Rock+Salt:regular?text=Biblioteca|Shanti|Reenie+Beanie&amp;amp;subset=latin" rel="stylesheet" type="text/css" >
+	<link href='incluir/css/estilos.css' media='screen' rel='stylesheet' type='text/css'/>
+	<link href='incluir/css/estilos-imprimir.css' media='print' rel='stylesheet' type='text/css'/>
 	</head>
-	<body>
-		<div id='libro'>
-			<h1>Guía definitiva para crear plantillas para Joomla! 1.6</h1>
+<body>
+
+	<div class="container">
+	
+		<div id="box" class="span-24">
+		
+			<div id="header" class="span-24">
+				<div id="logo" class="span-12 prepend-1">
+					<h1 class="clearfix">
+					<a href="http://biblioteca.comunidadjoomla.org/" title="Biblioteca Comunidad Joomla|">
+					<span class="text">Biblioteca</span>
+					<span class="logo">Comunidad Joomla</span>
+					</a>
+					</h1>
+				</div>
+				<div id="menu" class="span-11 last">
+					<div id="menu_social">
+						<ul class="menu">
+							<li id="item-102"><a href="http://www.facebook.com/pages/comunidadjoomla/191994190688" title="Facebook de Comunidad Joomla">Facebook de Comunidad Joomla</a></li>
+							<li id="item-103"><a href="http://twitter.com/comunidadjoomla" title="Twitter de Comunidad Joomla">Twitter de Comunidad Joomla</a></li>
+							<li id="item-104"><a href="http://www.linkedin.com/groups?mostPopular=&gid=2994050" title="LinkedIn de Comunidad Joomla">LinkedIn de Comunidad Joomla</a></li>
+						</ul>
+					</div>
+					<div id="menu_mainlinks">
+						<ul class="menu">
+							<li id="item-105"><a href="http://comunidadjoomla.org/" title="Portal Comunidad Joomla">Portal</a></li>
+							<li id="item-106"><a href="http://foro.comunidadjoomla.org/" title="Foro Comunidad Joomla">Foro</a></li>
+							<li id="item-101" class="current active"><a href="/">Biblioteca</a></li>
+							<li id="item-107"><a href="http://joomlacode.org/gf/project/comunidadjoomla/frs/" title="Centro de descargas">Centro de descargas</a></li>
+							<li id="item-108"><a href="http://comunidadjoomla.org/contacto.html" title="Contacto">Contacto</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 			
-			$if(toc)$
-				$toc$
-			$endif$
+			<div id="content" class="libro span-22 append-1 prepend-1 last">
+				
+				<div id="titulo">
+					<h1>Desarrollo de plantillas para Joomla! 1.6</h1>
+				</div>
+
+				$if(toc)$
+					<h2 id="indice">Índice</h2>
+					$toc$
+				$endif$
+				
+				$body$
+				</div>
 			
-			$body$
+			</div>
 			
+		<div id="copyright" class="span-24">
+			<div class="custom">
+				<p>
+					COMUNIDADJOOMLA.ORG is not affiliated with or endorsed by the Joomla! Project or Open Source Matters. The Joomla! name and logo are used under a limited license granted by Open Source Matters the trademark holder in the United States and other countries.
+				</p>
+				<p>
+					Copyright © 2008 Open Source Matters. Todos los derechos reservados. Joomla! es un software libre distribuido bajo la licencia GNU/GPL.
+				</p>
+			</div>
 		</div>
-		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js' type='text/javascript'></script>
-	</body>
+			
+	</div>
+</body>
 </html>

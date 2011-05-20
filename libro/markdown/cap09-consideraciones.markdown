@@ -16,3 +16,6 @@ El trabajo ya esta casi listo, las últimas tareas a realizar son:
 
 * Finalmente crear un instalador de la plantilla: es tan sencillo como seleccionar todos los archivos que componen la plantilla y comprimirlos en un archivo `.zip`. Ese archivo será el instalador para utilizar en múltiples sitios.
 
+
+
+********************************

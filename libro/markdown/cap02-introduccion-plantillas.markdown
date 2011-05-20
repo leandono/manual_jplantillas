@@ -133,3 +133,6 @@ Son archivos que agregan funcionalidades o características a la plantilla, pero
 
 * **language**: Contendrá archivos de lenguajes `.ini`, los cuales servirán para mostrar textos diferentes dependiendo del idioma configurado para el sitio y la administración. Cada idioma está separado por carpeta.
 
+
+
+********************************

@@ -144,3 +144,6 @@ La creación del slideshow es muy fácil, tan solo se debe especificar:
 
 Más información y otras opciones sobre la utilización de `jQuery Cycle Plugin`: <http://jquery.malsup.com/cycle/>
 
+
+
+********************************

@@ -261,3 +261,6 @@ Finalmente, para poder visualizar la plantilla en el sitio, ir a **Extensiones �
 
 Seleccionar el item de la plantilla nueva y presionar el botón **Predeterminada**. De esta forma se logrará que al ingresar al sitio se cargue la plantilla.
 
+
+
+********************************

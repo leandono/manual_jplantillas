@@ -1,67 +1,262 @@
+/**
+* Estilos
+* @version 1.0
+*/
+
+
+/* Maquetación y diseño heredado de Biblioteca Comunidad Joomla
+/--------------------------------------------------------- */
 
 body {
-  font-family: Georgia, serif;
+  background: transparent url("../img/biblioteca-bg.gif") repeat left top;
+  font-size: 12px;
 }
 
-#libro {
-  width: 60%;
-  margin: 0 auto;
+#box {
+  margin: 50px 0 30px 0;
+  background: #FFF;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -o-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
 }
 
-#libro h2{
-	margin: 60px 0 30px 0;
+#header {
+  height: 90px;
+  background: #3D4047;
+  margin: 0 0 20px 0;
 }
 
-#libro h3{
-	margin: 40px 0 15px 0;
+#header h1 a {
+  font-family: 'Rock Salt', serif;
+  color: #FFF;
+  line-height: 85px;
+  font-size: 20px;
+  text-decoration: none;
 }
 
-#libro h4{
-	margin: 10px 0 10px 0;
+#header h1 a span.text {
+  float: left;
+  margin: 0 10px 0 0;
 }
 
-#libro h2 a, #libro h3 a, #libro h4 a{
+#header h1 a span.logo {
+  display: block;
+  width: 300px;
+  height: 90px;
+  background: transparent url("../img/biblioteca-logo.png") no-repeat left top;
+  text-indent: -3000px;
+  float: left;
+}
+
+#menu {
+  position: relative;
+}
+
+#menu_social {
+  height: 30px;
+  margin: 10px 10px 0 0;
+}
+
+#menu_social ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#item-102, #item-103, #item-104 {
+  width: 16px;
+  height: 16px;
+  float: right;
+  display: block;
+  margin: 0 5px;
+}
+
+#item-102 a, #item-103 a, #item-104 a {
+  display: block;
+  text-indent: -3000px;
+}
+
+#item-102 {
+  background: transparent url("../img/biblioteca-facebook.png") no-repeat center center;
+}
+
+#item-103 {
+  background: transparent url("../img/biblioteca-twitter.png") no-repeat center center;
+}
+
+#item-104 {
+  background: transparent url("../img/biblioteca-linkedin.png") no-repeat center center;
+}
+
+#menu_mainlinks {
+  height: 30px;
+  position: absolute;
+  top: 60px;
+}
+
+#menu_mainlinks ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#menu_mainlinks li {
+  display: block;
+  float: left;
+  background: #FFF;
+  width: auto;
+  margin: 0 2px;
+  padding: 0 12px;
+  height: 28px;
+  border: 1px solid #CCC;
+  border-bottom: 0;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -o-border-top-left-radius: 5px;
+  -ms-border-top-left-radius: 5px;
+  -khtml-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -o-border-top-right-radius: 5px;
+  -ms-border-top-right-radius: 5px;
+  -khtml-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -moz-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+#menu_mainlinks li:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+#menu_mainlinks a {
+  color: #000;
+  text-decoration: none;
+  display: block;
+  line-height: 28px;
+}
+
+#menu_mainlinks a:hover {
+  text-decoration: underline;
+}
+
+#menu_mainlinks .current {
+  height: 29px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+#copyright {
+  margin: 0 0 50px 0;
+}
+
+#copyright p {
+  text-align: center;
+  color: #000;
+  font-size: 11px;
+  padding: 5px 0;
+  margin: 0;
+}
+
+/* Estilos del libro
+/--------------------------------------------------------- */
+
+.libro{
+	font-size: 1.4em;
+}
+
+.libro #indice {
+  margin: 10px 0;
+}
+
+.libro #TOC{
+	margin: 0 0 50px 0;
+}
+
+.libro #TOC li {
+  margin: 10px 0;
+}
+
+.libro #titulo h1{
+	font-size: 2.5em;
+	color: #000;
+}
+
+.libro .titulo div{
+	margin: 0;
+}
+
+.libro div{
+	margin: 50px 0;
+}
+
+.libro ul{
+	margin: 0 0 25px 40px;
+}
+
+.libro li p{
+	margin: 0;
+}
+
+.libro hr{
+	margin: 75px 0 25px 0;
+}
+
+.libro h2 a, .libro h3 a, .libro h4 a{
   color: #000;
   text-decoration: none;
 }
 
-#libro a code{
+.libro a code{
   font-family: Georgia, serif;
   font-size: 16px;
 }
 
-#libro blockquote {
+.libro blockquote {
   background: #FEEDC4;
   padding: 5px;
 }
 
-#libro img {
+.libro blockquote p{
+	margin: 0;
+}
+
+.libro img {
   max-width: 100%;
   display: block;
   margin: 20px auto;
   border: 1px solid #ccc;
 }
 
-#libro pre.sourceCode, #libro pre.numberLines {
+.libro pre.sourceCode, .libro pre.numberLines {
   background: none repeat scroll 0 0 #F1F1F1;
   border: 1px solid #DDDDDD;
   color: #000000;
   font-size: 12px;
   overflow: auto;
-  width: 745px;
-  margin: 0;
+  width: 100%;
+  margin: 20px 0;
 }
 
-#libro .nums pre {
+.libro .nums pre {
   margin: 0;
   padding: 0 10px 0 0;
 }
 
-#libro pre code, #libro .nums pre {
+.libro pre code, .libro .nums pre {
   font: 13px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
-}
-
-
-#TOC li {
-  margin: 10px 0;
 }
