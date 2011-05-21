@@ -1,8 +1,8 @@
-#Guía definitiva para crear plantillas para Joomla! 1.6 y versiones posteriores
+#Desarrollo de plantillas para Joomla! 1.6 y versiones posteriores
 
->Esta documentación está en fase de correcciones
 
-#Introducción
+
+##Introducción
 
 En el momento de construir un sitio web utilizando Joomla!, la creación de plantillas (ó *templates*) suele ser uno de los trabajos más comunes que emprenden diseñadores y desarrolladores web.
 
@@ -20,3 +20,26 @@ Al finalizar el documento, el lector deberá ser capaz de:
 * Conocer cómo modificar correctamente plantillas ya creadas;
 
 * Saber crearlas plantillas desde cero.
+
+
+
+##Sobre este libro
+
+* **Autor**: [Leandro D'Onofrio](http://dzign.us/), para Comunidad Joomla <http://comunidadjoomla.org/> y Biblioteca Comunidad Joomla <http://biblioteca.comunidadjoomla.org/>
+
+* **Licencia**: Creative Commons <http://creativecommons.org/licenses/by-nc-sa/2.5/es/>
+
+
+##¿Quieres colaborar / realizar mejoras en el material?
+
+Tienes dos formas de hacerlo:
+
+* Si es un error, puedes subir un ticket en el panel de incidencias: <https://github.com/dzignus/manual_jplantillas/issues>. Trata de detallar de forma especifica el problema.
+
+* Si es una mejora, puedes [clonar el repositorio](http://help.github.com/fork-a-repo/), realizar los cambios y enviar una solicitud para incorporarlos. Las mejoras pueden ser de todo tipo: nuevos contenidos, mejores explicaciones, trucos, tips...
+
+
+##Código de ejemplo
+
+Todo el código de ejemplo que se desarrolla en el manual está dentro de la carpeta `templates` del repositorio. Allí además se iran incorporando nuevos documentos que permitan complementar más los conocimientos.
+
