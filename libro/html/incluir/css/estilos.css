@@ -179,6 +179,10 @@ body {
 	font-size: 1.4em;
 }
 
+.libro #imprimir {
+	display: none;
+}
+
 .libro #indice {
   margin: 10px 0;
 }
@@ -194,10 +198,6 @@ body {
 .libro #titulo h1{
 	font-size: 2.5em;
 	color: #000;
-}
-
-.libro .titulo div{
-	margin: 0;
 }
 
 .libro div{
