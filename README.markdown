@@ -41,5 +41,5 @@ Tienes dos formas de hacerlo:
 
 ##Código de ejemplo
 
-Todo el código de ejemplo que se desarrolla en el manual está dentro de la carpeta `templates` del repositorio. Allí además se iran incorporando nuevos documentos que permitan complementar más los conocimientos.
+Todo el código de ejemplo que se desarrolla en el manual está dentro de la carpeta `/ejemplos/templates` del repositorio. Allí además se iran incorporando nuevos documentos que permitan complementar más los conocimientos.
 
