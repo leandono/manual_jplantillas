@@ -11,6 +11,7 @@
 	<title>Desarrollo de plantillas para Joomla! 1.6</title>
 	<link rel="stylesheet" href="incluir/css/blueprint/screen.css" type="text/css" media="screen, projection, print">
 	<!--[if lt IE 8]><link rel="stylesheet" href="incluir/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="incluir/css/blueprint/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
 	<link href="http://fonts.googleapis.com/css?family=Rock+Salt:regular?text=Biblioteca|Shanti|Reenie+Beanie&amp;amp;subset=latin" rel="stylesheet" type="text/css" >
 	<link rel="stylesheet" href="incluir/css/estilos.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="incluir/css/estilos-imprimir.css" type="text/css" media='print' />
@@ -53,10 +54,28 @@
 			<div id="content" class="libro span-22 append-1 prepend-1 last">
 				
 				<div id="titulo">
-					<h1>Desarrollo de plantillas para Joomla! 1.6</h1>
+					<h1 class="alt">Desarrollo de plantillas para Joomla! 1.6</h1>
 				</div>
 				
 				<div id="imprimir"></div>
+				
+				<div id="sobre">
+					
+					<h2>Sobre este libro</h2>
+						
+						<ul>
+					    	<li><strong>Autor</strong>: <a href="http://dzign.us/">Leandro D'Onofrio</a> para <a href="http://comunidadjoomla.org/">Comunidad Joomla</a> y <a href="http://biblioteca.comunidadjoomla.org/">Biblioteca Comunidad Joomla</a></li>
+					
+					    	<li><strong>Licencia</strong>: <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/">Creative Commons Reconocimiento-NoComercial-CompartirIgual 2.5 España</a></li>
+					    </ul>
+					
+					<h2>Obtener el material de aprendizaje </h2>
+					
+					<p>El material de aprendizaje y el código fuente de los ejemplos que se desarrollan en el libro están hospedados en un <a href="https://github.com/dzignus/manual_jplantillas">repositorio de Github</a>. Desde allí es posible descargar un archivo .zip o .tar con todo el material.</p>
+					
+					<h4><a href="https://github.com/dzignus/manual_jplantillas#readme">¿Tienes correcciones o mejoras en el material?</a></h4>
+					
+				</div>
 				
 				$if(toc)$
 					<h2 id="indice">Índice</h2>
@@ -69,14 +88,15 @@
 			</div>
 			
 		<div id="copyright" class="span-24">
-			<div class="custom">
+				<p>
+					Material bajo licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/">Creative Commons Reconocimiento-NoComercial-CompartirIgual 2.5 España</a>: Es libre de copiar, distribuir, transmitir y modificar el trabajo, siempre y cuando haga referencia la autoría original a <a href="http://dzign.us/">Leandro D'Onofrio</a>, para <a href="http://comunidadjoomla.org/">Comunidad Joomla</a> y <a href="http://biblioteca.comunidadjoomla.org/">Biblioteca Comunidad Joomla</a>. Si altera, transforma o crea una obra derivada, debera distribuir el resultado bajo una licencia igual, similar o compatible. Cualquiera de las condiciones mencionadas pueden no aplicarse si obtiene permisos del autor. Para cualquier reutilización o distribución, debera dejar en claro la licencia, la mejor manera para hacerlo es a través de un enlace hacia la licencia <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/">Creative Commons Reconocimiento-NoComercial-CompartirIgual 2.5 España</a>.
+				</p>
 				<p>
 					COMUNIDADJOOMLA.ORG is not affiliated with or endorsed by the Joomla! Project or Open Source Matters. The Joomla! name and logo are used under a limited license granted by Open Source Matters the trademark holder in the United States and other countries.
 				</p>
 				<p>
 					Copyright © 2008 Open Source Matters. Todos los derechos reservados. Joomla! es un software libre distribuido bajo la licencia GNU/GPL.
 				</p>
-			</div>
 		</div>
 			
 	</div>
