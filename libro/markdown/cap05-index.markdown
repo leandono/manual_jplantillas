@@ -248,8 +248,8 @@ El siguiente trozo de código tiene un solo objetivo: Leer la configuración del
 Si el sitio tendrá un sentido de lectura de izquierda a derecha, este trozo de código se puede eliminar.
 
 >Notar que el bloque condicional `if` no tiene la sintaxis clásica que se suele utilizar:
-
-
+>
+>
 ~~~~~~~~~{.php .numberLines}
 if () {
 ...
@@ -257,9 +257,9 @@ if () {
 ...
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-Esto es porque se utiliza una sintaxis alternativa que permite mejorar la lectura del código y su funcionamiento es exactamente el mismo que la manera clásica. 
+>
+>
+>Esto es porque se utiliza una sintaxis alternativa que permite mejorar la lectura del código y su funcionamiento es exactamente el mismo que la manera clásica. 
 Más información: <http://www.php.net/manual/es/control-structures.alternative-syntax.php>
 
 
