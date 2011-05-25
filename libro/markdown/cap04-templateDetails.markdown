@@ -206,7 +206,9 @@ Por último se añaden los archivos de lenguajes, los cuales tendrán la descrip
 
 * Abrir `es-ES.tpl_interpoint.ini`, borrar el contenido y luego escribir:
 
-		TPL_INTERPOINT_XML_DESCRIPTION="Template de ejemplo para Joomla! 1.6"
+~~~~~~~~~{.xml .numberLines}
+TPL_INTERPOINT_XML_DESCRIPTION="Template de ejemplo para Joomla! 1.6"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	
 >Notar que `TPL_INTERPOINT_XML_DESCRIPTION` hace referencia al término incorporado en la etiqueta `<description />` en el archivo `templateDetails.xml`. El texto de descripción se puede cambair a gusto.
 

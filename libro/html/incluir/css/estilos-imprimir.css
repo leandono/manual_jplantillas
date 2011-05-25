@@ -72,6 +72,14 @@ body {
 	display: none;
 }
 
+.libro #sobre{
+	margin: 0 0 1000px 0;
+}
+
+.libro #sobre h4 a{
+	text-decoration: underline;
+}
+
 .libro div{
 	margin: 50px 0;
 }
@@ -138,3 +146,8 @@ body {
   font: 12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
 }
 
+.libro #copyright{
+	margin: 50px 0 0 0;
+	border-top: 1px solid #ccc;
+	font-size: 12px;
+}

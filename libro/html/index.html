@@ -204,17 +204,14 @@
     <li><p>El diseño (a través de estilos en cascada e imágenes);</p></li>
     <li><p>Y funcionalidades especificadas que dependerán de cada plantilla.</p></li>
     </ul>
-    <p>En particular, Joomla posee un excelente sistema de plantillas que permite adaptar cualquier sitio a los requerimientos deseados. Además, a medida que el CMS evoluciona en versiones, el mismo va incorporando nuevas características que permiten mejorar la experiencia al momento de crear una plantilla:</p>
+    <p>En particular, Joomla posee un excelente sistema de plantillas que permite adaptar cualquier sitio a los requerimientos deseados. Además, a medida que el <em>CMS</em> (sistema de gestión de contenidos) evoluciona, el mismo va incorporando nuevas características que permiten mejorar la experiencia al momento de crear una plantilla. Actualmente, la última versión es la 1.6, la cual incorpora:</p>
     <ul>
-    <li><p><strong>Joomla! 1.6</strong>:</p>
-    <ul>
-    <li><p>En la versión 1.6, de forma predeterminada, el CMS cuenta con tres nuevas plantillas listas para utilizar y adaptar a las necesidades del sitio;</p></li>
-    <li><p>El código generado por Joomla es 100% XHTML estricto;</p></li>
+    <li><p>Tres nuevos <em>templates</em> listos para utilizar y adaptar a las necesidades del sitio;</p></li>
+    <li><p>El código generado por la aplicación 100% XHTML estricto;</p></li>
     <li><p>Incorporación de estilos en plantillas, una funcionalidad que permite dar más flexibilidad y personalización al sitio, permitiendo mostrar, por ejemplo, un estilo único en secciones determinadas;</p></li>
-    <li><p>Detección integrada de navegadores, para poder cargar un estilo diferente para cada tipo de navegador.</p></li>
-    </ul>
+    <li><p>Detección integrada de navegadores, para poder cargar un estilo diferente para cada tipo de navegador.</p>
     <blockquote>
-    <p>Si desea conocer en mayor detalle las características, puede visitar el sitio oficial dedicado a la versión 1.6: <a href="http://www.joomla.org/16/"><code class="url">http://www.joomla.org/16/</code></a></p>
+    <p>Si desea conocer en mayor detalle otras características nuevas de Joomla! 1.6, puede visitar el sitio oficial dedicado a dicha versión: <a href="http://www.joomla.org/16/"><code class="url">http://www.joomla.org/16/</code></a></p>
     </blockquote></li>
     </ul>
     <div id="tipos-de-plantillas">
@@ -222,7 +219,7 @@
     <p>Joomla cuenta con dos tipos de plantillas:</p>
     <ul>
     <li><p><strong>Plantillas para utilizar en la administración <em>(backend)</em></strong>: Son creadas especialmente para la parte de administración, las cuales pueden incorporar funcionalidades que faciliten el manejo de los contenidos en el sitio.</p></li>
-    <li><p><strong>Plantillas para utilizar en el sitio público <em>(frontend)</em></strong>: Son creadas para ser visualizadas por los visitantes. Pueden ser simples o complejas, todo dependerá del tipo de sitio y hacia quienes esta orientado.</p></li>
+    <li><p><strong>Plantillas para utilizar en el sitio público <em>(frontend)</em></strong>: Son creadas para ser visualizadas por los visitantes. Pueden ser simples o complejas, todo dependerá del tipo de sitio y hacia quienes esta orientado. Durante este manual aprenderá a crear este tipo de plantillas.</p></li>
     </ul>
     </div>
     <div id="encontrar-las-plantillas-disponibles-en-la-administraci&#243;n-del-cms">
@@ -521,10 +518,10 @@
     <li><p>En la carpeta de la plantilla, ir al directorio <code>language</code>;</p></li>
     <li><p>Allí dentro existe otra carpeta llamada <code>en-GB</code>. Cambiarle el nombre por <code>es-ES</code>;</p></li>
     <li><p>Dentro de esta carpeta existen dos archivos <code>.ini</code>: <code>en-GB.tpl_atomic.ini</code> y <code>en-GB.tpl_atomic.sys.ini</code>. Respectivamente, se los renombra a <code>es-ES.tpl_interpoint.ini</code> y <code>es-ES.tpl_interpoint.sys.ini</code>;</p></li>
-    <li><p>Abrir <code>es-ES.tpl_interpoint.ini</code>, borrar el contenido y luego escribir:</p>
-    <pre><code>TPL_INTERPOINT_XML_DESCRIPTION=&quot;Template de ejemplo para Joomla! 1.6&quot;
-    </code></pre></li>
+    <li><p>Abrir <code>es-ES.tpl_interpoint.ini</code>, borrar el contenido y luego escribir:</p></li>
     </ul>
+    <pre class="xml numberLines"><code>TPL_INTERPOINT_XML_DESCRIPTION=&quot;Template de ejemplo para Joomla! 1.6&quot;
+    </code></pre>
     <blockquote>
     <p>Notar que <code>TPL_INTERPOINT_XML_DESCRIPTION</code> hace referencia al término incorporado en la etiqueta <code>&lt;description /&gt;</code> en el archivo <code>templateDetails.xml</code>. El texto de descripción se puede cambair a gusto.</p>
     </blockquote>

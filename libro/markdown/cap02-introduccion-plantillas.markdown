@@ -16,20 +16,19 @@ Antes de comenzar, puede que se pregunte ¿qué es una plantilla y para qué sir
 * Y funcionalidades especificadas que dependerán de cada plantilla.
 
 
-En particular, Joomla posee un excelente sistema de plantillas que permite adaptar cualquier sitio a los requerimientos deseados. Además, a medida que el CMS evoluciona en versiones, el mismo va incorporando nuevas características que permiten mejorar la experiencia al momento de crear una plantilla:
+En particular, Joomla posee un excelente sistema de plantillas que permite adaptar cualquier sitio a los requerimientos deseados. Además, a medida que el *CMS* (sistema de gestión de contenidos) evoluciona, el mismo va incorporando nuevas características que permiten mejorar la experiencia al momento de crear una plantilla. Actualmente, la última versión es la 1.6, la cual incorpora:
 
 
-* **Joomla! 1.6**:
+* Tres nuevos *templates* listos para utilizar y adaptar a las necesidades del sitio;
 
-	* En la versión 1.6, de forma predeterminada, el CMS cuenta con tres nuevas plantillas listas para utilizar y adaptar a las necesidades del sitio;
+* El código generado por la aplicación 100% XHTML estricto;
 
-	* El código generado por Joomla es 100% XHTML estricto;
+* Incorporación de estilos en plantillas, una funcionalidad que permite dar más flexibilidad y personalización al sitio, permitiendo mostrar, por ejemplo, un estilo único en secciones determinadas;
 
-	* Incorporación de estilos en plantillas, una funcionalidad que permite dar más flexibilidad y personalización al sitio, permitiendo mostrar, por ejemplo, un estilo único en secciones determinadas;
+* Detección integrada de navegadores, para poder cargar un estilo diferente para cada tipo de navegador.
 
-	* Detección integrada de navegadores, para poder cargar un estilo diferente para cada tipo de navegador.
 
-	>Si desea conocer en mayor detalle las características, puede visitar el sitio oficial dedicado a la versión 1.6: <http://www.joomla.org/16/>
+	>Si desea conocer en mayor detalle otras características nuevas de Joomla! 1.6, puede visitar el sitio oficial dedicado a dicha versión: <http://www.joomla.org/16/>
 
 
 
@@ -40,8 +39,7 @@ Joomla cuenta con dos tipos de plantillas:
 
 * **Plantillas para utilizar en la administración *(backend)***: Son creadas especialmente para la parte de administración, las cuales pueden incorporar funcionalidades que faciliten el manejo de los contenidos en el sitio.
 
-* **Plantillas para utilizar en el sitio público *(frontend)***: Son creadas para ser visualizadas por los visitantes. Pueden ser simples o complejas, todo dependerá del tipo de sitio y hacia quienes esta orientado.
-
+* **Plantillas para utilizar en el sitio público *(frontend)***: Son creadas para ser visualizadas por los visitantes. Pueden ser simples o complejas, todo dependerá del tipo de sitio y hacia quienes esta orientado. Durante este manual aprenderá a crear este tipo de plantillas.
 
 
 
