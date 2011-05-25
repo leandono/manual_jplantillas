@@ -323,8 +323,8 @@ defined('_JEXEC') or die;
 Suponiendo el caso que se necesita que los datos de estadísticas del sitio, en lugar de mostrarse dentro de etiquetas `<dl />`, `<dt />` y `<dd />`, se muestren dentro de una lista desordenada (`<ul />`, `<li />`). Para realizarlo, utilizando la plantilla creada, se debe:
 
 
-	* En la carpeta `html` de la plantilla, crear una carpeta llamada `mod_stats`;
-	* Dentro de la carpeta creada, copiar los archivos `default.php` y `index.html` que estan en la carpeta `tmpl`;
+* En la carpeta `html` de la plantilla, crear una carpeta llamada `mod_stats`;
+* Dentro de la carpeta creada, copiar los archivos `default.php` y `index.html` que estan en la carpeta `tmpl`;
 	
 	
 De modo que la carpeta `html` posea la siguiente estructura de archivos:
