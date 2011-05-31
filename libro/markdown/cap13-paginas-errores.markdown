@@ -3,7 +3,7 @@
 Personalización de las páginas de errores
 -----------------------------------------
 
-Una de los aspectos que menos se suele prestar atención al momento de crear un sitio son las páginas de errores. Éstas son muy importantes, ya que, en caso de presentarse un error ante el usuario, se lo debe incentivar a que no abandone la página y continúe en ella.
+Una de los aspectos al que menos se suele prestar atención en el momento de crear un sitio son las páginas de errores. Éstas son muy importantes, ya que, en caso de presentarse un error ante el usuario, se lo debe incentivar a que no abandone la página y continúe en ella.
 
 Cada error siempre va acompañado por un código de estado HTTP. Los tipos de errores más comunes son:
 
@@ -21,7 +21,7 @@ De forma predeterminada, la página de error 404 en Joomla posee el siguiente di
 
 Como se puede observar, no posee un aspecto "muy amigable".
 
-Lo que se hará es modificar la página de errores para que herede el diseño del sitio. Para esto, hacerlo es necesario modificar el archivo `error.php` que se encuentra en la carpeta raíz de la plantilla. Al abrir al archivo se encontrará lo siguiente:
+Lo que se hará es modificar la página de errores para que herede el diseño del sitio. Para esto, hacerlo es necesario modificar el archivo `error.php` que se encuentra en la carpeta raiz de la plantilla. Al abrir al archivo se encontrará lo siguiente:
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -80,7 +80,7 @@ if (!isset($this->error)) {
 </html>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Lo primero a hacer es borrar el contenido e incorporar por una estructura similar a la creada en `index.php`.
+Lo primero a hacer es borrar el contenido e incorporar una estructura similar a la creada en `index.php`.
 
 
 >Es importante entender que `error.php` no funciona de forma exactamente igual a `index.php`. Por ejemplo, los parámetros de la plantilla se acceden de diferente forma y no es posible insertar módulos y contenidos de la manera anteriormente vista (a través de la directiva `<jdoc:include />`).
@@ -260,7 +260,7 @@ A igual que en `index.php`, se necesita acceder a las valores de los parámetros
 Luego, se crea el `Doctype` del documento, se inserta el título y los archivos CSS de la plantilla. Los archivos JavaScript no son necesarios, por lo tanto no se incorporan. 
 
 
->Notar que se utiliza `$this->error->getCode()` para obtener el código del error actual de la página y así mostrarlo en el título de la página.
+>Note que se utiliza `$this->error->getCode()` para obtener el código del error actual de la página y así mostrarlo en el título de la página.
 
 
 **Sección 3**
@@ -292,7 +292,7 @@ Luego, se crea el `Doctype` del documento, se inserta el título y los archivos 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Para la cabecera, se mostrará el logotipo del sitio y se lo alineará en el centro.
+Para la cabecera, se mostrará el logotipo del sitio y se alineará en el centro.
 
 **Sección 4**
 
@@ -312,7 +312,7 @@ Para la cabecera, se mostrará el logotipo del sitio y se lo alineará en el cen
 				echo JModuleHelper::renderModule( $module);	
 			?>
 		
-		<p>ó ir a la <a href="<?php echo $this->baseurl ?>" title="<?php echo $app->getCfg('sitename'); ?>">página principal del sitio</a>.</p>
+		<p>o ir a la <a href="<?php echo $this->baseurl ?>" title="<?php echo $app->getCfg('sitename'); ?>">página principal del sitio</a>.</p>
 	
 	<!-- Error 500 -->
 	<?php elseif ($this->error->getCode() == 500) : 	?>
@@ -335,7 +335,7 @@ Para la cabecera, se mostrará el logotipo del sitio y se lo alineará en el cen
 Esta sección es la más importante. En ella existen dos bloques condicionales:
 
 
-* En caso que la página sea no encontrada (404), se mostrará un mensaje conveniente e se invitará al usuario a realizar una búsqueda o continuar por la página principal del sitio. Algo importante es que la caja de búsqueda se incorpora a través de la directiva `JModuleHelper::getModule()` en la cual entre parentesis se le indica el tipo de módulo a mostrar (en este caso `search`).
+* En caso que la página no sea encontrada (404), se mostrará un mensaje conveniente e se invitará al usuario a realizar una búsqueda o continuar por la página principal del sitio. Algo importante es que la caja de búsqueda se incorpora a través de la directiva `JModuleHelper::getModule()` en la cual entre parentesis se le indica el tipo de módulo a mostrar (en este caso `search`).
 
 
 >Más información sobre getModule: <http://docs.joomla.org/JModuleHelper::getModule>
@@ -344,7 +344,7 @@ Esta sección es la más importante. En ella existen dos bloques condicionales:
 * En caso que la página posea un error interno (500), también se mostrará un mensaje conveniente invitando al usuario a continuar por la página principal. Por otro lado, para tener de referencia, se mostrará el tipo de error que se produjo a través de la directiva `$this->error->getMessage()`.
 
 
->Una buena práctica es no incorporar los textos en nuestro idioma dentro del archivo, sino utilizar los archivos de lenguajes de la plantilla. Esto se puede realizar una vez comprobado que los textos a mostrar son los correctos.
+>Una buena práctica es no incorporar los textos en nuestro idioma dentro del archivo, sino utilizar los archivos del idioma de la plantilla. Esto se puede realizar una vez comprobado que los textos a mostrar son los correctos.
 
 
 **Sección 5**

@@ -5,7 +5,7 @@ Apéndice
 
 ### Evitar que Mootools cargue de forma predeterminada
 
-Existen ocasiones en que no se desea cargar a Mootools en la plantilla, ya sea porque se va a utilizar otra biblioteca JavaScript ó se necesita agilizar la velocidad de la página reduciendo las peticiones a archivos que no se utilizan. 
+Existen ocasiones en que no se desea cargar a Mootools en la plantilla, ya sea porque se va a utilizar otra biblioteca JavaScript o porque se necesita agilizar la velocidad de la página reduciendo las peticiones a archivos que no se utilizan. 
 
 Para quitar cualquier archivo .js se debe realizar lo siguiente:
 
@@ -83,9 +83,9 @@ if (($menu->getActive() == $menu->getDefault()))
 >Más información sobre `getMenu()`: <http://docs.joomla.org/JApplication::getMenu>
 
 
-### Detectar si un usuario esta logueado en el sitio
+### Detectar si un usuario está logueado en el sitio
 
-Si se desea detectar si un usuario esta (o no) logueado en el sitio, es posible realizarlo con este código:
+Si se desea detectar si un usuario está (o no) logueado en el sitio, es posible realizarlo con este código:
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -93,7 +93,7 @@ Si se desea detectar si un usuario esta (o no) logueado en el sitio, es posible 
 $usuario =& JFactory::getUser();
 if ($usuario->guest == 1)
 {
-        //El usuario no esta logueado en el sitio
+        //El usuario no está logueado en el sitio
 }
 ?>
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -105,7 +105,7 @@ if ($usuario->guest == 1)
 
 ### Detectar un componente determinado
 
-Puede ocurrir en algunas situaciones detectar un componente determinado. Esto es posible realizarlo obteniendo el valor del parámetro `option` que se establece en la URL de la página:
+Puede ocurrir que en algunas situaciones necesite detectar un componente determinado. Esto es posible realizarlo obteniendo el valor del parámetro `option` que se establece en la URL de la página:
 
 
 ~~~~~~~~~{.php .numberLines}
