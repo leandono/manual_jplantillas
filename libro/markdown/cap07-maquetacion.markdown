@@ -3,7 +3,7 @@
 Maquetación del diseño
 ----------------------
 
-Ya explicado el sistema de grillas de BluePrint, se comenzará la modificación de `index.php` para agregar la maquetación del diseño.
+Ya explicado el sistema de grillas de BluePrint, se comenzará la modificación del `index.php` para agregar la maquetación del diseño.
 
 
 **Modificaciones en `<head />`**
@@ -13,7 +13,7 @@ El `<header />` quedará prácticamente igual a como estaba antes, con algunas m
 
 * Se eliminan algunos comentarios y se agregan otros;
 
-* Se quitan las llamadas a los estilos `/plugins/fancy-type/screen.css` y `/plugins/joomla-nav/screen.css` ya que no se utilizaran;
+* Se quitan las llamadas a los estilos `/plugins/fancy-type/screen.css` y `/plugins/joomla-nav/screen.css` ya que no se utilizarán;
 
 * También se eliminan las llamadas a los estilos utilizados para adaptar los textos al sentido de lectura de derecha a izquierda (*RTL*).
 
@@ -43,7 +43,7 @@ $app = JFactory::getApplication();
 
 ![](incluir/figuras/image01.png)
 
-Dentro del cuerpo del documento, la sección superior de dividirá en dos columnas: una dedicada al logo y otra dedicada a los dos menús:
+Dentro del cuerpo del documento, la sección superior se dividirá en dos columnas: una dedicada al logo y otra dedicada a los dos menús:
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -125,7 +125,7 @@ En esta sección se tendrá en primer lugar dos columnas y luego una columna ocu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 	
->Notar que se ha agregado `<jdoc:include type="message" />` para que aparezcan los mensajes del sistema debajo de cabecera del diseño.
+>Note que se ha agregado `<jdoc:include type="message" />` para que aparezcan los mensajes del sistema debajo de cabecera del diseño.
 
 
 **Maquetación de las columnas del medio**
@@ -230,7 +230,7 @@ Por lo tanto, Joomla se encarga de generar el HTML que necesitamos para poder lo
 
 ![](incluir/figuras/image27.png)
 
-Para la siguiente parte del diseño, se crearan dos columnas, una para el texto destacado y otra para la zona del slideshow.
+Para la siguiente parte del diseño, se crearán dos columnas, una para el texto destacado y otra para la zona del slideshow.
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -278,7 +278,7 @@ Finalmente para esta zona también se utilizarán dos columnas, una para el text
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
->Notar que además de las clases span-8 se utilizó prepend-3 para mover el contenido de las columnas hacia la derecha en cada columna.
+>Note que además de las clases span-8 se utilizó prepend-3 para mover el contenido de las columnas hacia la derecha en cada columna.
 
 
 Si se juntan todas las partes, el archivo `index.php` quedará conformado de la siguiente forma:
