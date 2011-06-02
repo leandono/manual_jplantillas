@@ -27,6 +27,8 @@ Al finalizar el documento, el lector deberá ser capaz de:
 
 * **Autor**: [Leandro D'Onofrio](http://dzign.us/), para [Comunidad Joomla](http://comunidadjoomla.org/) y [Biblioteca Comunidad Joomla](http://biblioteca.comunidadjoomla.org/).
 
+* **Correcciones**: [Rafael Gomez](http://comunidadjoomla.org/) y [Gustavo Raúl Aragón](http://comunidadjoomla.org/).
+
 * **Licencia**: [Creative Commons Reconocimiento-NoComercial-CompartirIgual 2.5 España](http://creativecommons.org/licenses/by-nc-sa/2.5/es/): Eres libre de copiar, distribuir, transmitir y modificar el trabajo, siempre y cuando hagas referencia la autoría original a [Leandro D'Onofrio](http://dzign.us/), para [Comunidad Joomla](http://comunidadjoomla.org/) y [Biblioteca Comunidad Joomla](http://biblioteca.comunidadjoomla.org/). Si alteras, transformas o creas una obra derivada, deberás distribuir el resultado bajo una licencia igual, similar o compatible. Cualquiera de las condiciones mencionadas pueden no aplicarse si obtienes permisos del autor. Para cualquier reutilización o distribución, deberás dejar en claro la licencia, la mejor manera para hacerlo es a través de un enlace hacia la licencia [Creative Commons Reconocimiento-NoComercial-CompartirIgual 2.5 España](http://creativecommons.org/licenses/by-nc-sa/2.5/es/).
 
 
