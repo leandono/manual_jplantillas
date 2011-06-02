@@ -3,10 +3,10 @@
 template.css
 ------------
 
-Llegó el momento de añadir diseño a la plantilla. Para eso se editará el archivo `template.css` que se encuentra dentro de la carpeta `css` de la plantilla. Notará ya existe contenido dentro del archivo, lo que se hará es borrarlo para luego incorporar los estilos apropiados. 
+Llegó el momento de añadir diseño a la plantilla. Para eso se editará el archivo `template.css` que se encuentra dentro de la carpeta `css` de la plantilla. Note que ya existe contenido dentro del archivo, lo que se hará es borrarlo para luego incorporar los estilos apropiados. 
 
 
->Antes de comenzar a escribir los estilos, es muy importante tener preparado los recortes de las diferentes imágenes que componen el diseño. Dichas imágenes deben ir guardadas en la carpeta `images` de la plantilla.
+>Antes de comenzar a escribir los estilos, es muy importante tener preparados los recortes de las diferentes imágenes que componen el diseño. Dichas imágenes deben ir guardadas en la carpeta `images` de la plantilla.
 
 
 ![](incluir/figuras/image11.png)
@@ -19,7 +19,7 @@ Llegó el momento de añadir diseño a la plantilla. Para eso se editará el arc
 
 
 >El nivel de comprensión de los estilos mostrados a continuación dependaran de los conocimientos de CSS que posea. Si desea introducirse más en profundidad con los estilos en cascada, puede consultar la colección referente a este tema en **LibrosWeb**: <http://www.librosweb.es/>.
->Aún así, los estilos descriptos son de ejemplo, los cuales pueden mejorarse o implementarse de otra forma.
+>Aún así, los estilos descritos son de ejemplo, los cuales pueden mejorarse o implementarse de otra forma.
 
 
 **Estilos generales**
@@ -152,7 +152,7 @@ Para completar los espacios superiores, se utilizaron dos módulos del tipo **Me
 
 **Estilos para el destacado superior, video y caja media**
 
-Luego se continua con los estilos para el destacado superior, video y caja del medio:
+Luego se continúa con los estilos para el destacado superior, video y caja del medio:
 
 
 ~~~~~~~~~{.css .numberLines}

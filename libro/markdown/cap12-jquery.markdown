@@ -17,7 +17,7 @@ Los pasos para incorporar jQuery en la plantilla son los siguientes:
 
 * Guardar el archivo `jquery.min.js` dentro de la carpeta `js` de la plantilla;
 
-* Abrir `index.php` de la plantilla e insertar a la biblioteca dentro de `<head />`, después de la directiva `<jdoc:include type="head" />` pero antes del llamado al archivo `template.js`:
+* Abrir el `index.php` de la plantilla e insertar a la biblioteca dentro del `<head />`, después de la directiva `<jdoc:include type="head" />` pero antes de la llamada al archivo `template.js`:
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -79,7 +79,7 @@ Recordar que la zona que conforma al slideshow en la plantilla esta compuesta de
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-La posición `interpoint-slideshow_inferior` mostrará a un módulo del tipo HTML personalizado, en donde se incorporaran varias imágenes para hacer funcionar al slideshow. Al insertar las imágenes, el HTML final queda de la siguiente manera:
+La posición `interpoint-slideshow_inferior` mostrará a un módulo del tipo HTML personalizado, en donde se incorporarán varias imágenes para hacer funcionar al slideshow. Al insertar las imágenes, el HTML final queda de la siguiente manera:
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -104,7 +104,7 @@ Lo siguiente a realizar será descargar **jQuery Cycle Plugin**: <http://jquery.
 
 ![](incluir/figuras/image32.png)
 
-Luego, insertar a `jquery.cycle.all.min.js` en la plantilla. El llamado al archivo debe quedar por debajo de `jquery.min.js` pero antes de `template.js`:
+Luego, insertar a `jquery.cycle.all.min.js` en la plantilla. La llamada al archivo debe quedar por debajo de `jquery.min.js` pero antes de `template.js`:
 
 
 ~~~~~~~~~{.php .numberLines}

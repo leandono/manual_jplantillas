@@ -10,7 +10,7 @@ Como se comentó la principio del manual, Joomla! 1.6 posee una nueva funcionali
 ![](incluir/figuras/image44.png)
 
 
->Recuerde que el listado de estilos de plantillas se puede encontrar yendo, en la administración, a Extensiones → Gestor de plantillas. Al ingresar a alguno de los ítems enlistados se puede visualizar los parámetros disponibles para configurar y a que secciones aplicarlos.
+>Recuerde que el listado de estilos de plantillas se puede encontrar yendo, en la administración, a Extensiones → Gestor de plantillas. Al ingresar a alguno de los items enlistados se pueden visualizar los parámetros disponibles para configurar y a que secciones aplicarlos.
 
 
 En el caso de la plantilla creada de ejemplo, se le añadirán varios parámetros de configuración para poder:
@@ -53,7 +53,7 @@ Como se muestra, la etiqueta más importante es `<field />`. Dicha etiqueta pose
 * `description`: La descripción será la explicación del campo.
 
 
->Notar que para los atributos `label` y `description` se utiliza `TPL_INTERPOINT_LOGO_LABEL` y `TPL_INTERPOINT_LOGO_DESC`. Estas dos referencias se deben agregar en el archivo `es-ES.tpl_interpoint.ini` junto a los textos correspondientes.
+>Note que para los atributos `label` y `description` se utiliza `TPL_INTERPOINT_LOGO_LABEL` y `TPL_INTERPOINT_LOGO_DESC`. Estas dos referencias se deben agregar en el archivo `es-ES.tpl_interpoint.ini` junto a los textos correspondientes.
 
 
 ![](incluir/figuras/image49.png)
@@ -120,7 +120,7 @@ Por lo tanto, `templateDetails.xml` quedará de la siguiente manera:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-**Modificación de index.php**
+**Modificación del index.php**
 
 En `index.php` lo primero que se hará es declarar una variable para guardar el valor del parámetro que queremos obtener. Esto es posible realizarlo dentro de las etiquetas PHP que se encuentran al principio del documento:
 
@@ -141,7 +141,7 @@ $imagenLogo = $this->params->get('logo');
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Como se ve, los parámetros se obtienen a través de `$this->params->get()` pasando como argumento el nombre del parámetro a obtener (en este caso el parámetro `logo`).
+Como puede ver, los parámetros se obtienen a través de `$this->params->get()` pasando como argumento el nombre del parámetro a obtener (en este caso el parámetro `logo`).
 Luego, antes del cierre de la etiqueta `<head />`  se incorpora:
 
 
@@ -238,7 +238,7 @@ Siguiendo los mismos pasos anteriores, se modifica `templateDetails.xml` añadie
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
->Notar que se añadieron dos nuevos atributos: 
+>Notae que se añadieron dos nuevos atributos: 
 >* `default`: Será el valor predeterminado en caso que el campo esté imcompleto;
 >* `filter`: Este permite especificar el tipo de información que se espera en el campo (`string`, `word`, `integer`);
 
@@ -286,7 +286,7 @@ Y se modifica la maquetación correspondiente a la zona del logotipo con lo sigu
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Si se configuró el parámetro `eslogan`, se muestra el texto correspondiente, caso contrario se muestre el predeterminado.
+Si se configuró el parámetro `eslogan`, se muestra el texto correspondiente, caso contrario se muestra el predeterminado.
   
 ![](incluir/figuras/image18.png)
   
@@ -331,7 +331,7 @@ Por lo tanto, al igual que antes, se modifica `templateDetails.xml`:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
->Notar que el parámetro, al ser del tipo lista, necesita tener definido las opciones que se podran seleccionar.
+>Note que el parámetro, al ser del tipo lista, necesita tener definidas las opciones que se podrán seleccionar.
 
 
 ![](incluir/figuras/image03.png)
@@ -392,7 +392,7 @@ Luego, dentro del cuerpo del documento se agrega una nueva maquetación y posici
 En caso que se haya seleccionado la opción “1 columna”, se muestra el contenido en una maquetación de una sola columna. Caso contrario, se muestra una maquetación de dos columnas.
 
 
->Notar que se agregó una nueva posición de módulo: `interpoint-columna_derecha`. Esta deber ser agregada además en `templateDetails.xml` y la referencia de su descripción en `es-ES.tpl_interpoint.sys.ini`.
+>Note que se agregó una nueva posición de módulo: `interpoint-columna_derecha`. Esta deber ser agregada además en `templateDetails.xml` y la referencia de su descripción en `es-ES.tpl_interpoint.sys.ini`.
 
 
 Para poder aplicar la nueva maquetación en el sitio utilizando los estilos de plantillas, se debe:
@@ -400,7 +400,7 @@ Para poder aplicar la nueva maquetación en el sitio utilizando los estilos de p
 
 * En la administración, ir al gestor de estilos de plantillas;
 * Duplicar el estilo predeterminado para el sitio;
-* Acceder a esta copia, cambiar la opción de maquetación y decidir a que items del menú se desea ver el nuevo diseño.
+* Acceder a esta copia, cambiar la opción de maquetación y decidir a que items del menú desea ver el nuevo diseño.
 
 
 Por ejemplo, si se selecciona asignar el nuevo diseño a una categoría dada, al ingresar a un articulo de esa categoría se visualizará:

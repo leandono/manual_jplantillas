@@ -12,17 +12,17 @@ A continuación de enumeran algunas cuestiones que deberá tener en cuenta al mo
 
 * **Definiciones gráficas**:
 	
-	* Contar con un diseño gráfico el cual se basará la plantilla. El diseño deberá contemplar diferentes aspectos que permitan al usuario estar cómodo y además satisfaga las necesidades del sitio: Gama de colores, disposición de los elementos, técnicas gráficas utilizadas, usabilidad y accesibilidad.
+	* Contar con un diseño gráfico en el cual se basará la plantilla. El diseño deberá contemplar diferentes aspectos que permitan al usuario estar cómodo y además satisfaga las necesidades del sitio: Gama de colores, disposición de los elementos, técnicas gráficas utilizadas, usabilidad y accesibilidad.
 	
 * **Definiciones funcionales**:
 
-	* Dependiendo de los requerimientos y necesidades, el sitio contará con una cantidad definida de funcionalidades. Para implementarlas, deberá analizar de que forma realizarlas: Utilizando las características que el CMS trae por defecto, instalando extensiones de terceros ó desarrollando una solución personalizada. 
+	* Dependiendo de los requerimientos y necesidades, el sitio contará con una cantidad definida de funcionalidades. Para implementarlas, deberá analizar de que forma realizarlas: Utilizando las características que el CMS trae por defecto, instalando extensiones de terceros o desarrollando una solución personalizada. 
 	
 	* Debe tener en cuenta que la plantilla sea lo suficientemente extensible y flexible para adecuarse a distintas situaciones. Una manera de hacerlo es a través de la implementación de parámetros de configuración en la plantilla.
 	
 * **Definiciones técnicas**:
 
-	* Si trabajó en el mundo del diseño y desarrollo web, sabrá que no siempre es posible realizar un sitio que luzca exactamente igual en todos los navegadores, versiones y dispositivos. Particularmente, Internet Explorer suele ser el navegador más problemático. Por lo tanto deberá tomar como determinación que navegadores, versiones y dispositivos serán soportados por la plantilla.
+	* Si ya ha trabajado en el mundo del diseño y desarrollo web, sabrá que no siempre es posible realizar un sitio que luzca exactamente igual en todos los navegadores, versiones y dispositivos. Particularmente, Internet Explorer suele ser el navegador más problemático. Por lo tanto deberá tomar como determinación que navegadores, versiones y dispositivos serán soportados por la plantilla.
 	
 	* Nombre de la plantilla e información asociada: Deberá elegir un nombre representativo para la plantilla y si lo desea, una licencia;
 	
@@ -67,7 +67,7 @@ Además la plantilla contará con las siguientes definiciones:
 
 * Licencia: GNU General Public License version 2
 
-* Navegadores soportados: Internet Explorer 8 ó superior, Firefox 3.6 ó superior, Google Chrome, Safari 5 ó superior.
+* Navegadores soportados: Internet Explorer 8 o superior, Firefox 3.6 o superior, Google Chrome, Safari 5 o superior.
 
 
 Una vez obtenidos los resultados del análisis es posible proseguir con la creación de los archivos.
@@ -76,12 +76,12 @@ Una vez obtenidos los resultados del análisis es posible proseguir con la creac
 
 ### Utilizar la plantilla `atomic` como base
 
-A partir de la versión 1.6, Joomla incorpora una nueva plantilla llamada *atomic*, la cual tiene como objetivo ser utilizada como base para la creación de nuevas plantillas. Su principal característica es la de utilizar [Blueprint](http://www.blueprintcss.org/), un *framework* CSS que permite agilizar la creación de estilos y maquetaciones.
+A partir de la versión 1.6, Joomla incorpora una nueva plantilla llamada *atomic*, la cual tiene como objetivo que pueda ser utilizada como base para la creación de nuevas plantillas. Su principal característica es la de utilizar [Blueprint](http://www.blueprintcss.org/), un *framework* CSS que permite agilizar la creación de estilos y maquetaciones.
 
-Para comenzar, lo primero será ir a la carpeta `templates` para copiar y pegar el directorio `atomic`. Luego se renombra la carpeta copiada con el nombre que queremos que se ha seleccionado para la plantilla.
+Para comenzar, lo primero será ir a la carpeta `templates` para copiar y pegar el directorio `atomic`. Luego se renombra la carpeta copiada con el nombre que se ha seleccionado para la plantilla.
 
 
->El nombre debe estar en minúscula y con guiones bajos (en caso de tener espacios de por medio).
+>El nombre debe estar en minúsculas y con guiones bajos (en caso de tener espacios de por medio).
 
 
 ![](incluir/figuras/image51.png)

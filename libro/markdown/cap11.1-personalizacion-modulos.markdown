@@ -7,23 +7,23 @@ Personalización de módulos y componentes
 
 Desde la versión 1.5, Joomla permite la sobrescritura del HTML que poseen módulos y componentes, otorgando mucho más control sobre lo que se desea mostrar en el sitio, sin tener que modificar archivos del núcleo de dichas extensiones o del mismo CMS.
 
-Para poder sobrescribir la estructura HTML que posea una extensión, es requisito que esta esté creada utilizando el patrón de arquitectura MVC (Modelo-Vista-Controlador).
+Para poder sobrescribir la estructura HTML que posea una extensión, es requisito que ésta esté creada utilizando el patrón de arquitectura MVC (Modelo-Vista-Controlador).
 
 Desde el punto de vista del usuario común, no existe una forma automática de saber si una extensión utiliza MVC. La única manera de saberlo es yendo a la carpeta de dicha extensión y mirando su estructura de carpetas y archivos. Por ejemplo, los componentes creados con MVC suelen tener una estructura de esta forma: 
 
 ![](incluir/figuras/image43.png)
 
-En donde existe una carpeta `controllers`, otra `models` y otra `views`. En esta última carpeta se encuentran archivos que se utilizaran como base para personalizar el HTML del componente.
+En donde existe una carpeta `controllers`, otra `models` y otra `views`. En ésta última carpeta se encuentran archivos que se utilizaran como base para personalizar el HTML del componente.
 
 Por otro lado, los módulos desarrollados en MVC poseen el siguiente aspecto:
 
 ![](incluir/figuras/image35.png)
 
-En este caso, la carpeta `tmpl` posee archivos que se utilizaran para personalizar a gusto el HTML del módulo.
+En este caso, la carpeta `tmpl` posee archivos que se utilizaran para personalizar al gusto el HTML del módulo.
 
 
->En Joomla, los archivos que componen cada componente pueden encontrarse dentro de la carpeta `components`, en el directorio raíz del CMS. Allí cada componente esta separado por carpetas diferentes (`com_banners`, `com_contact`, etc).
->En el caso de los módulos, estos se encuentran en la carpeta `modules`, también en el directorio raíz del CMS. Y al igual que el caso anterior, cada módulo esta separado en una carpeta diferente (`mod_articles_archive`, `mod_articles_categories`, etc). 
+>En Joomla, los archivos que componen cada componente pueden encontrarse dentro de la carpeta `components`, en el directorio raiz del CMS. Allí cada componente está separado por carpetas diferentes (`com_banners`, `com_contact`, etc).
+>En el caso de los módulos, estos se encuentran en la carpeta `modules`, también en el directorio raiz del CMS. Y al igual que el caso anterior, cada módulo está separado en una carpeta diferente (`mod_articles_archive`, `mod_articles_categories`, etc). 
 
 
 >Si desea conocer un poco más sobre MVC puede consultar:
@@ -43,7 +43,7 @@ En este aspecto, es posible adaptar a los módulos en varios aspectos:
 
 * La manera con que se muestra el módulo: Anteriormente, en el análisis de las secciones que componen a `index.php`, se explicó que los módulos se pueden cargar de diferentes formas cambiando el valor del atributo `style` en la directiva `<jdoc:include type="modules" name="" style="" />`. Sin embargo, existen situaciones en que se necesita que un módulo cargue dentro de una estructura determinada. Por eso mismo, Joomla permite crear estilos personalizados de visualización de módulos.
 
-* El mismo HTML que compone un módulo: También es posible personalizar las etiquetas HTML que componen a uno o varios módulos en particular, otorgando la flexibilidad para adaptar un diseño a gusto.
+* El mismo HTML que compone un módulo: También es posible personalizar las etiquetas HTML que componen a uno o varios módulos en particular, otorgando la flexibilidad para adaptar un diseño al gusto.
 
 
 #### Personalizar la forma con que muestran los módulos
@@ -135,7 +135,7 @@ function modChrome_personalizado($module, &$params, &$attribs) {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Definición de función para el estilo personalizado. El nombre de la función debe estar conformado por `modChrome_(nombre_del_estilo)`. Entre paréntesis se pasan tres argumentos:
+Definición de la función para el estilo personalizado. El nombre de la función debe estar conformado por `modChrome_(nombre_del_estilo)`. Entre paréntesis se pasan tres argumentos:
 
 
 * `$module`: Es el objeto PHP perteneciente al módulo que se mostrará en la posición definida. Este objeto posee información relacionada al módulo: título (y si se debe mostrar), contenido, ID único;
@@ -160,7 +160,7 @@ endif;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-En este bloque de código, se pregunta si el atributo `headerLevel` posee algún valor. Si lo posee se asigna a la variable `$headerLevel` dicho valor ó caso contrario se establece a 4 como valor predeterminado.
+En este bloque de código, se pregunta si el atributo `headerLevel` posee algún valor. Si lo posee se asigna a la variable `$headerLevel` dicho valor o en caso contrario se establece a 4 como valor predeterminado.
 
 **Sección 3**
 
@@ -188,7 +188,7 @@ Luego se pregunta si el módulo posee algún contenido HTML, ya que no tiene sen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Continuando, se pregunta si el módulo posee un título asignado. Si lo posee, se muestra a dicho título entre etiquetas `<h />`, la cual podrá variar dependiendo del valor establecido en el atributo `headerLevel`.
+Continuando, se pregunta si el módulo posee un título asignado. Si lo posee, se muestra dicho título entre etiquetas `<h />`, la cual podrá variar dependiendo del valor establecido en el atributo `headerLevel`.
 
 **Sección 5**
 
@@ -200,7 +200,7 @@ Continuando, se pregunta si el módulo posee un título asignado. Si lo posee, s
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Finalmente se muestra el contenido del módulo, el cual se lo encierra en una etiqueta `<div />` que posee el atributo `id` conformado por `module_(id_del_modulo)` y el atributo `class` por `moduletable(parametro_moduleclass_sfx)` (recordar nuevamente que este parámetro se especifica en la configuración del módulo, en la administración del CMS. Más precisamente corresponde al parámetro *Clase CSS* del módulo).
+Finalmente se muestra el contenido del módulo, el cual se encierra en una etiqueta `<div />` que posee el atributo `id` conformado por `module_(id_del_modulo)` y el atributo `class` por `moduletable(parametro_moduleclass_sfx)` (recordar nuevamente que este parámetro se especifica en la configuración del módulo, en la administración del CMS. Más precisamente corresponde al parámetro *Clase CSS* del módulo).
 
 El archivo `modules.php` quedará conformado de la siguiente forma:
 
@@ -263,7 +263,7 @@ function modChrome_personalizado($module, &$params, &$attribs)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Para mostrar en la plantilla los módulos de la nueva forma definida, tan solo es necesario agregar una nueva directiva en algún lugar ó reemplazar alguna por la nueva. Por ejemplo, para la sección de dos columnas, en la parte derecha, se incorpora el nuevo estilo:
+Para mostrar en la plantilla los módulos de la nueva forma definida, tan solo es necesario agregar una nueva directiva en algún lugar o reemplazar alguna por la nueva. Por ejemplo, para la sección de dos columnas, en la parte derecha, se incorpora el nuevo estilo:
 
 
 ~~~~~~~~~{.php .numberLines}
@@ -320,7 +320,7 @@ defined('_JEXEC') or die;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Suponiendo el caso que se necesita que los datos de estadísticas del sitio, en lugar de mostrarse dentro de etiquetas `<dl />`, `<dt />` y `<dd />`, se muestren dentro de una lista desordenada (`<ul />`, `<li />`). Para realizarlo, utilizando la plantilla creada, se debe:
+Suponiendo el caso en el que se necesita que los datos de estadísticas del sitio, en lugar de mostrarse dentro de etiquetas `<dl />`, `<dt />` y `<dd />`, se muestren dentro de una lista desordenada (`<ul />`, `<li />`). Para realizarlo, utilizando la plantilla creada, se debe:
 
 
 * En la carpeta `html` de la plantilla, crear una carpeta llamada `mod_stats`;
@@ -351,10 +351,10 @@ defined('_JEXEC') or die;
 
 Si se publica el módulo **estadísticas** en el sitio, se podrá ver que en lugar de utilizar las etiquetas HTML que posee el archivo `default.php` en la carpeta `tmpl`, se utilizaran las etiquetas del archivo creado en la carpeta `mod_stats` del directorio `html` de la plantilla.
 
-En caso de querer personalizar otros módulos, se deben realizar los mismos pasos descriptos.
+En caso de querer personalizar otros módulos, se deben realizar los mismos pasos descritos.
 
 
->Notar que `atomic`, la plantilla utilizada como base para el trabajo, ya posee varios módulos personalizados dentro de la carpeta `html`:
+>Note que `atomic`, la plantilla utilizada como base para el trabajo, ya posee varios módulos personalizados dentro de la carpeta `html`:
 >
 >* `mod_custom`
 >* `mod_login`
